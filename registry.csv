@@ -1,1 +1,7 @@
 type,id,project_added
+node,1001,Project A
+node,1002,Project A
+link,501,Project A
+node,1003,Project B
+node,1004,Project B
+link,502,Project B

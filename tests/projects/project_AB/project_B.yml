@@ -1,0 +1,35 @@
+project: Project B
+valid: false
+tags:
+   - 'registry example'
+dependencies:
+  prerequisites: []
+  corequisites: []
+  conflicts: []
+category: New Roadway
+links:
+  - A: 1001
+    B: 1002
+    model_link_id: 501
+    distance : 0.2500
+    name: 'Broad Street'
+    lanes: 2
+    bike_access: 1
+    drive_access: 1
+    transit_access: 0
+    walk_access: 1
+nodes:
+  - X: -93.14322
+    Y: 44.87414
+    bike_node: 0
+    drive_node: 1
+    transit_node: 0
+    walk_node: 0
+    model_node_id: 1001
+  - X: -93.14273
+    Y: 44.87648
+    bike_node: 0
+    drive_node: 1
+    transit_node: 0
+    walk_node: 0
+    model_node_id: 1002

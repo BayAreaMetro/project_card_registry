@@ -1,0 +1,20 @@
+project: Project C
+valid: false
+tags:
+   - 'registry example'
+dependencies:
+  prerequisites: []
+  corequisites: []
+  conflicts: []
+category: New Roadway
+links:
+  - A: 801
+    B: 802
+    model_link_id: 501
+    distance : 0.2500
+    name: 'Broad Street'
+    lanes: 2
+    bike_access: 1
+    drive_access: 1
+    transit_access: 0
+    walk_access: 1

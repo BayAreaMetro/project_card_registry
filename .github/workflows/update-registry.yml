@@ -24,8 +24,8 @@ jobs:
 
       - name: commit files
         run: |
-          git config --local user.email "david.ory@gmail.com"
-          git config --local user.name "DavidOry"
+          git config --local user.email ""
+          git config --local user.name "modelbot"
           git add -A
           git commit --allow-empty -m "GitHub Action automated registry update" -a
 
@@ -33,4 +33,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: staging
+          branch: configure

@@ -17,3 +17,17 @@ When a Project Card is added to the `projects` directory and committed to GitHub
 2. Fail if the Project Card adds a node or link with an ID that is already in the base network, as this suggest their may be a disconnect between the configuration file and the details of the base network. 
 3. Update the `registry.csv` database with the new nodes and/or new links, identifying the project that adds them.
 4. If a Project Card that adds links conflicts with nodes or links identified in the `registry.csv` database, these nodes and links are updated to use a node or link number that is not in the registry. The Project Cards are updated accordingly.
+
+### Removing a Project Card from the Registry
+To remove a Project Card from the registry, a user must do the following:
+1. Check out repository.
+2. Open the `registry.csv` database in a text editor and delete the entries specific to the project we want to remove.
+3. Delete the project card from the `projects` directory. 
+4. Commit the change to GitHub.
+
+### Editing a Project Card already entered to the Registry
+Once a Project Card has been added to the registry, a user must do the following:
+1. Check out the repository.
+2. Open the `registry.csv` database in a text editor and delete the entries specific to the project we want to remove.
+3. Edit the subject Project Card.
+4. Commit the change to GitHub.

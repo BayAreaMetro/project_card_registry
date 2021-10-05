@@ -35,7 +35,7 @@ def add_cards_to_registry(
                     card,
                     nodes_in_use,
                 )
-            else: 
+            else:
                 node_df = None
                 node_update = False
 
@@ -45,16 +45,16 @@ def add_cards_to_registry(
                 card,
                 links_in_use,
             )
-            
+
             if node_df is not None:
                 out_df = out_df.append(node_df, ignore_index=True)
-            
+
             out_df = (
                 out_df.append(link_df, ignore_index=True)
                 .drop_duplicates()
                 .reset_index(drop=True)
             )
-            
+
             if node_update or link_update:
                 card.__dict__.update(updated_card_dict)
                 if write_to_disk:
@@ -227,7 +227,7 @@ def _update_registry(
 
     subject_df = input_df[input_df["type"] == subject_word]
 
-    if card_dict["category"] == "New Roadway":
+    if card_dict["category"] == "Add New Roadway":
         for subject_index, subject in enumerate(card_dict[nodes_or_links]):
             new_id = subject[subject_id_word]
 

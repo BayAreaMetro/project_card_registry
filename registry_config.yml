@@ -5,97 +5,97 @@ maximum_allowable_link_id: 9000000
 nodes_used_by_geography:
   - geography_name: San Francisco TAZ
     start: 1
-    end: 9999
+    end: 651
   - geography_name: San Francisco MAZ
-    start: 10000
-    end: 89999
+    start: 10001
+    end: 17386
   - geography_name: San Francisco TAP
-    start: 90000
-    end: 99999
+    start: 90001
+    end: 90576
   - geography_name: San Mateo TAZ
-    start: 100000
-    end: 109999
+    start: 100001
+    end: 100467
   - geography_name: San Mateo MAZ
-    start: 110000
-    end: 189999
+    start: 110002
+    end: 119251
   - geography_name: San Mateo TAP
-    start: 190000
-    end: 199999
+    start: 190001
+    end: 190620
   - geography_name: Santa Clara TAZ
-    start: 200000
-    end: 209999
+    start: 200002
+    end: 201093
   - geography_name: Santa Clara MAZ
-    start: 210000
-    end: 289999
+    start: 210002
+    end: 232367
   - geography_name: Santa Clara TAP
-    start: 290000
-    end: 299999
+    start: 290001
+    end: 291268
   - geography_name: Alameda TAZ
-    start: 300000
-    end: 309999
+    start: 300001
+    end: 301132
   - geography_name: Alameda MAZ
-    start: 310000
-    end: 389999
+    start: 310001
+    end: 334484
   - geography_name: Alameda TAP
-    start: 390000
-    end: 399999
+    start: 390001
+    end: 391424
   - geography_name: Contra Costa TAZ
-    start: 400000
-    end: 409999
+    start: 400001
+    end: 400641
   - geography_name: Contra Costa MAZ
-    start: 410000
-    end: 489999
+    start: 410001
+    end: 428307
   - geography_name: Contra Costa TAP
-    start: 490000
-    end: 499999
+    start: 490001
+    end: 490836
   - geography_name: Solano TAZ
     start: 500001
-    end: 509999
+    end: 500287
   - geography_name: Solano MAZ
-    start: 510000
-    end: 589999
+    start: 510002
+    end: 520521
   - geography_name: Solano TAP
-    start: 590000
-    end: 599999
+    start: 590001
+    end: 590310
   - geography_name: Napa TAZ
-    start: 600000
-    end: 609999
+    start: 600001
+    end: 600107
   - geography_name: Napa MAZ
-    start: 610000
-    end: 689999
+    start: 610002
+    end: 661598
   - geography_name: Napa TAP
-    start: 690000
-    end: 699999
+    start: 690001
+    end: 690101
   - geography_name: Sonoma TAZ
-    start: 700000
-    end: 709999
+    start: 700001
+    end: 700387
   - geography_name: Sonoma MAZ
-    start: 710000
-    end: 789999
+    start: 710009
+    end: 720388
   - geography_name: Sonoma TAP
-    start: 790000
-    end: 799999
+    start: 790001
+    end: 790580
   - geography_name: Marin TAZ
-    start: 800000
-    end: 804999
+    start: 800001
+    end: 800210
   - geography_name: Marin MAZ
-    start: 805000
-    end: 844999
+    start: 810002
+    end: 814506
   - geography_name: Marin TAP
-    start: 845000
-    end: 849999
+    start: 890001
+    end: 890285
   - geography_name: San Joaquin TAZ
-    start: 850000
-    end: 854999
+    start: 805000
+    end: 809999
   - geography_name: San Joaquin MAZ
     start: 855000
-    end: 894999
+    end: 889999
   - geography_name: San Joaquin TAP
     start: 895000
     end: 899999
   - geography_name: External TAZ
-    start: 900000
-    end: 999999
+    start: 900001
+    end: 900021
   - geography_name: San Francisco Network
     start: 1000000
     end: 1028040
@@ -107,7 +107,7 @@ nodes_used_by_geography:
     end: 2192948
   - geography_name: Alameda Network
     start: 2500000
-    end: 2700000
+    end: 2625977
   - geography_name: Contra Costa Network
     start: 3000000
     end: 3097286
@@ -128,35 +128,38 @@ nodes_used_by_geography:
     end: 5300000
   - geography_name: External Network
     start: 5300000
-    end: 5500000
+    end: 5300001
 links_used_by_geography:
   - geography_name: San Francisco
     start: 1
-    end: 127974
+    end: 133492
   - geography_name: San Mateo
     start: 1000000
-    end: 1200489
+    end: 1203881
   - geography_name: Santa Clara
     start: 2000000
-    end: 2652149
+    end: 2660007
   - geography_name: Alameda
     start: 3000000
-    end: 3434585
+    end: 3443531
   - geography_name: Contra Costa
     start: 4000000
-    end: 4322027
+    end: 4326617
   - geography_name: Solano
     start: 5000000
-    end: 5155993
+    end: 5157453
   - geography_name: Napa
     start: 6000000
-    end: 6046605
+    end: 6047067
   - geography_name: Sonoma
     start: 7000000
-    end: 7176047
+    end: 7178791
   - geography_name: Marin
     start: 8000000
-    end: 8083415
+    end: 8084883
   - geography_name: San Joaquin
     start: 8500000
     end: 9000000
+  - geography_name: Rail and External (to be fixed in v 13)
+    start: 26067343
+    end: 26067400

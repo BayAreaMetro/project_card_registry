@@ -1,6 +1,5 @@
 project: add san mateo bridge toll plaza
 tags:
-- Year 2015
 - Toll Plaza
 dependencies: ''
 changes:
@@ -8,8 +7,7 @@ changes:
   links:
     model_link_id:
     - 3073690
-- &id001
-  category: Add New Roadway
+- category: Add New Roadway
   links:
   - A: 2562924
     B: 2625977
@@ -29,7 +27,7 @@ changes:
     bike_access: 0
     county: Alameda
     drive_access: 1
-    model_link_id: 3443533
+    model_link_id: 3443532
     rail_only: 0
     shstGeometryId: ''
     walk_access: 0
@@ -46,6 +44,3 @@ changes:
     osm_node_id: ''
     X: -122.147744
     Y: 37.6193308
-file: ./projects/year_2015_san_mateo_bridge_add_plaza_link.yml
-valid: false
-1: *id001

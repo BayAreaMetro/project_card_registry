@@ -107,7 +107,7 @@ nodes_used_by_geography:
     end: 2192948
   - geography_name: Alameda Network
     start: 2500000
-    end: 2625977
+    end: 2625976
   - geography_name: Contra Costa Network
     start: 3000000
     end: 3097286

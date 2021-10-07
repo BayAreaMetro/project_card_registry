@@ -2,3 +2,6 @@ type,id,project_added
 node,2625977,add san mateo bridge toll plaza
 link,3443532,add san mateo bridge toll plaza
 link,3443533,add san mateo bridge toll plaza
+node,5030001,add golden gate bridge toll plaza
+link,8084884,add golden gate bridge toll plaza
+link,8084885,add golden gate bridge toll plaza

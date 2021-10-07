@@ -62,8 +62,10 @@ def add_cards_to_registry(
 
                     if node_update or link_update:
                         if write_to_disk:
-                            card.__dict__.pop("file")
-                            card.__dict__.pop("valid")
+                            if "file" in card.__dict__:
+                                card.__dict__.pop("file")
+                            if "valid" in card.__dict__:
+                                card.__dict__.pop("valid")
                             card.write(filename=filename)
 
     return out_df

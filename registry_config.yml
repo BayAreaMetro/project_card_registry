@@ -122,7 +122,7 @@ nodes_used_by_geography:
     end: 4556145
   - geography_name: Marin Network
     start: 5000000
-    end: 5030001
+    end: 5030000
   - geography_name: San Joaquin Network
     start: 5150000
     end: 5300000

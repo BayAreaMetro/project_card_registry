@@ -30,3 +30,15 @@ Once a Project Card has been added to the registry, a user must do the following
 2. Open the `registry.csv` database in a text editor and delete the entries specific to the project we want to remove.
 3. Edit the subject Project Card.
 4. Commit the change to GitHub.
+
+### Dependicies Across Project Cards
+The registry software currently treats each Project Card independently. As such, if one Project Card adds a link and a second Project Card modifies the attribute of that link, the user is responsible to make sure the `model_link_id`s across the two cards align. To do this, we recommend:
+1. First create the Project Card to add the desired nodes and links.
+2. Upload this Project Card so that the nodes and link identifiers are registered in the registry and the Project Cards are updated. 
+3. Use the node and link identifiers in the registry for subsequent Project Cards that modify the attributes of these new node and links. 
+
+### Tips for Coding Projects
+When using the Project Card registry, using these tricks will make things easier:
+1. When creating a new roadway link, use the same `model_link_id` for each new link. Specifically, use the number that is one larger than the `end` value used in each county as defined in the `registry_config.yml`. For example, the `end` value used in San Francisco County is `133492`. Each new link added in San Francisco County should then have a `model_link_id` of `133493`. When Project Cards with this `model_link_id` are uploaded to this registry, the software will update the `model_link_id` to the next available number. 
+2. Similar to the above approach, when a new node is added, the user should use the next available node number per the county-specific rules. For example, a network node added in Sonoma County should use `4556146`, because the `end` network value used in the base network is `4556145`. If more than one node is added in a single Project Card, each should be incremented from one, starting with the next available number.
+

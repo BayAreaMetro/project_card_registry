@@ -17,7 +17,7 @@ changes:
   links:
   - A: 1028039
     B: 3541176
-    model_link_id: 5157454
+    model_link_id: 5157455
     lanes: 1
     ft: 99
     rail_only: 1
@@ -25,7 +25,7 @@ changes:
   links:
   - A: 1028039
     B: 1028040
-    model_link_id: 133493
+    model_link_id: 133511
     lanes: 1
     ft: 99
     rail_only: 1
@@ -33,7 +33,7 @@ changes:
   links:
   - A: 1028040
     B: 3541176
-    model_link_id: 5157454
+    model_link_id: 5157456
     lanes: 1
     ft: 99
     rail_only: 1

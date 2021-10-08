@@ -21,7 +21,7 @@ changes:
     B: 2154279
     bike_access: 1
     drive_access: 1
-    model_link_id: 2660008
+    model_link_id: 2660009
     rail_only: 0
     walk_access: 1
     lanes: 2
@@ -32,7 +32,7 @@ changes:
     B: 2129456
     bike_access: 1
     drive_access: 1
-    model_link_id: 2660008
+    model_link_id: 2660010
     rail_only: 0
     walk_access: 1
     lanes: 2
@@ -43,7 +43,7 @@ changes:
     B: 2137905
     bike_access: 1
     drive_access: 1
-    model_link_id: 2660008
+    model_link_id: 2660011
     rail_only: 0
     walk_access: 1
     lanes: 2

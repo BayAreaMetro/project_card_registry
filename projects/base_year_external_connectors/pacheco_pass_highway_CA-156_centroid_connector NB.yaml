@@ -1,5 +1,5 @@
 project: Year 2015 Add centroid connector at External Station connecting Pacheco Pass
-  Highway CA-152 SB
+  Highway CA-156 NB
 tags:
 - Year 2015
 - External Stations Review
@@ -7,8 +7,8 @@ dependencies: ''
 changes:
 - category: Add New Roadway
   links:
-  - A: 900014
-    B: 2013192
+  - A: 900015
+    B: 2192757
     model_link_id: 2660008
     lanes: 1
     ft: 8

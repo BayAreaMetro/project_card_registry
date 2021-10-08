@@ -1,4 +1,5 @@
-project: Year 2015 Add centroid connector at External Station connecting I-505 SB
+project: Year 2015 Add centroid connector at External Station connecting Pacheco Pass
+  Highway CA-152 SB
 tags:
 - Year 2015
 - External Stations Review
@@ -6,9 +7,9 @@ dependencies: ''
 changes:
 - category: Add New Roadway
   links:
-  - A: 900006
-    B: 3547305
-    model_link_id: 5157454
+  - A: 900014
+    B: 2013192
+    model_link_id: 2660007
     lanes: 1
     ft: 8
     bike_access: 0

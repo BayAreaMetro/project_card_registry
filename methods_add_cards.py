@@ -227,48 +227,49 @@ def _update_registry(
 
     subject_df = input_df[input_df["type"] == subject_word]
 
-    if card_dict["category"] == "New Roadway":
-        for subject_index, subject in enumerate(card_dict[nodes_or_links]):
-            new_id = subject[subject_id_word]
+    for change_category in card_dict["changes"]:
+        if change_category["category"] == "New Roadway":
+            for subject_index, subject in enumerate(card_dict[nodes_or_links]):
+                new_id = subject[subject_id_word]
 
-            _is_id_in_allowable_range(
-                subject_word, card_dict["project"], new_id, range_in_use
-            )
-            _is_id_used_in_base_network(
-                subject_word, card_dict["project"], new_id, range_in_use
-            )
-            if new_id not in subject_df["id"].values:
-                updates_df = pd.DataFrame(
-                    {
-                        "type": subject_word,
-                        "id": [new_id],
-                        "project_added": [card_dict["project"]],
-                    }
+                _is_id_in_allowable_range(
+                    subject_word, card_dict["project"], new_id, range_in_use
                 )
-                subject_df = subject_df.append(updates_df)
-            else:
-                number = _find_available_id(
-                    subject_word,
-                    card_dict["project"],
-                    new_id,
-                    range_in_use,
-                    subject_df,
+                _is_id_used_in_base_network(
+                    subject_word, card_dict["project"], new_id, range_in_use
                 )
-                card_dict[nodes_or_links][subject_index][subject_id_word] = number
-                if nodes_or_links == "nodes":
-                    for i in range(0, len(card_dict["links"])):
-                        if card_dict["links"][i]["A"] == new_id:
-                            card_dict["links"][i]["A"] = number
-                        if card_dict["links"][i]["B"] == new_id:
-                            card_dict["links"][i]["B"] = number
-                updates_df = pd.DataFrame(
-                    {
-                        "type": subject_word,
-                        "id": [number],
-                        "project_added": [card_dict["project"]],
-                    }
-                )
-                subject_df = subject_df.append(updates_df)
-                write_updated_card = True
+                if new_id not in subject_df["id"].values:
+                    updates_df = pd.DataFrame(
+                        {
+                            "type": subject_word,
+                            "id": [new_id],
+                            "project_added": [card_dict["project"]],
+                        }
+                    )
+                    subject_df = subject_df.append(updates_df)
+                else:
+                    number = _find_available_id(
+                        subject_word,
+                        card_dict["project"],
+                        new_id,
+                        range_in_use,
+                        subject_df,
+                    )
+                    card_dict[nodes_or_links][subject_index][subject_id_word] = number
+                    if nodes_or_links == "nodes":
+                        for i in range(0, len(card_dict["links"])):
+                            if card_dict["links"][i]["A"] == new_id:
+                                card_dict["links"][i]["A"] = number
+                            if card_dict["links"][i]["B"] == new_id:
+                                card_dict["links"][i]["B"] = number
+                    updates_df = pd.DataFrame(
+                        {
+                            "type": subject_word,
+                            "id": [number],
+                            "project_added": [card_dict["project"]],
+                        }
+                    )
+                    subject_df = subject_df.append(updates_df)
+                    write_updated_card = True
 
     return subject_df, write_updated_card, card_dict

@@ -1,0 +1,70 @@
+project: 2018_ALA130005_Dougherty_road_widening
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3191615
+      - 3192605
+      - 3013048
+      - 3057433
+  properties:
+  - existing: 1
+    set: 3
+    property: lanes
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3141758
+      - 3169996
+      - 3174941
+      - 3176544
+      - 3181112
+      - 3201756
+      - 3215957
+      - 3218200
+      - 3231709
+      - 3234385
+      - 3235515
+      - 3243072
+      - 3251457
+      - 3253381
+      - 3255185
+      - 3268664
+      - 3268753
+      - 3272611
+      - 3278659
+      - 3279326
+      - 3282842
+      - 3289182
+      - 3306095
+      - 3111861
+      - 3098840
+      - 3145350
+      - 3141758
+      - 3010354
+      - 3064206
+      - 3138126
+      - 3127323
+      - 3042553
+      - 3015443
+      - 3120023
+      - 3165743
+      - 3007236
+      - 3013399
+      - 3003763
+      - 3025630
+      - 3035757
+      - 3158226
+      - 3133918
+      - 3162147
+      - 3073133
+      - 3102596
+  properties:
+  - existing: 2
+    set: 3
+    property: lanes
+valid: false

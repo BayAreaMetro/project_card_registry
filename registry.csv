@@ -1,7 +1,61 @@
 type,id,project_added
-node,1005,Project A
-node,1006,Project A
-link,503,Project A
-node,1007,Project B
-node,1008,Project B
-link,504,Project B
+node,2625977,add san mateo bridge toll plaza
+link,3443532,add san mateo bridge toll plaza
+link,3443533,add san mateo bridge toll plaza
+node,5030001,add golden gate bridge toll plaza
+link,8084884,add golden gate bridge toll plaza
+link,8084885,add golden gate bridge toll plaza
+link,133493,move street rail to street connector links
+link,133494,move street rail to street connector links
+link,133495,move street rail to street connector links
+link,133496,move street rail to street connector links
+link,133497,move street rail to street connector links
+link,133498,move street rail to street connector links
+link,133499,move street rail to street connector links
+link,133500,move street rail to street connector links
+link,133501,move street rail to street connector links
+link,133502,move street rail to street connector links
+link,133503,move street rail to street connector links
+link,133504,move street rail to street connector links
+link,133505,move street rail to street connector links
+link,133506,move street rail to street connector links
+link,133507,move street rail to street connector links
+link,133508,move street rail to street connector links
+link,133509,move street rail to street connector links
+link,133510,move street rail to street connector links
+link,3443534,sf bay ferry missing link
+link,3443535,sf bay ferry missing link
+link,3443536,sf bay ferry missing link
+link,3443537,sf bay ferry missing link
+link,5157454,sf bay ferry vallejo missing link
+link,5157455,sf bay ferry vallejo missing link
+link,133511,sf bay ferry vallejo missing link
+link,5157456,sf bay ferry vallejo missing link
+link,4326618,Year 2015 Add centroid connector at External Station connecting Antioch Bridge CA-160 SB
+link,4326619,Year 2015 Add centroid connector at External Station connecting Antioch Bridge CA-160 NB
+link,2660008,year 2015 pacheco pass highway missing segments
+link,2660009,year 2015 pacheco pass highway missing segments
+link,2660010,year 2015 pacheco pass highway missing segments
+link,2660011,year 2015 pacheco pass highway missing segments
+link,1203882,Year 2015 Add centroid connector at External Station connecting Cabrillo Highway CA-1 NB
+link,1203883,Year 2015 Add centroid connector at External Station connecting Cabrillo Highway CA-1 SB
+link,7178792,Year 2015 Add centroid connector at External Station connecting Geysers Road SB
+link,7178793,Year 2015 Add centroid connector at External Station connecting Geysers Road NB
+link,2660012,Year 2015 Add centroid connector at External Station connecting Pacheco Pass Highway CA-152 NB
+link,5157457,Year 2015 Add centroid connector at External Station connecting I-505 SB
+link,5157458,Year 2015 Add centroid connector at External Station connecting I-505 NB
+link,2660013,Year 2015 Add centroid connector at External Station connecting Pacheco Pass Highway CA-156 NB
+link,2660014,Year 2015 Add centroid connector at External Station connecting Pacheco Pass Highway CA-156 SB
+link,2660015,Year 2015 Add centroid connector at External Station connecting Pacheco Pass Highway CA-152 SB
+link,7178794,Year 2015 Add centroid connector at External Station connecting Redwood Highway US-101 SB
+link,2660016,Year 2015 Add centroid connector at External Station connecting Santa Cruz Highway CA-17 NB
+link,7178795,Year 2015 Add centroid connector at External Station connecting Redwood Highway US-101 NB
+link,2660017,Year 2015 Add centroid connector at External Station connecting Santa Cruz Highway CA-17 SB
+link,2660018,Year 2015 Add centroid connector at External Station connecting South Valley Freeway US-101 SB
+link,2660019,Year 2015 Add centroid connector at External Station connecting South Valley Freeway US-101 NB
+link,2660020,Year 2015 Add centroid connector at External Station connecting Skyline Boulevard CA-35 NB
+link,2660021,Year 2015 Add centroid connector at External Station connecting Skyline Boulevard CA-35 SB
+link,3443538,Year 2015 Add centroid connector at External Station connecting William Elton Brown Freeway I-580 NB
+link,5157459,Year 2015 Add centroid connector at External Station connecting Vic Fazio Freeway CA-113 SB
+link,5157460,Year 2015 Add centroid connector at External Station connecting Vic Fazio Highway CA-113 NB
+link,3443539,Year 2015 Add centroid connector at External Station connecting William Elton Brown Freeway I-580 SB

@@ -7,3 +7,4 @@ src/*
 __pycache__/*
 example/.ipynb_checkpoints/*
 temp_registry.csv
+temporary_project_card_archive/*

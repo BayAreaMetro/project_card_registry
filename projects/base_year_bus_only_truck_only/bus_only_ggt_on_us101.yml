@@ -1,0 +1,56 @@
+project: Year 2015 Bus Only Segments for Golden Gate Transit on US 101
+tags:
+- Year 2015
+- Bus Only
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 8000037
+      - 8000332
+      - 8001646
+      - 8001757
+      - 8002545
+      - 8002788
+      - 8002879
+      - 8005651
+      - 8005839
+      - 8006663
+      - 8007466
+      - 8007989
+      - 8011039
+      - 8011194
+      - 8011277
+      - 8011840
+      - 8011861
+      - 8012001
+      - 8012215
+      - 8013860
+      - 8014412
+      - 8016154
+      - 8016540
+      - 8018555
+      - 8018969
+      - 8021507
+      - 8022179
+      - 8025867
+      - 8026190
+      - 8027729
+      - 8029339
+      - 8030583
+      - 8030605
+      - 8032084
+      - 8032827
+  properties:
+  - property: drive_access
+    set: 0
+  - property: bus_only
+    set: 1
+  - property: walk_access
+    set: 1
+  - property: transit_access
+    set: 1
+  - property: bike_access
+    set: 1

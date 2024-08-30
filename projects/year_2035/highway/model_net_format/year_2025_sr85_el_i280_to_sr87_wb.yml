@@ -1,0 +1,41 @@
+project: Year 2030 SR 85 Express Lanes I-280 Interchange to SR87 - WB
+tags:
+- Year 2030
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12189176
+      - 12023244
+      - 12040515
+      - 12042514
+      - 12201490
+      - 12051959
+      - 12058195
+      - 12063792
+      - 12086866
+      - 12088586
+      - 12101107
+      - 12118943
+      - 12130088
+      - 12145016
+      - 12146950
+      - 12182626
+      - 12205687
+      - 12211008
+      - 12224098
+      - 12224623
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 854
+  - property: tollseg
+    set: 0

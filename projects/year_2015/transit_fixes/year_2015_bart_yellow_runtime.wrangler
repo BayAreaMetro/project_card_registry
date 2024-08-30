@@ -1,0 +1,75 @@
+---
+project: Year 2015 BART Yello Line EA and AM Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 154
+
+################
+# AM westbound #
+################
+shape_id = 404
+trip_id = 5877
+ref_trip_id = 5781
+
+# get stop_id_list and arrival_time_list from reference trip
+ref_stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] == str(ref_trip_id)]
+ref_stop_sequence_list = list(range(1, len(ref_stop_times) + 1))
+ref_stop_id_list = ref_stop_times['stop_id'].tolist()
+ref_arrival_time_list = ref_stop_times['arrival_time'].tolist()
+
+# remove old stop_times record
+self.feed.stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] != str(trip_id)]
+
+# add new stop_times record based on reference info
+stop_sequence_list = ref_stop_sequence_list
+stop_id_list = ref_stop_id_list
+arrival_time_list = ref_arrival_time_list
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+df = pd.DataFrame({
+    "trip_id": [trip_id] * len(stop_id_list),
+    "stop_sequence": stop_sequence_list,
+    "arrival_time": arrival_time_list,
+    "departure_time": departure_time_list,
+    "stop_id": stop_id_list
+})
+add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+
+################
+# EA eastbound #
+################
+shape_id = 405
+trip_id = 5782
+ref_trip_id = 6296
+
+# get stop_id_list and arrival_time_list from reference trip
+ref_stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] == str(ref_trip_id)]
+ref_stop_sequence_list = list(range(1, len(ref_stop_times) + 1))
+ref_stop_id_list = ref_stop_times['stop_id'].tolist()
+ref_arrival_time_list = ref_stop_times['arrival_time'].tolist()
+
+# remove old stop_times record
+self.feed.stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] != str(trip_id)]
+
+# add new stop_times record based on reference info
+stop_sequence_list = ref_stop_sequence_list
+stop_id_list = ref_stop_id_list
+arrival_time_list = ref_arrival_time_list
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+df = pd.DataFrame({
+    "trip_id": [trip_id] * len(stop_id_list),
+    "stop_sequence": stop_sequence_list,
+    "arrival_time": arrival_time_list,
+    "departure_time": departure_time_list,
+    "stop_id": stop_id_list
+})
+add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)

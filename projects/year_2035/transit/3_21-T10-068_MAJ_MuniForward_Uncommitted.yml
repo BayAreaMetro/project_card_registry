@@ -1,0 +1,63 @@
+project: 3_21-T10-068_MAJ_MuniForward_Uncommitted
+tags: 
+- 'change headway'
+- 'Service Frequency Boost'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21076'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '14853'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '14932'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '14796'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '14930'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '21073'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21097'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '14813'
+  properties:
+  - set: 600.0
+    property: headway_secs
+valid: false

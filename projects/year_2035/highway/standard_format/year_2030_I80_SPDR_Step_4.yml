@@ -1,0 +1,39 @@
+project: I80 San Pablo Dam Road Interchange Improvements Riverside Ave Ped Overcrossing, RTP ID 21-T06-013
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4162595
+      - 4101083
+  properties:
+  - property: drive_access
+    set: 0
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1
+- category: Roadway Deletion
+  links:
+    model_link_id:
+      - 4062126
+      - 4204661
+      - 4231851
+      - 4065924
+      - 4124416
+      - 4223503
+      - 4201206
+      - 4087771
+      - 4222217
+      - 4110640
+      - 4080108
+      - 4229988
+      - 4089457
+      - 4165594
+      - 4207335
+      - 4104946
+      - 4040030
+      - 4155928

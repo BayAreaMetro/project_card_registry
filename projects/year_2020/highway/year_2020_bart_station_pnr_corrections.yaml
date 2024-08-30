@@ -1,0 +1,307 @@
+project: PNR Connections to BART Stations
+tags:
+- Year 2020
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 2018745
+    B: 9550801
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660022
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 9550801
+    B: 2018745
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660023
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 200700
+    B: 2018745
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660024
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2018745
+    B: 200700
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660025
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2008203
+    B: 9550800
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660026
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 9550800
+    B: 2008203
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660027
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 201079
+    B: 2008203
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660028
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2008203
+    B: 201079
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660029
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300049
+    B: 2625947
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660030
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 2625947
+    B: 5300049
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660031
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 2625948
+    B: 5300050
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660032
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300050
+    B: 2625948
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660033
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 331048
+    B: 5300050
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660034
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300050
+    B: 331048
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660035
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300051
+    B: 2625949
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660036
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2625949
+    B: 5300051
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    model_link_id: 2660037
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2578390
+    B: 5300034
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660038
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300034
+    B: 2578390
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660039
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2604916
+    B: 5300034
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660040
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300034
+    B: 2604916
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660041
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2562808
+    B: 5300034
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660042
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300034
+    B: 2562808
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660043
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2567143
+    B: 5300034
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660044
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 5300034
+    B: 2567143
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660045
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2567143
+    B: 2625959
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660046
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2625959
+    B: 2567143
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660047
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2582620
+    B: 2578390
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660048
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2578390
+    B: 2582620
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660049
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2597970
+    B: 2582620
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660050
+    assignable: 1
+    bus_only: 0
+    ft: 8
+  - A: 2582620
+    B: 2597970
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 1
+    model_link_id: 2660051
+    assignable: 1
+    bus_only: 0
+    ft: 8

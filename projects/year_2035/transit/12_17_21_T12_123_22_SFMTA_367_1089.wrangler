@@ -1,0 +1,79 @@
+---
+project: 12_17_21_T12_123_22_SFMTA_367_1089
+category: Add Transit
+tags: 
+  - 'Express bus service expansion along US-101 and I-280'
+---
+
+# this wrangler card adds 1 d0 EV trip, 1 d1 EA trip, updates the headway of existing trips
+# update AM pickup and drop-off type
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+self.feed.stop_times.loc[((self.feed.stop_times['stop_id'].astype(int).isin([stop_id_xref_dict[1004327]]))&
+                          (self.feed.stop_times['trip_id'].astype(int)==20165)), 'drop_off_type'] = 1
+self.feed.stop_times.loc[((self.feed.stop_times['stop_id'].astype(int).isin([stop_id_xref_dict[1004327]]))&
+                          (self.feed.stop_times['trip_id'].astype(int)==20165)), 'pickup_type'] = 1
+
+# update AM headway
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20165, 'headway_secs'] = 600
+
+# update PM headway
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==21166, 'headway_secs'] = 600
+
+# update MD headway
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20173, 'headway_secs'] = 900
+
+# add direction 1 EA
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : ["367"],
+   "direction_id" : [1],
+   "trip_id" : [max_trip_id+1],
+   "shape_id" : ["1089"],
+   "agency_raw_name" : ["SFMTA_2015_8_11"]
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop_time
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==20165].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==20165, "trip_id"] = max_trip_id+1
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : [max_trip_id+1],
+   "headway_secs" : [900],
+   "start_time" : [10800],
+   "end_time" : [21600]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+
+# add direction 0 EV
+add_trips_df = pd.DataFrame(
+  {"route_id" : ["367"],
+   "direction_id" : [0],
+   "trip_id" : [max_trip_id+2],
+   "shape_id" : ["1088"],
+   "agency_raw_name" : ["SFMTA_2015_8_11"]
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop_time
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==21166].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==21166, "trip_id"] = max_trip_id+2
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : [max_trip_id+2],
+   "headway_secs" : [900],
+   "start_time" : [68400],
+   "end_time" : [10800]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

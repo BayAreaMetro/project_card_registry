@@ -1,0 +1,12 @@
+project: I680/SR262 Interchange improvements Step 1 (Remove ramps), RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+      - 3140958
+      - 3062921
+      - 3075226
+      - 3030565

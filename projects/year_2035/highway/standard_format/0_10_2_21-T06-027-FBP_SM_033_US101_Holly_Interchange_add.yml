@@ -1,0 +1,95 @@
+project: 0_10_2_21-T06-027-FBP_SM_033_US101_Holly_Interchange_add
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - lanes: 2.0
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 1
+    tollseg: 0
+    model_link_id: 2700040
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900032
+    B: 2900033
+  - lanes: 7.0
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 1
+    tollseg: 0
+    model_link_id: 2700041
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900032
+    B: 1538956
+  - lanes: 7.0
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 1
+    tollseg: 0
+    model_link_id: 2700042
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900033
+    B: 1537738
+  - ft: 6
+    lanes: 7.0
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 1
+    tollseg: 0
+    model_link_id: 2700043
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 1537738
+    B: 2900033
+  - ft: 6
+    lanes: 7.0
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 1
+    tollseg: 0
+    model_link_id: 2700044
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 1538956
+    B: 2900032
+  nodes:
+  - Y: 37.5142131492409
+    X: -122.25568272865664
+    model_node_id: 2900032
+  - Y: 37.5140023654003
+    X: -122.25573644151716
+    model_node_id: 2900033

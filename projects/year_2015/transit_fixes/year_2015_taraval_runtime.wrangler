@@ -1,0 +1,20 @@
+---
+project: Year 2015 L Taraval Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 379
+shape_id = 1101
+trip_id_list = ['21532', '21515', '21490', '21766', '21587']
+target_runtime = 32.17 # in min
+
+# update arrival_time and departure_time of the last stop in stop_times
+for trip_id in trip_id_list:
+    stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] == trip_id]
+    max_stop_sequence = stop_times["stop_sequence"].max()
+    self.feed.stop_times.loc[(self.feed.stop_times["trip_id"] == trip_id) & (self.feed.stop_times["stop_sequence"] == max_stop_sequence), "arrival_time"] = target_runtime * 60
+    self.feed.stop_times.loc[(self.feed.stop_times["trip_id"] == trip_id) & (self.feed.stop_times["stop_sequence"] == max_stop_sequence), "departure_time"] = target_runtime * 60

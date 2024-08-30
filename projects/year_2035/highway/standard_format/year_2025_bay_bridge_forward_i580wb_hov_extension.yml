@@ -1,0 +1,33 @@
+project: Year 2025 Bay Bridge Forward Alameda I-580 WB HOV Lane Extension
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      -  3046612
+      -  3056545
+      -  3065824
+  properties:
+  - property: lanes
+    change: -1
+  - property: ML_lanes
+    set: 1
+  - property: ML_useclass
+    set: 2
+  - property: ML_tollbooth
+    set: 0
+  - property: ML_tollseg
+    set: 0
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: useclass
+    set: 2
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

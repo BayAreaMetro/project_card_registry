@@ -1,0 +1,51 @@
+project: SR262 improvements Step 6 (Widen Mohave Dr to two lanes in each direction),
+  RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3036762
+      - 3238385
+      - 3233224
+      - 3136062
+  properties:
+  - property: lanes
+    set: 2
+- category: Add New Roadway
+  links:
+  - A: 2554300
+    B: 2626023
+    model_link_id: 3443612
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626023
+    B: 2554300
+    model_link_id: 3443613
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626023
+    B: 2525292
+    model_link_id: 3443614
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2525292
+    B: 2626023
+    model_link_id: 3443615
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2

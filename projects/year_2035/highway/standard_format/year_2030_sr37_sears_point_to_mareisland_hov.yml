@@ -1,0 +1,36 @@
+project: Year 2030 SR-37 Interim Project Sears Point to Mare Island
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 5006639
+      -  5012955
+      -  5013617
+      -  5054383
+      -  5043376
+      -  5023004
+      -  5054349
+      -  7064104
+      -  7014464
+      -  7024197
+      -  5043118
+      -  7068530
+  properties:
+  - property: lanes
+    change: -1
+  - property: ML_tollbooth
+    set: 0
+  - property: ML_tollseg
+    set: 0
+  - property: ML_lanes
+    set: 1
+  - property: ML_useclass
+    set: 2
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

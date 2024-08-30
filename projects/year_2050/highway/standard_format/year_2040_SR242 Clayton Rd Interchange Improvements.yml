@@ -1,0 +1,73 @@
+project: SR 242/Clayton Rd Interchange Improvements, RTP ID 21-T06-045
+tags:
+- Year 2040
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 4084570
+    - 4019139
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626011
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.04629
+    Y: 37.97198
+  - model_node_id: 2626012
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.0467
+    Y: 37.97205
+  links:
+  - A: 3023611
+    B: 2626011
+    model_link_id: 3443582
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 1
+    lanes: 3
+  - A: 2626011
+    B: 3020340
+    model_link_id: 3443583
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 1
+    lanes: 3
+  - A: 3027644
+    B: 2626011
+    model_link_id: 3443584
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626012
+    B: 3020153
+    model_link_id: 3443585
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+  - A: 3018518
+    B: 2626012
+    model_link_id: 3443586
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+  - A: 2626012
+    B: 3077291
+    model_link_id: 3443587
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1

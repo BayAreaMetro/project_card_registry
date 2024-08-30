@@ -1,0 +1,50 @@
+project:  I680 Express Lanes NB SR262/Automall Pkwy to SR237/Calaveras Blvd, New express lane construction, RTP ID 21-T12-116
+tags:
+- Year 2042
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2023518
+      - 2185456
+      - 2120842
+      - 3090532
+      - 3107437
+      - 3007963
+      - 3034089
+  properties:
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 9999
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+  - property: ML_tollbooth
+    set: 24
+  - property: ML_tollseg
+    set: 1
+

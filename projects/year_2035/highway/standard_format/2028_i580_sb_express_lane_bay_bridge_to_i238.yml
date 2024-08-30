@@ -1,0 +1,86 @@
+project: Year 2028 Express Lane on I-580 SB from Bay Bridge to I-238
+tags:
+- Year 2028
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3054439
+      - 3006134
+      - 3047681
+      - 3008376
+      - 3132261
+      - 3028889
+      - 3073961
+      - 3021388
+      - 3038474
+      - 3027505
+      - 3067531
+      - 3030464
+      - 3083339
+      - 3036589
+      - 3042365
+      - 3044251
+      - 3044633
+      - 3054320
+      - 3055506
+      - 3056191
+      - 3062514
+      - 3167602
+      - 3146244
+      - 3085119
+      - 3086057
+      - 3086129
+      - 3105772
+      - 3090414
+      - 3100108
+      - 3105531
+      - 3155577
+      - 3127329
+      - 3128651
+      - 3149290
+      - 3149920
+      - 3150901
+      - 3151587
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 222
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

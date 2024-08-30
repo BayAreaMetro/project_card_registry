@@ -1,0 +1,26 @@
+project: Hercules Intercity Rail Station
+tags:
+- year 2030
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 3051205
+    B: 2910001
+    model_link_id: 4900015
+    drive_access: 0
+    walk_access: 1
+    bike_access: 1
+  - A: 2910001
+    B: 3051205
+    model_link_id: 4900016
+    drive_access: 0
+    walk_access: 1
+    bike_access: 1
+  nodes:
+  - drive_access: 1
+    walk_access: 1
+    Y: 38.02133
+    rail_only: 0
+    X: -122.28846
+    model_node_id: 2910001

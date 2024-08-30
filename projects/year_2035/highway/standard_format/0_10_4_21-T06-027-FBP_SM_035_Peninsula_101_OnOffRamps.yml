@@ -1,0 +1,77 @@
+project: 0_10_4_21-T06-027-FBP_SM_035_Peninsula_101_OnOffRamps
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - bike_access: 1
+    bus_only: 0
+    walk_access: 1
+    tollseg: 0
+    transit_access: 0.0
+    drive_access: 1
+    assignable: 1
+    tollbooth: 0
+    lanes: 1.0
+    shstGeometryId: ''
+    county: San Mateo
+    model_link_id: 2700006
+    A: 1506908
+    B: 2900001
+  - bike_access: 1
+    bus_only: 0
+    walk_access: 1
+    tollseg: 0
+    transit_access: 0.0
+    drive_access: 1
+    assignable: 1
+    tollbooth: 0
+    lanes: 1.0
+    shstGeometryId: ''
+    county: San Mateo
+    model_link_id: 2700007
+    A: 2900000
+    B: 1522697
+  - bike_access: 0
+    bus_only: 0
+    walk_access: 0
+    tollseg: 0
+    transit_access: 0.0
+    drive_access: 1
+    assignable: 1
+    tollbooth: 99
+    lanes: 1
+    shstGeometryId: null
+    county: San Mateo
+    model_link_id: 2700008
+    A: 2900001
+    B: 1512814
+  - bike_access: 0
+    bus_only: 0
+    walk_access: 0
+    tollseg: 0
+    transit_access: 0.0
+    drive_access: 1
+    assignable: 1
+    tollbooth: 0
+    lanes: 1
+    shstGeometryId: null
+    county: San Mateo
+    model_link_id: 2700009
+    A: 1545450
+    B: 2900000
+  nodes:
+  - bike_access: 0
+    drive_access: 0
+    walk_access: 0
+    Y: 37.58468607374194
+    rail_only: 0
+    X: -122.32914491154384
+    model_node_id: 2900000
+  - bike_access: 0
+    drive_access: 0
+    walk_access: 0
+    Y: 37.58377451378082
+    rail_only: 0
+    X: -122.32815674871479
+    model_node_id: 2900001

@@ -1,0 +1,49 @@
+---
+project: Year 2015 Catro Shuttle PM Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 378
+shape_id = 1105
+trip_id = 21841
+target_runtime = 29.67 # in min
+
+# calculate length of stop sequence
+# the only change will be stop_times, so the length of stop sequence will be the same
+old_stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] == str(trip_id)]
+stop_sequence_list = list(range(1, len(old_stop_times) + 1))
+# get stop_id_list
+stop_id_list = old_stop_times['stop_id'].tolist()
+
+# calculate runtime adjustment ratio
+runtime_ratio = (target_runtime * 60) / old_stop_times['arrival_time'].max()
+
+# calculate new arrival_time
+old_arrival_time_list = old_stop_times['arrival_time'].tolist()
+arrival_time_list = []
+for x in old_arrival_time_list:
+    if x is None:
+        arrival_time_list.append(x)
+    else:
+        adjusted_x = int(x * runtime_ratio)
+        arrival_time_list.append(adjusted_x)
+departure_time_list = arrival_time_list
+
+# remove old stop_times record
+self.feed.stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] != str(trip_id)]
+
+# add new stop times
+add_stop_times_df = []
+df = pd.DataFrame({
+    "trip_id": [trip_id] * len(stop_id_list),
+    "stop_sequence": stop_sequence_list,
+    "arrival_time": arrival_time_list,
+    "departure_time": departure_time_list,
+    "stop_id": stop_id_list
+})
+add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)

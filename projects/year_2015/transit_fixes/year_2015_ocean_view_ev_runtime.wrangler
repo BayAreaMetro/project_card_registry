@@ -1,0 +1,19 @@
+---
+project: Year 2015 M Ocean View EV Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 380
+shape_id = 1102
+trip_id = '21878'
+target_runtime = 23.38 # in min
+
+# update arrival_time and departure_time of the last stop in stop_times
+stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'] == trip_id]
+max_stop_sequence = stop_times["stop_sequence"].max()
+self.feed.stop_times.loc[(self.feed.stop_times["trip_id"] == trip_id) & (self.feed.stop_times["stop_sequence"] == max_stop_sequence), "arrival_time"] = target_runtime * 60
+self.feed.stop_times.loc[(self.feed.stop_times["trip_id"] == trip_id) & (self.feed.stop_times["stop_sequence"] == max_stop_sequence), "departure_time"] = target_runtime * 60

@@ -1,0 +1,22 @@
+# This removes managed lane connectors for nodes which should not have access/egress
+# This is one of two segments identified for the I-680 CC Express Lanes
+# which has a segment of restricted access/egress.
+project: I-680 Contra Costa Express Lanes SB Remove Connectors Rudgear Rd to Stone Valley
+tags:
+- Year 2019
+- Roadway Deletion
+- toll review
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+      - 18019135
+      - 18054143
+      - 18186663
+      - 18179955
+      - 18197991
+      - 18179956
+      - 18186664
+      - 18019136
+      - 18197992

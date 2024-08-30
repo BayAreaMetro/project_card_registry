@@ -1,0 +1,23 @@
+project: 2_5_16_21_T11-98-MAJ_RedwoodCity_SF_Ferry_add_ferry_link
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - bus_only: 0
+    rail_only: 0
+    transit_access: 1.0
+    model_link_id: 2700051
+    A: 1028039
+    B: 2900006
+  - bus_only: 0
+    rail_only: 0
+    transit_access: 1.0
+    model_link_id: 2700052
+    A: 2900006
+    B: 1028039
+  nodes:
+  - Y: 37.51659261338181
+    rail_only: 0
+    X: -122.20482366619228
+    model_node_id: 2900006

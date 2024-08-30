@@ -1,0 +1,87 @@
+project: Add Centroid Connectors
+tags:
+- add centroid connectors
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 8100058
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 401490
+    B: 3060481
+  - model_link_id: 8100059
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 3060481
+    B: 401490
+  - model_link_id: 8100060
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 400731
+    B: 3007125
+  - model_link_id: 8100061
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 3007125
+    B: 400731
+  - model_link_id: 8100062
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 401406
+    B: 3068377
+  - model_link_id: 8100063
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 3068377
+    B: 401406
+  - model_link_id: 8100064
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 401186
+    B: 3019445
+  - model_link_id: 8100065
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 3019445
+    B: 401186
+  - model_link_id: 8100066
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 400673
+    B: 3065088
+  - model_link_id: 8100067
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 1
+    A: 3065088
+    B: 400673

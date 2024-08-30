@@ -1,0 +1,160 @@
+project: Year 2030 I-680 Express Lanes from SR84 to Alcosta Boulevard
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3036037
+      - 4026985
+      - 3163119
+      - 3052105
+      - 3059935
+      - 3067016
+      - 3071655
+      - 3079507
+      - 3121773
+      - 3089791
+      - 3096622
+      - 3106229
+      - 3107103
+      - 3128027
+      - 3161537
+      - 3167357
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '10:00'
+      - '15:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_tollbooth
+    set: 35
+  - property: ML_tollseg
+    set: 1
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3000866
+      - 3011213
+      - 3040983
+      - 3057906
+      - 3019208
+      - 3047941
+      - 3026673
+      - 3050471
+      - 3057358
+      - 3058016
+      - 3155210
+      - 3066038
+      - 3083650
+      - 3087440
+      - 3096617
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '10:00'
+      - '15:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_tollbooth
+    set: 36
+  - property: ML_tollseg
+    set: 1
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 2
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

@@ -1,0 +1,11 @@
+---
+project: 0_06_SR-237 Corridor Improvement 21-T06-043
+category: Calculated Roadway
+tags: 
+  - 'SR-237 Corridor Improvement'
+---
+
+self.links_df.loc[self.links_df['model_link_id'].isin([2168765,2244507,2225072]), 'lanes'] = 3
+self.links_df.loc[self.links_df['model_link_id'].isin([2101822]), 'lanes'] = 4
+self.links_df.loc[self.links_df['model_link_id'].isin([2139185,2251571]), 'lanes'] = 4
+self.links_df.loc[self.links_df['model_link_id'].isin([2018544]), 'lanes'] = 3

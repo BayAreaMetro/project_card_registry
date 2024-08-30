@@ -1,0 +1,66 @@
+project: BART_2036_Berryessa_to_Santa_Clara_add_rail_link
+tags:
+- add transit link
+dependencies:
+  prerequisites:
+  - BART_2020_Fremont_to_Berryessa_add_rail_link
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700140
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900023
+    B: 2900026
+  - model_link_id: 2700141
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900026
+    B: 2900023
+  - model_link_id: 2700142
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900026
+    B: 2900027
+  - model_link_id: 2700143
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900027
+    B: 2900026
+  - model_link_id: 2700144
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900028
+    B: 2900027
+  - model_link_id: 2700145
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900027
+    B: 2900028
+  - model_link_id: 2700146
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900029
+    B: 2900028
+  - model_link_id: 2700147
+    rail_only: 1
+    transit_access: 1.0
+    A: 2900028
+    B: 2900029
+  nodes:
+  - X: -121.86787579822288
+    rail_only: 1
+    Y: 37.352261442939735
+    model_node_id: 2900026
+  - X: -121.89038648425782
+    rail_only: 1
+    Y: 37.33619664363269
+    model_node_id: 2900027
+  - X: -121.9025025782296
+    rail_only: 1
+    Y: 37.327820730322856
+    model_node_id: 2900028
+  - X: -121.94324755187488
+    rail_only: 1
+    Y: 37.35604259242026
+    model_node_id: 2900029

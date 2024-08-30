@@ -1,0 +1,13 @@
+project: I880 Winton Avenue Interchange Improvements Step 2 (Widen SB diagonal off-ramp to provide a 2-lane off ramp), RTP ID 21-T06-024
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3068198
+  properties:
+  - property: lanes
+    set: 2

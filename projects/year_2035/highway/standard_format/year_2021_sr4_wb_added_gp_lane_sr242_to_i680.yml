@@ -1,0 +1,26 @@
+project: I-680/SR 4 Phase 3 Project to add WB and EB GP lanes.
+tags:
+- Year 2021
+- GP Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4000063
+      - 4001386
+      - 4022743
+      - 4034720
+      - 4058698
+      - 4000985
+      - 4124133
+      - 4023963
+      - 4099903
+      - 4121448
+      - 4102565
+      - 4121834
+      - 4121448
+  properties:
+  - property: lanes
+    set: 3

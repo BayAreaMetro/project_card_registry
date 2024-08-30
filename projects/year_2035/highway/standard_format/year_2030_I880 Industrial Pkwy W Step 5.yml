@@ -1,0 +1,21 @@
+project: I880 Industrial Parkway West Step 5 (widen the overcrossing structure - 3 lanes in westbound and 2 lanes in eastbound direction), RTP ID 21-T06-024
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3083620
+  properties:
+  - property: lanes
+    set: 3
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3056707
+  properties:
+  - property: lanes
+    set: 2

@@ -1,0 +1,112 @@
+project: Add EBART Rail links and connections to the network
+tags:
+- add transit link
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 3097287
+    rail_only: 1
+    X: -121.88909847052751
+    Y: 38.01685826520999
+  - model_node_id: 3097288
+    rail_only: 1
+    X: -121.78043116127834
+    Y: 37.995410520067416
+  links:
+  - model_link_id: 4326620
+    rail_only: 1
+    transit_access: 1
+    A: 3097273
+    B: 3097287
+  - model_link_id: 4326621
+    rail_only: 1
+    transit_access: 1
+    A: 3097287
+    B: 3097288
+  - model_link_id: 4326622
+    rail_only: 1
+    transit_access: 1
+    A: 3097288
+    B: 3097287
+  - model_link_id: 4326623
+    rail_only: 1
+    transit_access: 1
+    A: 3097287
+    B: 3097273
+  - model_link_id: 4326624
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3097288
+    B: 3090653
+  - model_link_id: 4326625
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3090653
+    B: 3097288
+  - model_link_id: 4326626
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3097288
+    B: 3068235
+  - model_link_id: 4326627
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3068235
+    B: 3097288
+  - model_link_id: 4326628
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3097287
+    B: 3072085
+  - model_link_id: 4326629
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3072085
+    B: 3097287
+  - model_link_id: 4326630
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 5300040
+    B: 3097273
+  - model_link_id: 4326631
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 3097273
+    B: 5300040
+  - model_link_id: 4326632
+    drive_access: 1
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 5300040
+    B: 401665
+  - model_link_id: 4326633
+    drive_access: 1
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 401665
+    B: 5300040
+  - model_link_id: 4326634
+    drive_access: 1
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 9550799
+    B: 2532373
+  - model_link_id: 4326635
+    drive_access: 1
+    walk_access: 1
+    lanes: 1
+    transit_access: 1
+    A: 2532373
+    B: 9550799

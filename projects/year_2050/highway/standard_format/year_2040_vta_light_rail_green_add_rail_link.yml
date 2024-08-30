@@ -1,0 +1,73 @@
+project: Year 2040 Add VTA Green Light Rail links for Extention to Vasona Junction
+tags:
+- 'add transit link'
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  # Hacienda
+  - model_node_id: 2192953
+    rail_only: 1
+    X: -121.95608465043298
+    Y: 37.26901497268895
+  # Vasona Junction
+  - model_node_id: 2192954
+    rail_only: 1
+    X: -121.96364420618295
+    Y: 37.25911472818778
+  links:
+  # NB Vasona Junction to Hacienda
+  - model_link_id: 2700132
+    rail_only: 1
+    transit_access: 1
+    A: 2192954
+    B: 2192953
+  # NB Hacienda to Winchester
+  - model_link_id: 2700133
+    rail_only: 1
+    transit_access: 1
+    A: 2192953
+    B: 2192900
+  # SB Winchester to Hacienda
+  - model_link_id: 2700134
+    rail_only: 1
+    transit_access: 1
+    A: 2192945
+    B: 2192953
+  # SB Hacienda to Vasona Junction
+  - model_link_id: 2700135
+    rail_only: 1
+    transit_access: 1
+    A: 2192953
+    B: 2192954
+  # walk to rail links for node 2192953
+  - model_link_id: 2700136
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2192953
+    B: 2060481
+  - model_link_id: 2700137
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2060481
+    B: 2192953
+  # walk to rail links for node 2192954
+  - model_link_id: 2700138
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    cntype: ped
+    A: 2192954
+    B: 2162416
+  - model_link_id: 2700139
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2162416
+    B: 2192954

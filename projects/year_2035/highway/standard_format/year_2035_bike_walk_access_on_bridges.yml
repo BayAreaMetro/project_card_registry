@@ -1,0 +1,41 @@
+project: Year 2035 Bike and Walk Access on Golden Gate, Dumberton, ANtioch, Bay Bridge East Span, San Rafael Bridges
+tags:
+- Year 2035
+- Walk Access
+- Bike Access
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1016795
+      - 4074386
+      - 4062186
+  properties:
+  - property: lanes
+    change: 0
+  - property: ML_lanes
+    set: 1
+  - property: ML_tollbooth
+    set: 0
+  - property: ML_useclass
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      -  4041747
+  properties:
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1

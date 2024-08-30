@@ -1,0 +1,35 @@
+project: Year 2038 Express Lane on I-280 EB from Magdalena Ave to Leland Ave
+tags:
+- Year 2038
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12093779
+      - 12141190
+      - 12259400
+      - 12195073
+      - 12229490
+      - 12153430
+      - 12239368
+      - 12139319
+      - 12021491
+      - 12061036
+      - 12080471
+      - 12238191
+      - 12202112
+      - 12119425
+      - 12200582
+      - 12010212
+      - 12189752
+      - 12090321
+      - 12095925
+      - 12268315
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_PM
+    set: 4
+

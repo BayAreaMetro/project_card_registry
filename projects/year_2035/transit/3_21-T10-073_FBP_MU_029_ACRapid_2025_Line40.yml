@@ -1,0 +1,49 @@
+project: 3_21-T10-073_FBP_MU_029_ACRapid_2025_Line40
+tags: 
+- 'change headway'
+- 'rapid transit improvements'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '3231'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '3243'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '3258'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '3327'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '3339'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '3354'
+  properties:
+  - set: 360.0
+    property: headway_secs
+valid: false

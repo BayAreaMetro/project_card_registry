@@ -1,0 +1,447 @@
+project: 4_21-T10-068_SFMTA_LocalBusServiceBoost_change_hdw
+tags: 
+- 'change headway'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '13881'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '13811'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '13896'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '13885'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '14035'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '14025'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '13992'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '13949'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '16357'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '16448'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '16446'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '16302'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '16421'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20770'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20769'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '16252'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '16296'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20494'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '19762'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20773'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20491'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20635'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20777'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '19478'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '19378'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '19447'
+  properties:
+  - set: 330.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '21205'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '21294'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '21218'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21326'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21385'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '15251'
+  properties:
+  - set: 480.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '15188'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '15085'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '15347'
+  properties:
+  - set: 5400.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '15302'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '15543'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '15553'
+  properties:
+  - set: 480.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12320'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12374'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12328'
+  properties:
+  - set: 660.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12367'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12536'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12517'
+  properties:
+  - set: 5999.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12467'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12400'
+  properties:
+  - set: 660.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12511'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12590'
+  properties:
+  - set: 5400.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12566'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20318'
+  properties:
+  - set: 420.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20316'
+  properties:
+  - set: 480.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12627'
+  properties:
+  - set: 5400.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '12606'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20358'
+  properties:
+  - set: 450.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20260'
+  properties:
+  - set: 480.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '20240'
+  properties:
+  - set: 360.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '17682'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '14858'
+  properties:
+  - set: 300.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '21073'
+  properties:
+  - set: 720.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '14813'
+  properties:
+  - set: 300.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21076'
+  properties:
+  - set: 300.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '21097'
+  properties:
+  - set: 720.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '14895'
+  properties:
+  - set: 300.0
+    property: headway_secs
+valid: false

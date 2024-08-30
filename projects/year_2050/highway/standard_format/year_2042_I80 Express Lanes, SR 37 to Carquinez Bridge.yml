@@ -1,0 +1,82 @@
+project:  I80 Express Lanes SR 37 to Carquinez Bridge, New express lane construction, RTP ID 21-T12-116
+tags:
+- Year 2042
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 5027504
+      - 5032540
+      - 5043522
+      - 5015148
+      - 5033083
+      - 5016755
+      - 5039651
+      - 5032456
+      - 5028514
+      - 5012186
+      - 5002788
+      - 5026814
+      - 5052038
+      - 5039883
+      - 5029399
+      - 5004616
+      - 5058827
+      - 5060896
+      - 5059128
+      - 5032373
+      - 5044449
+      - 5038233
+      - 5056873
+      - 5020814
+      - 5060244
+      - 5005494
+      - 5025246
+      - 5023976
+      - 5023976
+      - 5003249
+      - 5052426
+      - 5004245
+      - 5057076
+      - 5009415
+      - 5056236   
+  properties:
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 9999
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 5007578
+      - 15007578
+  properties:
+  - property: ft
+    set: 1

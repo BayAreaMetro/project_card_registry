@@ -1,0 +1,141 @@
+project: East West Connector - Quarry Lakes Parkway Project, RTP ID 21-T07-056
+tags:
+- Year 2040
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 3313767
+    - 3159667
+    - 3064342
+    - 3265132
+    - 3265712
+    - 3056434
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626019
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.00889
+    Y: 37.58682
+  - model_node_id: 2626020
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.00569
+    Y: 37.59025
+  links:
+  - A: 2548223
+    B: 2605490
+    model_link_id: 3443596
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 99
+    lanes: 2
+  - A: 2605490
+    B: 2548223
+    model_link_id: 3443597
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 99
+    lanes: 2
+  - A: 2548223
+    B: 2550419
+    model_link_id: 3443598
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2550419
+    B: 2548223
+    model_link_id: 3443599
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2550419
+    B: 2626019
+    model_link_id: 3443600
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626019
+    B: 2550419
+    model_link_id: 3443601
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626019
+    B: 2626020
+    model_link_id: 3443602
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626020
+    B: 2626019
+    model_link_id: 3443603
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626020
+    B: 2518759
+    model_link_id: 3443604
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2518759
+    B: 2626020
+    model_link_id: 3443605
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626020
+    B: 2512674
+    model_link_id: 3443606
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2512674
+    B: 2626020
+    model_link_id: 3443607
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2607553
+    B: 2626019
+    model_link_id: 3443608
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626019
+    B: 2607553
+    model_link_id: 3443609
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2

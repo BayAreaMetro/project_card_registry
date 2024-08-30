@@ -1,0 +1,30 @@
+project: SR262 Interchange improvements Step 4 (Create Frontage Rd between Mohave Dr and I680), RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3099030
+      - 3104417
+      - 3046868
+      - 3009307
+      - 3073518
+      - 3068165
+  properties:
+  - property: lanes
+    set: 2
+  - property: ft
+    set: 99
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3149101
+  properties:
+  - property: lanes
+    set: 1
+  - property: ft
+    set: 99

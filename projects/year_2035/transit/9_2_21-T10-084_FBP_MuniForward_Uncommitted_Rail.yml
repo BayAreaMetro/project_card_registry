@@ -1,0 +1,27 @@
+project: 9_2_21-T10-084_FBP_MuniForward_Uncommitted_Rail
+tags: 
+- 'change headway'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '19273'
+  properties:
+  - set: 240.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '19284'
+  properties:
+  - set: 240.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '19110'
+  properties:
+  - set: 240.0
+    property: headway_secs
+valid: false

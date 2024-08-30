@@ -1,0 +1,147 @@
+project: I80 San Pablo Dam Road Interchange Improvements - San Pablo Dam Road Interchange,
+  RTP ID 21-T06-013
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 4056680
+    - 4144931
+    - 4120713
+    - 4040482
+    - 4137295
+    - 4040477
+    - 4068896
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626013
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.32382
+    Y: 37.96657
+  - model_node_id: 2626014
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.32366
+    Y: 37.96653
+  - model_node_id: 2626015
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.32502
+    Y: 37.96477
+  - model_node_id: 2626017
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.33086
+    Y: 37.95979
+  links:
+  - A: 2626014
+    B: 3060603
+    model_link_id: 3443553
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 3060603
+    B: 2626014
+    model_link_id: 3443554
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 2626013
+    B: 2626014
+    model_link_id: 3443555
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 2626014
+    B: 2626013
+    model_link_id: 3443556
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 2626013
+    B: 3079267
+    model_link_id: 3443557
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 3079267
+    B: 2626013
+    model_link_id: 3443558
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 3079267
+    B: 3036462
+    model_link_id: 3443559
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 3036462
+    B: 3079267
+    model_link_id: 3443560
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    lanes: 1
+  - A: 3036458
+    B: 2626014
+    model_link_id: 3443561
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 2
+  - A: 2626014
+    B: 2626015
+    model_link_id: 3443562
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 2
+  - A: 3036458
+    B: 2626015
+    model_link_id: 3443563
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 1
+    lanes: 4
+  - A: 2626015
+    B: 2626017
+    model_link_id: 3443564
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 1
+    lanes: 4
+  - A: 2626017
+    B: 3021213
+    model_link_id: 3443565
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 1
+    lanes: 4

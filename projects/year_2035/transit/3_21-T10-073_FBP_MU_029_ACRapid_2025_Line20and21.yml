@@ -1,0 +1,133 @@
+project: 3_21-T10-073_FBP_MU_029_ACRapid_2025_Line20and21
+tags: 
+- 'change headway'
+- 'rapid transit improvements'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2712'
+  properties:
+  - set: 4800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2674'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2677'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2680'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2731'
+  properties:
+  - set: 3000.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2683'
+  properties:
+  - set: 4800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2665'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2667'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2671'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2703'
+  properties:
+  - set: 3000.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2772'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2778'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2788'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '2796'
+  properties:
+  - set: 4200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2741'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2747'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2757'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '2765'
+  properties:
+  - set: 4200.0
+    property: headway_secs
+valid: false

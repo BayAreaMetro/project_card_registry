@@ -1,0 +1,29 @@
+project: Year 2030 I-680 NB Convert HOV to Express Lane from SR-242 to Benicia-Martinez Bridge Toll Plaza
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 14063510
+      - 14012703
+      - 14014030
+      - 14015126
+      - 14094017
+      - 14107765
+      - 14072250
+      - 14072728
+      - 14105781
+      - 14107959
+      - 14110496
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 683

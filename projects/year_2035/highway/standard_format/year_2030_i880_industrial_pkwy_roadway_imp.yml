@@ -1,0 +1,19 @@
+project: I-880 Auxiliary lanes at Industrial Parkway
+tags:
+- year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3160856
+      - 3119458
+      - 3020364
+      - 3169202
+      - 3055218
+      - 3087174
+      - 3111133
+  properties:
+  - property: lanes
+    set: 5

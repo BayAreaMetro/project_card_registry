@@ -1,0 +1,19 @@
+project: 2_1_14_MAJ_MTC050027_Berkeley_Ferry_add_ferry_link
+tags:
+- add transit link
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700020
+    transit_access: 1.0
+    A: 1028039
+    B: 2900004
+  - model_link_id: 2700021
+    transit_access: 1.0
+    A: 2900004
+    B: 1028039
+  nodes:
+  - Y: 37.86515148146898
+    X: -122.3082882283559
+    model_node_id: 2900004

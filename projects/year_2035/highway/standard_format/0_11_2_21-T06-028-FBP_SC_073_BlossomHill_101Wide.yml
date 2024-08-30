@@ -1,0 +1,23 @@
+project: 0_11_2_21-T06-028-FBP_SC_073_BlossomHill_101Wide
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 2219656
+  properties:
+  - existing: 2.0
+    set: 3.0
+    property: lanes
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 2097503
+  properties:
+  - existing: 2.0
+    set: 4.0
+    property: lanes
+valid: false

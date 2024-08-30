@@ -1,0 +1,20 @@
+project: 0_12_21-T06-015-MAJ_SOL070020_I80_I680_SR12_Int_2B_7_mod
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 5019954
+      - 5010854
+      - 5011151
+      - 5025191
+      - 5059523
+      - 5032644
+      - 5048232
+  properties:
+  - existing: 2.0
+    set: 3.0
+    property: lanes
+valid: false

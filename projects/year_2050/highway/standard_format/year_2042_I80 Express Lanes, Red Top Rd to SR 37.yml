@@ -1,0 +1,63 @@
+project: I80 Express Lanes Red Top Rd to SR 37, GP Lane Conversion, RTP ID 21-T12-116
+tags:
+- Year 2042
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 6001281
+      - 5034456
+      - 5037161
+      - 5021355
+      - 5042400
+      - 5024352
+      - 5035937
+      - 5047374
+      - 5048125
+      - 5045888
+      - 5039648
+      - 6003556
+      - 5025911
+      - 5036491
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 9999
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

@@ -1,0 +1,36 @@
+---
+project: 3_21-T10-073_FBP_MU_029_ACRapid_2025_LineNL
+category: Add Transit
+tags: 
+  - 'rapid transit improvements'
+---
+
+# change headway
+# route 138, d0, AM, EV, PM, MD
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3557, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3571, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3567, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3561, 'headway_secs'] = 600
+# route 138, d1, AM, EV, PM, MD, EA
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3558, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3570, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3566, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3562, 'headway_secs'] = 600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==3556, 'headway_secs'] = 720
+# create d0 EA trip from d0 EV
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+
+add_trips_df = self.feed.trips[self.feed.trips.trip_id.astype(int)==3571].copy()
+add_trips_df.loc[add_trips_df.trip_id.astype(int)==3571, "trip_id"] = max_trip_id+1
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==3571].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==3571, "trip_id"] = max_trip_id+1
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+add_freqs_df = self.feed.frequencies[self.feed.frequencies.trip_id.astype(int)==3571].copy()
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==3571, "trip_id"] = max_trip_id+1
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "headway_secs"] = 720
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "start_time"] = 10800
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "end_time"] = 21600
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

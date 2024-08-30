@@ -1,0 +1,138 @@
+project: Sonoma_Marin_Area_Rail_Transit_add_rail_link
+tags:
+- add transit link
+dependencies: ''
+category: Add Transit
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700053
+    rail_only: 1
+    transit_access: 1.0
+    A: 5019935
+    B: 5015671
+  - model_link_id: 2700054
+    rail_only: 1
+    transit_access: 1.0
+    A: 5015671
+    B: 5019935
+  - model_link_id: 2700055
+    rail_only: 1
+    transit_access: 1.0
+    A: 5015671
+    B: 5013453
+  - model_link_id: 2700056
+    rail_only: 1
+    transit_access: 1.0
+    A: 5013453
+    B: 5015671
+  - model_link_id: 2700057
+    rail_only: 1
+    transit_access: 1.0
+    A: 5013453
+    B: 5006567
+  - model_link_id: 2700058
+    rail_only: 1
+    transit_access: 1.0
+    A: 5006567
+    B: 5013453
+  - model_link_id: 2700059
+    rail_only: 1
+    transit_access: 1.0
+    A: 5006567
+    B: 5017385
+  - model_link_id: 2700060
+    rail_only: 1
+    transit_access: 1.0
+    A: 5017385
+    B: 5006567
+  - model_link_id: 2700061
+    rail_only: 1
+    transit_access: 1.0
+    A: 5017385
+    B: 5010879
+  - model_link_id: 2700062
+    rail_only: 1
+    transit_access: 1.0
+    A: 5010879
+    B: 5017385
+  - model_link_id: 2700063
+    rail_only: 1
+    transit_access: 1.0
+    A: 5010879
+    B: 4534087
+  - model_link_id: 2700064
+    rail_only: 1
+    transit_access: 1.0
+    A: 4534087
+    B: 5010879
+  - model_link_id: 2700065
+    rail_only: 1
+    transit_access: 1.0
+    A: 4534087
+    B: 4517348
+  - model_link_id: 2700066
+    rail_only: 1
+    transit_access: 1.0
+    A: 4517348
+    B: 4534087
+  - model_link_id: 2700067
+    rail_only: 1
+    transit_access: 1.0
+    A: 4517348
+    B: 4532708
+  - model_link_id: 2700068
+    rail_only: 1
+    transit_access: 1.0
+    A: 4532708
+    B: 4517348
+  - model_link_id: 2700069
+    rail_only: 1
+    transit_access: 1.0
+    A: 4532708
+    B: 4520721
+  - model_link_id: 2700070
+    rail_only: 1
+    transit_access: 1.0
+    A: 4520721
+    B: 4532708
+  - model_link_id: 2700071
+    rail_only: 1
+    transit_access: 1.0
+    A: 4520721
+    B: 4507449
+  - model_link_id: 2700072
+    rail_only: 1
+    transit_access: 1.0
+    A: 4507449
+    B: 4520721
+  - model_link_id: 2700073
+    rail_only: 1
+    transit_access: 1.0
+    A: 4507449
+    B: 4503663
+  - model_link_id: 2700074
+    rail_only: 1
+    transit_access: 1.0
+    A: 4503663
+    B: 4507449
+  - model_link_id: 2700075
+    rail_only: 1
+    transit_access: 1.0
+    A: 4503663
+    B: 4535995
+  - model_link_id: 2700076
+    rail_only: 1
+    transit_access: 1.0
+    A: 4535995
+    B: 4503663
+  - model_link_id: 2700077
+    rail_only: 1
+    transit_access: 1.0
+    A: 4535995
+    B: 4539592
+  - model_link_id: 2700078
+    rail_only: 1
+    transit_access: 1.0
+    A: 4539592
+    B: 4535995

@@ -1,0 +1,54 @@
+##REVIEW COMMENTS:
+#MODEL LINK IDS ARE GENERAL PURPOSE LINKS. ATTRIBUTES DONOT NEED TO CHANGE
+#PARALLEL, MANAGED LANES ARE ALREADY CODED IN THE NETWORK. JUST NEED TO UPDATE THE TOLLS.CSV FILE
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+      model_link_id:
+      - 14027071
+      - 14093331
+      - 14009567
+      - 14089977
+      - 14098995
+      - 14043277
+      - 14089377
+      - 14108558
+      - 14060467
+      - 14043112
+      - 14040822
+      - 14054627
+      - 14048078
+      - 14016907
+      - 14103852
+      - 14013008
+      - 14008949
+      - 14090312
+      - 14078369
+      - 14114612
+      - 14093385
+      - 14026562
+      - 14123296
+      - 14059973
+      - 14114714
+      - 14118223
+      - 14056861
+      - 14077454
+      - 14059935
+      - 14036430
+      - 14071228
+      - 14085747
+      - 14079823
+  properties:
+  - property: useclass_am #ML_useclass
+    set: 4
+  - property: useclass_md #ML_useclass
+    set: 4
+  - property: useclass_pm #ML_useclass
+    set: 4
+dependencies: ''
+project: I-680 Contra Costa Express Lanes Phase 2
+tags:
+- Year 2020
+- Roadway Property Change
+- toll review

@@ -1,0 +1,60 @@
+project: SR262 improvements Step 8 (SR262/I680 Interchnage improvements), RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 3083780
+    - 3050497
+    - 3057560
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626028
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92344251
+    Y: 37.49527339
+  links:
+  - A: 2529074
+    B: 2626027
+    model_link_id: 3443588
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626027
+    B: 2626028
+    model_link_id: 3443589
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626028
+    B: 2567915
+    model_link_id: 3443590
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626028
+    B: 2534081
+    model_link_id: 3443591
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2501986
+    B: 2626028
+    model_link_id: 3443592
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3

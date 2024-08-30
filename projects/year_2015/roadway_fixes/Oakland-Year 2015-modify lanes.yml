@@ -1,0 +1,65 @@
+project: Oakland - Year 2015 - modify lanes
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3000836
+      - 3003957
+      - 3019316
+      - 3019627
+      - 3020526
+      - 3032861
+      - 3034289
+      - 3045877
+      - 3057602
+      - 3078661
+      - 3088683
+      - 3094613
+      - 3095068
+      - 3101426
+      - 3105943
+      - 3138412
+      - 3153315
+      - 3158050
+      - 3158405
+      - 3163210
+      - 3170328
+      - 3188281
+      - 3191406
+      - 3196002
+      - 3198655
+      - 3205450
+      - 3209304
+      - 3224417
+      - 3228898
+      - 3233528
+      - 3233533
+      - 3242313
+      - 3245779
+      - 3255123
+      - 3266217
+      - 3285825
+      - 3289413
+      - 3291080
+      - 3308312
+      - 3312458
+  properties:
+  - property: lanes
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3097739
+      - 3163841
+      - 3167455
+  properties:
+  - property: lanes
+    set: 2

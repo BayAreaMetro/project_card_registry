@@ -1,0 +1,38 @@
+project: SR262 Interchange improvements Step 5 (Edit Brown Road to connect to Mohave
+  Dr), RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 3251145
+    - 3028600
+    - 3026333
+    - 3258022
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626023
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92698
+    Y: 37.4922
+  links:
+  - A: 2511420
+    B: 2626023
+    model_link_id: 3443610
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626023
+    B: 2511420
+    model_link_id: 3443611
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2

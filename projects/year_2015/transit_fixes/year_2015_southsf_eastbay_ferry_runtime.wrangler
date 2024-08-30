@@ -1,0 +1,33 @@
+---
+project: Year 2015 South SF - East Bay Ferry AM and EV Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 388
+
+######
+# AM #
+######
+shape_id = 1139
+trip_id = 22858
+old_stop_id = 11936
+new_stop_id = 11938
+
+# in the stop_times record for the identified trip_id, update stop_id from old_stop_id to new_stop_id
+self.feed.stop_times.loc[((self.feed.stop_times['trip_id'] == str(trip_id)) & (self.feed.stop_times['stop_id'] == str(old_stop_id))), "stop_id"] = str(new_stop_id)
+
+
+######
+# EV #
+######
+shape_id = 1140
+trip_id = 22869
+old_stop_id = 11936
+new_stop_id = 11938
+
+# in the stop_times record for the identified trip_id, update stop_id from old_stop_id to new_stop_id
+self.feed.stop_times.loc[((self.feed.stop_times['trip_id'] == str(trip_id)) & (self.feed.stop_times['stop_id'] == str(old_stop_id))), "stop_id"] = str(new_stop_id)

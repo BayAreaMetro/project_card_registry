@@ -1,0 +1,74 @@
+project: Year 2030 Add VTA Orange Light Rail links
+tags:
+- add transit link
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2192949
+    rail_only: 1
+    X: -121.86787579822288
+    Y: 37.35059626052545
+  - model_node_id: 2192950
+    rail_only: 1
+    X: -121.810714012712
+    Y: 37.32751474112139
+  links:
+  - model_link_id: 2700026
+    rail_only: 1
+    transit_access: 1
+    A: 2192865
+    B: 2192949
+  - model_link_id: 2700027
+    rail_only: 1
+    transit_access: 1
+    A: 2192949
+    B: 2192881
+  - model_link_id: 2700028
+    rail_only: 1
+    transit_access: 1
+    A: 2192949
+    B: 2192950
+  - model_link_id: 2700029
+    rail_only: 1
+    transit_access: 1
+    A: 2192950
+    B: 2192949
+  - model_link_id: 2700030
+    rail_only: 1
+    transit_access: 1
+    A: 2192937
+    B: 2192855
+  - model_link_id: 2700031
+    rail_only: 1
+    transit_access: 1
+    A: 2192891
+    B: 2192908
+  - model_link_id: 2700032
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2192949
+    B: 2120280
+  - model_link_id: 2700033
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2120280
+    B: 2192949
+  - model_link_id: 2700034
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2192950
+    B: 2147956
+  - model_link_id: 2700035
+    walk_access: 1
+    drive_access: 0
+    bike_access: 0
+    lanes: 1
+    A: 2147956
+    B: 2192950

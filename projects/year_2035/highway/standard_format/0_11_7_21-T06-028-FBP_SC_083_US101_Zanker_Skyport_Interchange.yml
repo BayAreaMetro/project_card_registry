@@ -1,0 +1,40 @@
+project: 0_11_7_21-T06-028-FBP_SC_083_US101_Zanker_Skyport_Interchange
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - ft: 7
+    lanes: 2.0
+    bike_access: 1
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    tollseg: 0
+    model_link_id: 2700010
+    transit_access: 0.0
+    bus_only: 0
+    managed: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2109105
+    B: 2112228
+  - ft: 0
+    lanes: 2.0
+    bike_access: 1
+    walk_access: 1
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    tollseg: 0
+    model_link_id: 2700011
+    transit_access: 0.0
+    bus_only: 0
+    managed: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2112228
+    B: 2109105

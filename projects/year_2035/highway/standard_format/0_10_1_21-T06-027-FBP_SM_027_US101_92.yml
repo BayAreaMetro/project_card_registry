@@ -1,0 +1,102 @@
+project: 0_10_1_21-T06-027-FBP_SM_027_US101_92
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - lanes: 7.0
+    walk_access: 0
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 0
+    tollseg: 0
+    model_link_id: 2700083
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 1520701
+    B: 2900030
+  - lanes: 7.0
+    walk_access: 0
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 0
+    tollseg: 0
+    model_link_id: 2700084
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900030
+    B: 1520701
+  - lanes: 1.0
+    walk_access: 0
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 0
+    tollseg: 0
+    model_link_id: 2700085
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900030
+    B: 2900031
+  - lanes: 7.0
+    walk_access: 0
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 0
+    tollseg: 0
+    model_link_id: 2700086
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 2900031
+    B: 1535695
+  - lanes: 7.0
+    walk_access: 0
+    shstGeometryId: ''
+    rail_only: 0
+    assignable: 1
+    segment_id: 0
+    bike_access: 0
+    tollseg: 0
+    model_link_id: 2700087
+    managed: 0
+    transit_access: 0.0
+    bus_only: 0
+    tollbooth: 0
+    drive_access: 1
+    A: 1535695
+    B: 2900031
+  nodes:
+  - Y: 37.553690976086145
+    X: -122.29460761210197
+    model_node_id: 2900030
+  - Y: 37.55050489067179
+    X: -122.2937433962126
+    model_node_id: 2900031
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 1014980
+  properties:
+  - existing: 1
+    set: 0
+    property: bike_access

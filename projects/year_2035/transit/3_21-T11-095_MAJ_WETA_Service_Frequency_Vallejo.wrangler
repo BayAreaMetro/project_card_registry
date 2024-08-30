@@ -1,0 +1,48 @@
+---
+project: 3_21-T11-095_MAJ_WETA_Service_Frequency_Vallejo
+category: Add Transit
+tags: 
+  - 'Service Frequency Boost'
+---
+
+# change headway
+# route 386, d0, AM, EA, MD, PM
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22908, 'headway_secs'] = 900
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22915, 'headway_secs'] = 0.6
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22910, 'headway_secs'] = 3600
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22892, 'headway_secs'] = 900
+# route 386, d1, AM, MD
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22909, 'headway_secs'] = 900
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==22889, 'headway_secs'] = 3600
+# create d0 EV trip from d0 AM
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+
+add_trips_df = self.feed.trips[self.feed.trips.trip_id.astype(int)==22908].copy()
+add_trips_df.loc[add_trips_df.trip_id.astype(int)==22908, "trip_id"] = max_trip_id+1
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==22908].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==22908, "trip_id"] = max_trip_id+1
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+add_freqs_df = self.feed.frequencies[self.feed.frequencies.trip_id.astype(int)==22908].copy()
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==22908, "trip_id"] = max_trip_id+1
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "headway_secs"] = 3600
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "start_time"] = 68400
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "end_time"] = 10800
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+# create d1 EV trip from d1 MD
+add_trips_df = self.feed.trips[self.feed.trips.trip_id.astype(int)==22889].copy()
+add_trips_df.loc[add_trips_df.trip_id.astype(int)==22889, "trip_id"] = max_trip_id+2
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==22889].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==22889, "trip_id"] = max_trip_id+2
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+add_freqs_df = self.feed.frequencies[self.feed.frequencies.trip_id.astype(int)==22889].copy()
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==22889, "trip_id"] = max_trip_id+2
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+2, "start_time"] = 68400
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+2, "end_time"] = 10800
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

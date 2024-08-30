@@ -1,0 +1,63 @@
+---
+project: Year 2035 Muniforward - J Church Runtime Reduction
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 369
+trn_info = {
+    '1122': {'distance': 4.24834, 'trips': ['22784']},
+    '1123': {'distance': 6.9582, 'trips': ['22473', '22464', '22409', '22519']},
+    '1129': {'distance': 4.34872, 'trips': ['22734']},
+    '1131': {'distance': 6.99142, 'trips': ['22746', '22674', '22666', '22641']}
+}
+reduction_factor = 0.96 # min per miles
+
+# for each trip, get current total runtime from the last arrival record of stop_times
+for shape_id, line_info in trn_info.items():
+    distance = line_info['distance']
+    trip_id_list = line_info['trips']
+
+    runtime_reduction = distance * reduction_factor * 60 # times 60 to convert to seconds
+
+    for trip_id in trip_id_list:
+        # calculate runtime adjustment ratio
+        old_stop_times = self.feed.stop_times[(self.feed.stop_times['trip_id'] == trip_id) | (self.feed.stop_times['trip_id'] == int(trip_id))]
+        old_max_arrival_time = old_stop_times['arrival_time'].max() # original total runtime
+        target_runtime = old_max_arrival_time - runtime_reduction # in second
+        runtime_ratio = target_runtime / old_max_arrival_time
+
+        # calculate new arrival_time
+        old_arrival_time_list = old_stop_times['arrival_time'].tolist()
+        # arrival_time_list = [int(x * runtime_ratio) for x in old_arrival_time_list]
+        arrival_time_list = []
+        for x in old_arrival_time_list:
+            if x is None:
+                arrival_time_list.append(x)
+            else:
+                adjusted_x = int(x * runtime_ratio)
+                arrival_time_list.append(adjusted_x)
+        departure_time_list = arrival_time_list
+
+        # get stop_id_list
+        stop_id_list = old_stop_times['stop_id'].tolist()
+        stop_sequence_list = list(range(1, len(old_stop_times) + 1))
+
+        # remove old stop_times record
+        self.feed.stop_times = self.feed.stop_times[(self.feed.stop_times['trip_id'] != trip_id) & (self.feed.stop_times['trip_id'] != int(trip_id))]
+
+        # add new stop times
+        add_stop_times_df = []
+        df = pd.DataFrame({
+            "trip_id": [str(trip_id)] * len(stop_id_list),
+            "stop_sequence": stop_sequence_list,
+            "arrival_time": arrival_time_list,
+            "departure_time": departure_time_list,
+            "stop_id": stop_id_list
+        })
+
+        add_stop_times_df.append(df)
+        self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)

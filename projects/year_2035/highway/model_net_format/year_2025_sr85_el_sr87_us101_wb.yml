@@ -1,0 +1,25 @@
+project: Year 2025 SR 85 Express Lanes SR87 to US101 Interchange - WB
+tags:
+- Year 2025
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12134595
+      - 12106987
+      - 12253966
+      - 12177209
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 856
+  - property: tollseg
+    set: 0

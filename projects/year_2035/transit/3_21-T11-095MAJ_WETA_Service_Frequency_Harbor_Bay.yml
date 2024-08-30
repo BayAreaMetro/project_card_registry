@@ -1,0 +1,48 @@
+project: 3_21-T11-095MAJ_WETA_Service_Frequency_Harbor_Bay
+tags: 
+- 'change headway'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22825'
+  properties:
+  - set: 1800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22865'
+  properties:
+  - set: 1800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22824'
+  properties:
+  - set: 0.6
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22829'
+  properties:
+  - set: 1800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22832'
+  properties:
+  - set: 1800.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22830'
+  properties:
+  - set: 0.6
+    property: headway_secs
+valid: false

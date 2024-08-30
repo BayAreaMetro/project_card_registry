@@ -1,0 +1,24 @@
+project: Year 2015 Modify I-580 lanes
+tags:
+- Year 2015
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      #- 3105865
+      #- 3062279
+      #- 3055023
+      - 3049429
+      #- 3048060
+      - 3059861
+      - 3051922
+      #- 3161887
+      - 3136269
+      #- 3120154
+      - 3010784
+      - 3053350
+  properties:
+  - property: lanes
+    set: 5

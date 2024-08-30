@@ -1,0 +1,50 @@
+project: 2050_Transbay_add_rail_link
+tags:
+- add transit link
+- year 2050
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700150
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 1003587
+    B: 2625965
+  - model_link_id: 2700151
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 2625965
+    B: 1003587
+  - model_link_id: 2700152
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 2508138       # this is ardenwood station    
+    B: 2192823
+  - model_link_id: 2700153
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 2192823
+    B: 2508138
+  - model_link_id: 2700154
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 2508138
+    B: 2625966
+  - model_link_id: 2700155
+    rail_only: 1
+    transit_access: 1.0
+    ft: 99
+    cntype: 'CRAIL'
+    A: 2625966
+    B: 2508138

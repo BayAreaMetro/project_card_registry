@@ -1,0 +1,18 @@
+project: Tassajara Road Widening, RTP ID 21-T07-056
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3002377
+      - 3250900
+      - 3062822
+      - 3235735
+      - 3175507
+      - 3135720
+  properties:
+  - property: lanes
+    set: 2

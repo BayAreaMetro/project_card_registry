@@ -1,0 +1,45 @@
+project: I80 San Pablo Dam Road Interchange Improvements - McBryde Avenue Connector
+  Road, RTP ID 21-T06-013
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 4056158
+    - 4067573
+    - 4054542
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626018
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.3294
+    Y: 37.9548
+  links:
+  - A: 3046775
+    B: 2626018
+    model_link_id: 3443566
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626018
+    B: 3036831
+    model_link_id: 3443567
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626018
+    B: 3078755
+    model_link_id: 3443568
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1

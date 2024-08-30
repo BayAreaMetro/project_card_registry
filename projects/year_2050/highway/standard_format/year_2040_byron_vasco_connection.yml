@@ -1,0 +1,25 @@
+project: Byron Highway - Vasco Road Connection
+tags:
+- year 2040
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700148
+    rail_only: 1
+    transit_access: 1
+    drive_access: 1
+    walk_access: 1
+    assignable: 1
+    lanes: 1
+    A: 3047176
+    B: 3045696
+  - model_link_id: 2700149
+    rail_only: 1
+    transit_access: 1
+    drive_access: 1
+    walk_access: 1
+    assignable: 1
+    lanes: 1
+    A: 3045696
+    B: 3047176

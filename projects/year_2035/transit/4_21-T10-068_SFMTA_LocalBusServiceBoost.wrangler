@@ -1,0 +1,1074 @@
+---
+project: 4_21-T10-068_SFMTA_LocalBusServiceBoost
+category: Add Transit
+tags: 
+  - 'Service Frequency Boost'
+---
+
+# change headway
+# route 363, d0, AM, EV, PM, MD
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20011, 'headway_secs'] = 420
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20109, 'headway_secs'] = 900
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20108, 'headway_secs'] = 420
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20048, 'headway_secs'] = 540
+# route 363, d1, AM, MD, PM
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==19937, 'headway_secs'] = 420
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==19989, 'headway_secs'] = 540
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==20006, 'headway_secs'] = 420
+# create d1 EV trip from d1 AM
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+
+add_trips_df = self.feed.trips[self.feed.trips.trip_id.astype(int)==19937].copy()
+add_trips_df.loc[add_trips_df.trip_id.astype(int)==19937, "trip_id"] = max_trip_id+1
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+add_stop_times_df = self.feed.stop_times[self.feed.stop_times.trip_id.astype(int)==19937].copy()
+add_stop_times_df.loc[add_stop_times_df.trip_id.astype(int)==19937, "trip_id"] = max_trip_id+1
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+add_freqs_df = self.feed.frequencies[self.feed.frequencies.trip_id.astype(int)==19937].copy()
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==19937, "trip_id"] = max_trip_id+1
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "headway_secs"] = 900
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "start_time"] = 68400
+add_freqs_df.loc[add_freqs_df.trip_id.astype(int)==max_trip_id+1, "end_time"] = 10800
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+# add new shape for route 332 d0 AM, EA, EV, MD, PM, change headway
+max_shape_id = self.feed.shapes.shape_id.astype(int).max()
+shape_model_node_id_list = [1014196,
+                            1012521,
+                            1006303,
+                            1007816,
+                            1000137,
+                            1008943,
+                            1023133,
+                            1010579,
+                            1003660,
+                            1023327,
+                            1007291,
+                            1013909,
+                            1009159,
+                            1023389,
+                            1015028,
+                            1003750,
+                            1005808,
+                            1004113,
+                            1008655,
+                            1002136,
+                            1003313,
+                            1002858,
+                            1019037,
+                            1022310,
+                            1005486,
+                            1012635,
+                            1004077,
+                            1022040,
+                            1012504,
+                            1013273,
+                            1024210,
+                            1014230,
+                            1007877,
+                            1016457,
+                            1008599,
+                            1024526,
+                            1018444,
+                            1002268,
+                            1009347,
+                            1002901,
+                            1020680,
+                            1013952,
+                            1018546,
+                            1013543,
+                            1015480,
+                            1011562,
+                            1002846,
+                            1006706,
+                            1022335,
+                            1015642,
+                            1016424,
+                            1010753,
+                            1003802,
+                            1017902,
+                            1003703,
+                            1007474,
+                            1001867,
+                            1010548,
+                            1003088,
+                            1004678,
+                            1005829,
+                            1022182,
+                            1001934,
+                            1011225,
+                            1001513,
+                            1022596,
+                            1001982,
+                            1013835,
+                            1003691,
+                            1015593,
+                            1004039,
+                            1024534,
+                            1002151,
+                            1001725,
+                            1008701,
+                            1011675,
+                            1003821,
+                            1020247,
+                            1014005,
+                            1023042,
+                            1015053,
+                            1008587,
+                            1022296,
+                            1009219,
+                            1007706,
+                            1004652,
+                            1009389,
+                            1003785,
+                            1005171,
+                            1013192,
+                            1006860,
+                            1017216,
+                            1015868,
+                            1019680,
+                            1013090,
+                            1005665,
+                            1009218,
+                            1016240,
+                            1021665,
+                            1017173,
+                            1018327,
+                            1011679,
+                            1004500,
+                            1004793,
+                            1021351,
+                            1023735,
+                            1009686,
+                            1011439,
+                            1022735,
+                            1009028,
+                            1008175,
+                            1000068,
+                            1020622,
+                            1016992,
+                            1010089,
+                            1012029,
+                            1023601,
+                            1004005,
+                            1020863,
+                            1019456,
+                            1011836,
+                            1020728,
+                            1009333,
+                            1015415,
+                            1023483,
+                            1018709,
+                            1014529,
+                            1007051,
+                            1005920,
+                            1003323,
+                            1016960,
+                            1013828,
+                            1020233,
+                            1011242,
+                            1010819,
+                            1019449,
+                            1006497,
+                            1011118,
+                            1008215,
+                            1011719,
+                            1009422,
+                            1001713,
+                            1002380,
+                            1019119,
+                            1000216,
+                            1011957,
+                            1002440,
+                            1003482,
+                            1001150,
+                            1006575,
+                            1009754,
+                            1002372,
+                            1012683,
+                            1010126,
+                            1009254,
+                            1006326,
+                            1022249,
+                            1012832,
+                            1018724,
+                            1001688,
+                            1005331,
+                            1010838,
+                            1003568,
+                            1017888,
+                            1011625,
+                            1019480,
+                            1006169,
+                            1001338,
+                            1019941,
+                            1008978,
+                            1009126,
+                            1007257,
+                            1019150,
+                            1018348,
+                            1009736,
+                            1002525,
+                            1007068,
+                            1011880,
+                            1021987,
+                            1009601,
+                            1023520,
+                            1023038,
+                            1020693,
+                            1019186,
+                            1000667,
+                            1004694,
+                            1004504,
+                            1007616,
+                            1019065]
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+1,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+# trip change the existing shape
+trip_id_list = [14210, 14239, 14215, 14213, 14278]
+self.feed.trips.loc[self.feed.trips['trip_id'].astype(int).isin(trip_id_list), 'shape_id'] = max_shape_id+1
+
+# stop
+stop_model_node_id_list = [1014196,
+                          1012521,
+                          1006303,
+                          1000137,
+                          1008943,
+                          1010579,
+                          1023327,
+                          1007291,
+                          1009159,
+                          1005808,
+                          1002136,
+                          1019037,
+                          1012635,
+                          1024210,
+                          1007877,
+                          1018444,
+                          1002901,
+                          1013952,
+                          1013543,
+                          1015642,
+                          1010753,
+                          1003802,
+                          1017902,
+                          1007474,
+                          1003088,
+                          1005829,
+                          1022182,
+                          1001934,
+                          1022596,
+                          1013835,
+                          1003691,
+                          1004039,
+                          1002151,
+                          1008701,
+                          1003821,
+                          1014005,
+                          1007706,
+                          1019680,
+                          1016240,
+                          1017173,
+                          1011679,
+                          1021351,
+                          1011439,
+                          1020622,
+                          1010089,
+                          1023601,
+                          1011836,
+                          1018709,
+                          1016960,
+                          1019449,
+                          1009422,
+                          1019119,
+                          1000216,
+                          1002440,
+                          1003482,
+                          1001150,
+                          1012832,
+                          1003568,
+                          1011880,
+                          1023520,
+                          1004694,
+                          1007616,
+                          1019065]
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+# delete the old records
+self.feed.stop_times = self.feed.stop_times[~self.feed.stop_times['trip_id'].astype(int).isin(trip_id_list)]
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list = 0
+add_stop_times_df = []
+# add new stop times
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14239, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14215, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14213, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14210, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14278, 'headway_secs'] = 1800
+
+
+# add new shape for route 332 d1 AM, EA, EV, MD, PM, change headway
+shape_model_node_id_list = [1019065,
+                            1007616,
+                            1004504,
+                            1004694,
+                            1000667,
+                            1019186,
+                            1020693,
+                            1023038,
+                            1023520,
+                            1009601,
+                            1021987,
+                            1012724,
+                            1006525,
+                            1008075,
+                            1019613,
+                            1001290,
+                            1003302,
+                            1012856,
+                            1010830,
+                            1009251,
+                            1020506,
+                            1011540,
+                            1010394,
+                            1012898,
+                            1002237,
+                            1008056,
+                            1007607,
+                            1013032,
+                            1008566,
+                            1001155,
+                            1013259,
+                            1017619,
+                            1017701,
+                            1016534,
+                            1003329,
+                            1000789,
+                            1009591,
+                            1003901,
+                            1006464,
+                            1022479,
+                            1003482,
+                            1002440,
+                            1011957,
+                            1000216,
+                            1019119,
+                            1002380,
+                            1001713,
+                            1009422,
+                            1012988,
+                            1023184,
+                            1013093,
+                            1006497,
+                            1013093,
+                            1001826,
+                            1010464,
+                            1006656,
+                            1004132,
+                            1006693,
+                            1006778,
+                            1016101,
+                            1014529,
+                            1018709,
+                            1023483,
+                            1015415,
+                            1009333,
+                            1020728,
+                            1011836,
+                            1019456,
+                            1020863,
+                            1004005,
+                            1023601,
+                            1012029,
+                            1010089,
+                            1016992,
+                            1020622,
+                            1000068,
+                            1008175,
+                            1009028,
+                            1022735,
+                            1011439,
+                            1009686,
+                            1023735,
+                            1021351,
+                            1004793,
+                            1004500,
+                            1011679,
+                            1018327,
+                            1017173,
+                            1021665,
+                            1016240,
+                            1009218,
+                            1005665,
+                            1013090,
+                            1019680,
+                            1015868,
+                            1017216,
+                            1006860,
+                            1013192,
+                            1005171,
+                            1003785,
+                            1009389,
+                            1004652,
+                            1007706,
+                            1009219,
+                            1022296,
+                            1008587,
+                            1015053,
+                            1023042,
+                            1014005,
+                            1020247,
+                            1003821,
+                            1011675,
+                            1008701,
+                            1001725,
+                            1002151,
+                            1024534,
+                            1004039,
+                            1015593,
+                            1003691,
+                            1013835,
+                            1001982,
+                            1022596,
+                            1001513,
+                            1011225,
+                            1001934,
+                            1022182,
+                            1005829,
+                            1004678,
+                            1003088,
+                            1010548,
+                            1001867,
+                            1007474,
+                            1003703,
+                            1017902,
+                            1003802,
+                            1010753,
+                            1016424,
+                            1015642,
+                            1022335,
+                            1006706,
+                            1002846,
+                            1011562,
+                            1015480,
+                            1013543,
+                            1018546,
+                            1013952,
+                            1020680,
+                            1002901,
+                            1009347,
+                            1002268,
+                            1018444,
+                            1024526,
+                            1008599,
+                            1013997,
+                            1000140,
+                            1007750,
+                            1004255,
+                            1008845,
+                            1004510,
+                            1024430,
+                            1011655,
+                            1002937,
+                            1017501,
+                            1003937,
+                            1000051,
+                            1011406,
+                            1002297,
+                            1017059,
+                            1001601,
+                            1016762,
+                            1019563,
+                            1018526,
+                            1003751,
+                            1018344,
+                            1015554,
+                            1000484,
+                            1010231,
+                            1016406,
+                            1018800,
+                            1017954,
+                            1015506,
+                            1023327,
+                            1003660,
+                            1010579,
+                            1023133,
+                            1008943,
+                            1000137,
+                            1007816,
+                            1006303,
+                            1012521,
+                            1010972,
+                            1014881,
+                            1014196]
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+2,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+# trip change the existing shape
+trip_id_list = [14328, 14312, 14304, 14302, 14362]
+self.feed.trips.loc[self.feed.trips['trip_id'].astype(int).isin(trip_id_list), 'shape_id'] = max_shape_id+2
+
+# stop
+stop_model_node_id_list = [1019065,
+                          1004694,
+                          1023520,
+                          1021987,
+                          1020506,
+                          1002237,
+                          1001155,
+                          1003901,
+                          1006464,
+                          1022479,
+                          1003482,
+                          1002440,
+                          1000216,
+                          1019119,
+                          1009422,
+                          1006497,
+                          1004132,
+                          1023483,
+                          1020728,
+                          1023601,
+                          1010089,
+                          1020622,
+                          1011439,
+                          1021351,
+                          1018327,
+                          1017173,
+                          1016240,
+                          1015868,
+                          1004652,
+                          1023042,
+                          1003821,
+                          1008701,
+                          1002151,
+                          1004039,
+                          1003691,
+                          1013835,
+                          1022596,
+                          1001934,
+                          1022182,
+                          1005829,
+                          1003088,
+                          1001867,
+                          1017902,
+                          1003802,
+                          1010753,
+                          1015642,
+                          1013543,
+                          1013952,
+                          1002901,
+                          1018444,
+                          1000140,
+                          1004255,
+                          1017501,
+                          1011406,
+                          1001601,
+                          1018344,
+                          1016406,
+                          1017954,
+                          1023327,
+                          1010579,
+                          1008943,
+                          1000137,
+                          1006303,
+                          1012521,
+                          1014881,
+                          1014196]
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+# delete the old records
+self.feed.stop_times = self.feed.stop_times[~self.feed.stop_times['trip_id'].astype(int).isin(trip_id_list)]
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list = 0
+add_stop_times_df = []
+# add new stop times
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14328, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14304, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14302, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14362, 'headway_secs'] = 450
+self.feed.frequencies.loc[self.feed.frequencies['trip_id'].astype(int)==14312, 'headway_secs'] = 1800
+
+
+
+# delete route 365 EV both directions, route 317 d0 EA
+delete_trip_id_list = [19701,20778,15211]
+self.feed.trips = self.feed.trips[~self.feed.trips['trip_id'].astype(int).isin(delete_trip_id_list)]
+self.feed.stop_times = self.feed.stop_times[~self.feed.stop_times['trip_id'].astype(int).isin(delete_trip_id_list)]
+self.feed.frequencies = self.feed.frequencies[~self.feed.frequencies['trip_id'].astype(int).isin(delete_trip_id_list)]
+
+
+
+# add 5 d0 + 5 d1 new trips for EA, AM, MD, PM, EV
+# route
+add_routes_df = pd.DataFrame(
+  {"route_id" : ["1001"],
+   "route_id_original" : [""],
+   "agency_id" : ["SFMTA"],
+   "route_short_name" : [""],
+   "route_long_name" : ["29Short"],
+   "route_type" : [3],
+   "agency_raw_name" : ["SFMTA_2015_8_11"]
+  }
+)
+self.feed.routes = self.feed.routes.append(add_routes_df, sort = False, ignore_index = True)
+
+# add direction 0 EA, AM, MD, PM, EV
+# trip
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+trip_id_list = [max_trip_id+1,max_trip_id+2,max_trip_id+3,max_trip_id+4,max_trip_id+5]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1001",
+   "direction_id" : 0,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+3,
+   "agency_raw_name" : "SFMTA_2015_8_11"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop
+stop_model_node_id_list = [1018267,
+                          1008366,
+                          1019150,
+                          1000901,
+                          1021373,
+                          1010460,
+                          1023720,
+                          1007170,
+                          1008881,
+                          1019185,
+                          1004034,
+                          1011971,
+                          1008528,
+                          1007119,
+                          1014674,
+                          1015449,
+                          1016419]
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list =0
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# shape
+shape_model_node_id_list = [1018267,
+                            1005472,
+                            1008366,
+                            1020921,
+                            1008075,
+                            1019150,
+                            1022227,
+                            1020965,
+                            1012518,
+                            1013688,
+                            1017384,
+                            1022122,
+                            1015105,
+                            1000901,
+                            1012906,
+                            1014827,
+                            1017349,
+                            1021373,
+                            1001743,
+                            1010460,
+                            1008462,
+                            1009441,
+                            1015585,
+                            1020119,
+                            1002608,
+                            1006267,
+                            1018138,
+                            1009411,
+                            1012171,
+                            1014786,
+                            1019000,
+                            1023720,
+                            1016744,
+                            1024055,
+                            1007170,
+                            1008881,
+                            1007980,
+                            1004609,
+                            1017995,
+                            1019185,
+                            1024273,
+                            1022150,
+                            1004034,
+                            1024112,
+                            1001282,
+                            1023159,
+                            1004586,
+                            1004664,
+                            1000547,
+                            1017824,
+                            1018190,
+                            1017768,
+                            1011971,
+                            1019760,
+                            1003260,
+                            1020936,
+                            1003891,
+                            1013437,
+                            1008528,
+                            1019819,
+                            1016515,
+                            1007119,
+                            1015072,
+                            1006500,
+                            1019227,
+                            1000609,
+                            1006085,
+                            1021769,
+                            1019198,
+                            1001962,
+                            1013838,
+                            1003801,
+                            1014674,
+                            1015449,
+                            1016419]
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+3,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1200,600,600,600,1200],
+   "start_time" : [10800,21600,36000,54000,68400],
+   "end_time" : [21600,36000,54000,68400,10800]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+
+# add direction 1 EA, AM, MD, PM, EV
+# trip
+trip_id_list = [max_trip_id+6,max_trip_id+7,max_trip_id+8,max_trip_id+9,max_trip_id+10]
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1001",
+   "direction_id" : 1,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+4,
+   "agency_raw_name" : "SFMTA_2015_8_11"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop
+stop_model_node_id_list = [1012347,
+                          1000632,
+                          1006500,
+                          1008528,
+                          1011971,
+                          1024112,
+                          1017995,
+                          1008881,
+                          1007170,
+                          1019000,
+                          1023900,
+                          1021373,
+                          1012906,
+                          1008075,
+                          1008366,
+                          1005472,
+                          1018267]
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list =0
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# shape
+shape_model_node_id_list = [1012347,
+                            1000632,
+                            1003801,
+                            1013838,
+                            1001962,
+                            1019198,
+                            1021769,
+                            1006085,
+                            1000609,
+                            1019227,
+                            1006500,
+                            1015072,
+                            1007119,
+                            1024513,
+                            1022707,
+                            1008528,
+                            1013437,
+                            1003891,
+                            1020936,
+                            1003260,
+                            1019760,
+                            1011971,
+                            1017768,
+                            1018190,
+                            1017824,
+                            1000547,
+                            1004664,
+                            1004586,
+                            1023159,
+                            1001282,
+                            1024112,
+                            1004034,
+                            1022150,
+                            1024273,
+                            1019185,
+                            1017995,
+                            1004609,
+                            1007980,
+                            1008881,
+                            1007170,
+                            1024055,
+                            1016744,
+                            1023720,
+                            1019000,
+                            1020808,
+                            1012380,
+                            1007992,
+                            1000404,
+                            1015097,
+                            1018458,
+                            1012093,
+                            1006710,
+                            1015126,
+                            1009269,
+                            1023900,
+                            1010460,
+                            1001743,
+                            1021373,
+                            1017349,
+                            1014827,
+                            1012906,
+                            1000901,
+                            1015105,
+                            1022122,
+                            1017384,
+                            1013688,
+                            1012518,
+                            1020965,
+                            1022227,
+                            1019150,
+                            1008075,
+                            1020921,
+                            1008366,
+                            1005472,
+                            1018267]
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+4,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1200,600,600,600,1200],
+   "start_time" : [10800,21600,36000,54000,68400],
+   "end_time" : [21600,36000,54000,68400,10800]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

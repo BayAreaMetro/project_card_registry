@@ -1,0 +1,42 @@
+##   review comments:
+# SB MANAGED LINKS ARE ALREADY CODED PROPERLY IN THE NETWORK. NO NEED TO UPDATE THEM
+# MODEL LINK IDS ARE GP LANES.
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+      model_link_id:
+      - 14098995
+      - 14089977
+      - 14009567
+      - 14093331
+      - 14027071
+      - 14080189
+      - 14036448
+      - 14054042
+      - 14116255
+      - 14098229
+      - 14010164
+      - 14030836
+      - 14035692
+      - 14004151
+      - 14093880
+      - 14104431
+      - 14125907
+      - 14105644
+      - 14099696
+      - 15069801
+      - 13009658
+  properties:
+  - property: useclass_am #ML_useclass
+    set: 4
+  - property: useclass_md #ML_useclass
+    set: 4
+  - property: useclass_pm #ML_useclass
+    set: 4
+dependencies: ''
+project: I-680 Contra Costa Express Lanes Phase 1 SB
+tags:
+- Year 2017
+- Roadway Property Change
+- toll review

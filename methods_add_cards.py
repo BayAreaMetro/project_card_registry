@@ -103,6 +103,7 @@ def _make_available(nodes_or_links: str, config: dict) -> list:
 
 def _is_id_in_allowable_range(
     nodes_or_links: str,
+    new_id: int,
     project_name: str,
     subject_id: int,
     range_in_use: dict,
@@ -124,6 +125,7 @@ def _is_id_in_allowable_range(
             "New {} id ({}) in project '{}' is not in the base networks allowable range"
             "({} to {}) as defined in the configuration file.".format(
                 nodes_or_links,
+                new_id,
                 project_name,
                 min(range_in_use.keys()),
                 max(range_in_use.keys()),
@@ -241,7 +243,7 @@ def _update_registry(
     for subject_index, subject in enumerate(card.changes[change_index][nodes_or_links]):
         new_id = subject[subject_id_word]
 
-        _is_id_in_allowable_range(subject_word, card.project, new_id, range_in_use)
+        _is_id_in_allowable_range(subject_word, new_id, card.project, new_id, range_in_use)
         _is_id_used_in_base_network(subject_word, card.project, new_id, range_in_use)
         if new_id not in subject_df["id"].values:
             updates_df = pd.DataFrame(

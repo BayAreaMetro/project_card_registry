@@ -1,0 +1,35 @@
+project: Extra BRT - Ralph Appezzato Memorial Pwky
+tags:
+- Extra BRT
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3027886
+      - 3056012
+      - 3012044
+      - 3016132
+      - 3163329
+      - 3030954
+      - 3018742
+      - 3029171
+      - 3040079
+      - 3048277
+      - 3050983
+      - 3083885
+      - 3157544
+      - 3075414
+      - 3081797
+      - 3099620
+      - 3104216
+      - 3104032
+      - 3115967
+      - 3133457
+      - 3131944
+      - 3152947
+      - 3165815
+  properties:
+  - property: BRT
+    set: 1

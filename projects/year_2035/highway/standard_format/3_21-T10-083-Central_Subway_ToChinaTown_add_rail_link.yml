@@ -1,0 +1,64 @@
+project: 3_21-T10-083-Central_Subway_ToChinaTown
+tags:
+- add new roadway
+- Service exapansion to Chinatown
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - bus_only: 0
+    tollbooth: 0
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 0
+    managed: 0
+    rail_only: 1
+    tollseg: 1
+    ft: 0
+    drive_access: 0
+    transit_access: 1.0
+    model_link_id: 2700045
+    A: 1009623
+    B: 1027784
+  - bus_only: 0
+    tollbooth: 0
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 0
+    managed: 0
+    rail_only: 1
+    tollseg: 1
+    ft: 0
+    drive_access: 0
+    transit_access: 1.0
+    model_link_id: 2700046
+    A: 1027771
+    B: 1002245
+  - bus_only: 0
+    tollbooth: 0
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 0
+    managed: 0
+    rail_only: 1
+    tollseg: 1
+    ft: 0
+    drive_access: 0
+    transit_access: 1.0
+    model_link_id: 2700047
+    A: 1027784
+    B: 1027891
+  - bus_only: 0
+    tollbooth: 0
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 0
+    managed: 0
+    rail_only: 1
+    tollseg: 1
+    ft: 0
+    drive_access: 0
+    transit_access: 1.0
+    model_link_id: 2700048
+    A: 1002245
+    B: 1009623

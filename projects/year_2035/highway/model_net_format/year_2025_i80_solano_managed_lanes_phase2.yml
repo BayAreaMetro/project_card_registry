@@ -1,0 +1,57 @@
+project: Year 2025 Solano I-80 Managed Lanes Phase 2
+tags:
+- Year 2025
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 15001188
+      - 15001451
+      - 15049341
+      - 15007724
+      - 15006372
+      - 15006592
+      - 15009289
+      - 15039104
+      - 15015224
+      - 15017077
+      - 15041579
+      - 15054357
+      - 15020844
+      - 15022319
+      - 15024395
+      - 15025610
+      - 15026983
+      - 15029443
+      - 15029554
+      - 15033047
+      - 15039112
+      - 15035495
+      - 15037244
+      - 15040164
+      - 15040247
+      - 15059342
+      - 15054949
+      - 15041756
+      - 15042996
+      - 15044048
+      - 15049892
+      - 15050141
+      - 15051271
+      - 15058288
+      - 15058516
+      - 15059948
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 1

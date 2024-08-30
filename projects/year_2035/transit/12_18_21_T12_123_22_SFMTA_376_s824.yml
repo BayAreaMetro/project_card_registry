@@ -1,0 +1,257 @@
+project: 12_18_21_T12_123_22_SFMTA_376_s824
+tags:
+- 'change line headway'
+- 'change alighting and boarding type'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20265'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12590'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12566'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20316'
+  properties:
+  - set: 900.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20318'
+  properties:
+  - set: 600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20318'
+  properties:
+  - property: allow_alightings
+    set:
+    - 1014856
+    - 1007005
+  - property: allow_boardings
+    set:
+    - 1014856
+    - 1007005
+  - property: no_alightings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+  - property: no_boardings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20265'
+  properties:
+  - property: allow_alightings
+    set:
+    - 1014856
+    - 1007005
+  - property: allow_boardings
+    set:
+    - 1014856
+    - 1007005
+  - property: no_alightings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+  - property: no_boardings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '20316'
+  properties:
+  - property: allow_alightings
+    set:
+    - 1014856
+    - 1007005
+  - property: allow_boardings
+    set:
+    - 1014856
+    - 1007005
+  - property: no_alightings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+  - property: no_boardings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12590'
+  properties:
+  - property: allow_alightings
+    set:
+    - 1014856
+    - 1007005
+  - property: allow_boardings
+    set:
+    - 1014856
+    - 1007005
+  - property: no_alightings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+  - property: no_boardings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '12566'
+  properties:
+  - property: allow_alightings
+    set:
+    - 1014856
+    - 1007005
+  - property: allow_boardings
+    set:
+    - 1014856
+    - 1007005
+  - property: no_alightings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+  - property: no_boardings
+    set:
+    - 1001720
+    - 1010173
+    - 1010460
+    - 1020032
+    - 1002521
+    - 1007896
+    - 1002063
+    - 1007117
+    - 1021666
+    - 1002099
+    - 1005812
+    - 1009001
+    - 1019268
+valid: false

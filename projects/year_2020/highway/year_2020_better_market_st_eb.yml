@@ -1,0 +1,59 @@
+project: Year 2020 Better Market Street EB from 10th St to Main St
+tags:
+- Year 2020
+- BRT
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4502
+      - 27854
+      - 8450
+      - 9393
+      - 14764
+      - 27747
+      - 30012
+      - 31195
+      - 54279
+      - 63934
+      - 60414
+      - 71096
+      - 56307
+      - 57777
+      - 56810
+      - 72281
+      - 68981
+      - 44243
+      - 67841
+      - 53834
+      - 53448
+      - 45923
+      - 49018
+      - 57554
+      - 62464
+      - 55420
+      - 58305
+      - 66420
+      - 40924
+      - 3792
+      - 21360
+      - 5083
+      - 4404
+      - 7900
+      - 50731
+      - 52753
+      - 68882
+      - 43983
+      - 69397
+      - 55770
+      - 41384
+      - 58178
+      - 50747
+      - 54864
+  properties:
+  - property: BRT
+    set: 1
+  - property: lanes
+    set: 0

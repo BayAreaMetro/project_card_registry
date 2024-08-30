@@ -1,0 +1,63 @@
+project: I-680/SR 4 Phase 3 Project to add parallel managed lanes.
+tags:
+- Year 2023
+- Managed Lanes
+dependencies: 
+  prerequisites:
+  - 'I-680/SR 4 Phase 3 Project to add WB and EB GP lanes.'
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 4000063
+      - 4000985
+      - 4001386
+      - 4124133
+      - 4022743
+      - 4023963
+      - 4034720
+      - 4102565
+      - 4058698
+      - 4099903
+      - 4121834
+      - 4121448
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 4
+  - property: ML_tollbooth
+    set: 99
+  - property: ML_tollseg
+    set: 7
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: useclass
+    set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

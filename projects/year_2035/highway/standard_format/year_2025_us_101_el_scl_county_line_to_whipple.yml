@@ -1,0 +1,354 @@
+project: Year 2025 Santa Clara County Line to Whipple Ave
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1037174
+      - 1037799
+      - 1042366
+      - 1050814
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 107
+  - property: ML_tollseg
+    set: 2
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1001251
+      - 1015020
+      - 1026247
+      - 1033997
+      - 1039296
+      - 1042066
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 107
+  - property: ML_tollseg
+    set: 3
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2046145
+      - 2062632
+      - 2070664
+      - 2072120
+      - 2103467
+      - 2115244
+      - 2124995
+      - 2140839
+      - 2171410
+      - 2177354
+      - 2206615
+      - 2228342
+      - 2236621
+      - 2246528
+      - 2251007
+      - 2256176
+      - 2261956
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 107
+  - property: ML_tollseg
+    set: 4
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1000512
+      - 1004685
+      - 1015547
+      - 1015869
+      - 1046712
+      - 1054098
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 108
+  - property: ML_tollseg
+    set: 2
+  - property: ML_useclass
+    set: 2
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1013924
+      - 1024948
+      - 1044291
+      - 1048332
+      - 1051258
+      - 1055752
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 108
+  - property: ML_tollseg
+    set: 3
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2021154
+      - 2036989
+      - 2042346
+      - 2050687
+      - 2053563
+      - 2068992
+      - 2076396
+      - 2093169
+      - 2146178
+      - 2158245
+      - 2176805
+      - 2188343
+      - 2190087
+      - 2203962
+      - 2270219
+      - 2272797
+  properties:
+  - property: lanes
+    set: 5
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_tollbooth
+    set: 108
+  - property: ML_tollseg
+    set: 4
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

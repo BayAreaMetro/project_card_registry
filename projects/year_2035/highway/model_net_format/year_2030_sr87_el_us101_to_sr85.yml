@@ -1,0 +1,57 @@
+project: Year 2030 SR-87 Express Lanes US-101 to SR-85
+tags:
+- Year 2030
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12081136
+      - 12212826
+      - 12009697
+      - 12012177
+      - 12017800
+      - 12249852
+      - 12042388
+      - 12043682
+      - 12048647
+      - 12059253
+      - 12062332
+      - 12064560
+      - 12065599
+      - 12071387
+      - 12071859
+      - 12087550
+      - 12176972
+      - 12093444
+      - 12094505
+      - 12105379
+      - 12126016
+      - 12127649
+      - 12131799
+      - 12154681
+      - 12168198
+      - 12261009
+      - 12189891
+      - 12192139
+      - 12198279
+      - 12217894
+      - 12226922
+      - 12245594
+      - 12250422
+      - 12254557
+      - 12255119
+      - 12257456
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 6

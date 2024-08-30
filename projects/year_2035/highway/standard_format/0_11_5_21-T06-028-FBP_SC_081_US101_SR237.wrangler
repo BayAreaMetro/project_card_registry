@@ -1,0 +1,9 @@
+---
+project: 0_11_5_21-T06-028-FBP_SC_081_US101_SR237
+category: Calculated Roadway
+tags: 
+  - 'US101_SR237 Corridor Improvement'
+---
+
+self.links_df.loc[self.links_df['model_link_id'].isin([2207245]), 'lanes'] = 2
+self.links_df.loc[self.links_df['model_link_id'].isin([2046145,2093169]), 'lanes'] = 4

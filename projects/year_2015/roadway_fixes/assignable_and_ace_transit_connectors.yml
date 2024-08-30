@@ -1,0 +1,102 @@
+project: assignable_and_ace_transit_connectors
+tags:
+- Year 2015
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 4237483
+    - 4237497
+    - 4237482
+    - 4237496
+    - 3315422
+    - 3315457
+- category: Add New Roadway
+  links:
+  - A: 2625972
+    B: 5256617
+    model_link_id: 3500000
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+  - A: 3097285
+    B: 5267161
+    model_link_id: 3500001
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+  - A: 3097286
+    B: 5264239
+    model_link_id: 3500002
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+  - A: 5256617
+    B: 2625972
+    model_link_id: 3500003
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+  - A: 5264239
+    B: 3097286
+    model_link_id: 3500004
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+  - A: 5267161
+    B: 3097285
+    model_link_id: 3500005
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: 'TANA'
+    lanes: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 5080429
+      - 5001780
+  properties:
+  - property: assignable
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3267999
+      - 3160837
+      - 3315423
+      - 3315458
+      - 3315424
+      - 3315459
+      - 3315426
+      - 3315461
+      - 3315425
+      - 3315460
+      - 2516861
+      - 2517011
+      - 2516862
+      - 2517012
+      - 2516863
+      - 2517013
+  properties:
+  - property: drive_access
+    set: 1

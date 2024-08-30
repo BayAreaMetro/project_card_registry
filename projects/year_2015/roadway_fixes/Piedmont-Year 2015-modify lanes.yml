@@ -1,0 +1,50 @@
+project: Piedmont - Year 2015 - modify lanes
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3016062
+      - 3021231
+      - 3024072
+      - 3029608
+      - 3059506
+      - 3082836
+      - 3085850
+      - 3114722
+      - 3115804
+      - 3133034
+      - 3139788
+      - 3163862
+      - 3166220
+      - 3208476
+      - 3224183
+      - 3262164
+      - 3281798
+      - 3294451
+      - 3295140
+      - 3296048
+      - 3299337
+      - 3304031
+      - 3306932
+      - 3307340
+      - 3307916
+      - 3312931
+  properties:
+  - property: lanes
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3126289
+      - 3181090
+  properties:
+  - property: lanes
+    set: 2

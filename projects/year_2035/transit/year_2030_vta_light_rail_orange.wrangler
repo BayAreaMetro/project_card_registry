@@ -1,0 +1,383 @@
+---
+project: Year 2030 VTA Light Rail Orange Line
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - 'vta_light_rail_orange_add_rail_link.yml'
+---
+
+
+# route
+# add new orange route
+add_routes_df = pd.DataFrame(
+  {"route_id" : ["1015"],
+   "route_id_original" : [""],
+   "agency_id" : ["VTA"],
+   "route_short_name" : ["903"],
+   "route_long_name" : ["VTA Light Rail Orange Line"],
+   "route_type" : [0],
+   "agency_raw_name" : ["VTA_2015_8_27"]
+  }
+)
+self.feed.routes = self.feed.routes.append(add_routes_df, sort = False, ignore_index = True)
+
+
+# VTA LRT Orange Line EB - Mountain View to Eastridge Transit Center
+# add 5 EB new trips for EA, AM, MD, PM, EV
+# trip
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+max_shape_id = self.feed.shapes.shape_id.astype(int).max()
+trip_id_list = [max_trip_id+1,max_trip_id+2,max_trip_id+3,max_trip_id+4,max_trip_id+5]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1015",
+   "direction_id" : 0,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+1,
+   "agency_raw_name" : "VTA_2015_8_27"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+
+# stop
+stop_model_node_id_list = [2192923,  # Mountain View
+                            2192924,  # Whisman
+                            2192925,  # Middlefield
+                            2192926,  # Bayshore/NASA
+                            2192927,  # Moffett Park
+                            2192928,  # Lockheed Martin
+                            2192929,  # Borregas
+                            2192930,  # Crossman
+                            2192931,  # fair Oaks
+                            2192932,  # Vienna
+                            2192933,  # Reamwood
+                            2192934,  # Old Iransides
+                            2192935,  # Great America
+                            2192936,  # Lock Mill
+                            2192937,  # Champion
+                            2192855,  # Baypointe
+                            2192856,  # Cisco way
+                            2192857,  # Alder station (formerly I-880 Milpitas)
+                            2192858,  # Great Mall
+                            2192859,  # Milpitas (formerly Montague)
+                            2192860,  # Cropley
+                            2192861,  # Hostetter
+                            2192862,  # Berryessa
+                            2192863,  # Penitencia Creek
+                            2192864,  # McKee
+                            2192865,  # Alum Rock
+                            2192949,  # Story
+                            2192950]  # Eastridge Transit Center
+
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = [0,
+                      240,
+                      360,
+                      480,
+                      660,
+                      780,
+                      900,
+                      1020,
+                      1140,
+                      1260,
+                      1440,
+                      1560,
+                      1620,
+                      1800,
+                      1980,
+                      2160,
+                      2340,
+                      2460,
+                      2640,
+                      2760,
+                      2880,
+                      3000,
+                      3120,
+                      3240,
+                      3420,
+                      3600,
+                      3690,
+                      3960]
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+
+# shape
+shape_model_node_id_list = [2192923,
+                            2192924,
+                            2192925,
+                            2192926,
+                            2192927,
+                            2192928,
+                            2192929,
+                            2192930,
+                            2192931,
+                            2192932,
+                            2192933,
+                            2192934,
+                            2192935,
+                            2192936,
+                            2192937,
+                            2192855,
+                            2192856,
+                            2192857,
+                            2192858,
+                            2192859,
+                            2192860,
+                            2192861,
+                            2192862,
+                            2192863,
+                            2192864,
+                            2192865,
+                            2192949,
+                            2192950]
+
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+1,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1800, 900, 900, 900, 1800],
+   "start_time" : [10800,21600,36000,54000,68400],
+   "end_time" : [21600,36000,54000,68400,10800]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+
+##################################
+
+
+# VTA LRT Orange Line WB - Eastridge Transit Center to Mountain View
+# add 5 WB new trips for EA, AM, MD, PM, EV
+# trip
+trip_id_list = [max_trip_id+6,max_trip_id+7,max_trip_id+8,max_trip_id+9,max_trip_id+10]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1015",
+   "direction_id" : 1,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+2,
+   "agency_raw_name" : "VTA_2015_8_27"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+
+# stop
+stop_model_node_id_list = [2192950, # Eastridge Transit Center
+                            2192949, # Story
+                            2192881, # Alum Rock
+                            2192882, # McKee
+                            2192883, # Penitencia Creek
+                            2192884, # Berryessa
+                            2192885, # Hostetter
+                            2192886, # Cropley
+                            2192887, # Milpitas (formerly Montague)
+                            2192888, # Great Mall
+                            2192889, # Alder station (formerly I-880 Milpitas)
+                            2192890, # Cisco way
+                            2192891, # Baypointe
+                            2192908, # Champion
+                            2192909, # Lock Mill
+                            2192910, # Great America
+                            2192911, # Old Iransides
+                            2192912, # Reamwood
+                            2192913, # Vienna
+                            2192914, # fair Oaks
+                            2192915, # Crossman
+                            2192916, # Borregas
+                            2192917, # Lockheed Martin
+                            2192918, # Moffett Park
+                            2192919, # Bayshore/NASA
+                            2192920, # Middlefield
+                            2192921, # Whisman
+                            2192922] # Mountain View
+
+
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = [0,
+                      330,
+                      450,
+                      690,
+                      810,
+                      930,
+                      1050,
+                      1230,
+                      1350,
+                      1530,
+                      1710,
+                      1830,
+                      2010,
+                      2190,
+                      2370,
+                      2550,
+                      2610,
+                      2730,
+                      2850,
+                      2970,
+                      3090,
+                      3210,
+                      3330,
+                      3450,
+                      3630,
+                      3750,
+                      3870,
+                      4050]
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+
+# shape
+shape_model_node_id_list = [2192950,
+                            2192949,
+                            2192881,
+                            2192882,
+                            2192883,
+                            2192884,
+                            2192885,
+                            2192886,
+                            2192887,
+                            2192888,
+                            2192889,
+                            2192890,
+                            2192891,
+                            2192908,
+                            2192909,
+                            2192910,
+                            2192911,
+                            2192912,
+                            2192913,
+                            2192914,
+                            2192915,
+                            2192916,
+                            2192917,
+                            2192918,
+                            2192919,
+                            2192920,
+                            2192921,
+                            2192922]
+
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+2,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1800, 900, 900, 900, 1800],
+   "start_time" : [10800,21600,36000,54000,68400],
+   "end_time" : [21600,36000,54000,68400,10800]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

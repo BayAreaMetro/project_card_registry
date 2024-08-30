@@ -1,0 +1,23 @@
+project: Contra Costa County East - Year 2015 - correct facility type
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4005343
+      - 4017658
+      - 3063446
+      - 3135720
+      - 3166684
+      - 3175507
+      - 3208482
+      - 3272882
+  properties:
+  - property: ft
+    set: 4

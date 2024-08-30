@@ -1,0 +1,63 @@
+project: Year 2021 Modify HOV Lanes and USE to HOT 3+ for 5AM to 8PM on I-880 NB Dixon Landing Rd to Lewelling Blvd
+tags:
+- Year 2021
+- Managed Lanes
+- HOV Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 13006224
+      - 13053248
+      - 13015407
+      - 13017390
+      - 13019250
+      - 13020364
+      - 13022060
+      - 13025615
+      - 13099252
+      - 13034163
+      - 13035345
+      - 13035565
+      - 13037870
+      - 13132925
+      - 13051261
+      - 13052883
+      - 13055218
+      - 13062102
+      - 13062193
+      - 13062877
+      - 13145138
+      - 13169202
+      - 13076045
+      - 13077176
+      - 13149313
+      - 13089687
+      - 13089691
+      - 13092326
+      - 13097926
+      - 13102681
+      - 13107745
+      - 13113758
+      - 13118079
+      - 13119458
+      - 13124424
+      - 13131135
+      - 13134250
+      - 13136237
+      - 13144105
+      - 13160856
+      - 13167386
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 1

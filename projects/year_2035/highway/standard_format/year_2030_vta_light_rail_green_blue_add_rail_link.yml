@@ -1,0 +1,36 @@
+project: Year 2030 Add VTA Green and Blue Light Rail links
+tags:
+- add transit link
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2192951
+    rail_only: 1
+    X: -121.88796362437404
+    Y: 37.33270958420669
+  - model_node_id: 2192952
+    rail_only: 1
+    X: -121.8891515206911
+    Y: 37.33609766686003
+  links:
+  - model_link_id: 2700079
+    rail_only: 1
+    transit_access: 1
+    A: 2192842
+    B: 2192951
+  - model_link_id: 2700080
+    rail_only: 1
+    transit_access: 1
+    A: 2192951
+    B: 2192843
+  - model_link_id: 2700081
+    rail_only: 1
+    transit_access: 1
+    A: 2192868
+    B: 2192952
+  - model_link_id: 2700082
+    rail_only: 1
+    transit_access: 1
+    A: 2192952
+    B: 2192869

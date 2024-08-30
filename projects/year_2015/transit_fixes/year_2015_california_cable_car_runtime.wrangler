@@ -1,0 +1,37 @@
+---
+project: Year 2015 California Cable Car Runtime Fix
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+route_id = 352
+
+trip_id_arrival_time = {
+    # shape_id: 1030 (eastbound)
+    '18626': [None, None, None, 180, None, None, None, None, 420, None, None, None, None, None, None, None, None, 900], 
+    '18617': [None, None, None, 180, None, None, None, None, 420, None, None, None, None, None, None, None, None, 900],
+    '18597': [None, None, None, 180, None, None, None, None, 540, None, None, None, None, None, None, None, None, 1020],
+    '18559': [None, None, None, 180, None, None, None, None, 540, None, None, None, None, None, None, None, None, 1020],
+    '18612': [None, None, None, 180, None, None, None, None, 540, None, None, None, None, None, None, None, None, 960],
+    # shape_id: 1028 (westbound)
+    '18493': [None, None, None, None, None, None, None, None, None, 420, None, None, None, None, 660, None, None, 780],
+    '18479': [None, None, None, None, None, None, None, None, None, 480, None, None, None, None, 780, None, None, 960],
+    '18474': [None, None, None, None, None, None, None, None, None, 480, None, None, None, None, 780, None, None, 960],
+    '18445': [None, None, None, None, None, None, None, None, None, 480, None, None, None, None, 780, None, None, 960],
+}
+
+# update arrival/departure time list
+for trip_id, arrival_time_list in trip_id_arrival_time.items():
+    old_stop_times = self.feed.stop_times[self.feed.stop_times['trip_id'].isin([trip_id, int(trip_id)])]
+    update_stop_times = old_stop_times.copy()
+    update_stop_times['arrival_time'] = arrival_time_list
+    update_stop_times['departure_time'] = update_stop_times['arrival_time']
+
+    # remove original stop_times for this trip
+    self.feed.stop_times = self.feed.stop_times[(self.feed.stop_times['trip_id'] != trip_id) & (self.feed.stop_times['trip_id'] != int(trip_id))]
+
+    # add updated info to stop_times
+    self.feed.stop_times = self.feed.stop_times.append(update_stop_times, sort = False, ignore_index = True)

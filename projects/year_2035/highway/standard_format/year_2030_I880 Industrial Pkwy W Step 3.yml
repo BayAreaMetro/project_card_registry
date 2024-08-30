@@ -1,0 +1,53 @@
+project: I880 Industrial Pkwy West Step 3 (Construct a two lane diagonal northbound
+  off-ramp), RTP ID 21-T06-024
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626024
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.07332
+    Y: 37.61633
+  - model_node_id: 2626025
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -122.07316
+    Y: 37.61637
+  links:
+  - A: 2606141
+    B: 2626024
+    model_link_id: 3443573
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 4
+  - A: 2626024
+    B: 2573331
+    model_link_id: 3443574
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 4
+  - A: 2626024
+    B: 2626025
+    model_link_id: 3443575
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 8
+    lanes: 1
+  - A: 2626024
+    B: 2526697
+    model_link_id: 3443576
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 2

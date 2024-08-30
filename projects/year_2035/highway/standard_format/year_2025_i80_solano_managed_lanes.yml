@@ -1,0 +1,60 @@
+project: Year 2025 Solano I-80 Managed Lanes Phase 1 Create New Managed Lane from Air Base Parkway to I-505
+tags:
+- Year 2025
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      -  5002282
+      -  5002655
+      -  5004284
+      -  5005559
+      -  5005633
+      -  5006510
+      -  5006949
+      -  5007439
+      -  5007842
+      -  5012639
+      -  5035860
+      -  5015708
+      -  5018165
+      -  5018564
+      -  5018667
+      -  5048365
+      -  5023994
+      -  5025273
+      -  5044708
+      -  5043087
+      -  5033197
+      -  5033492
+      -  5034158
+      -  5037799
+      -  5043770
+      -  5039512
+      -  5046091
+      -  5054499
+      -  5055185
+      -  5057388
+      -  5060950
+  properties:
+  - property: lanes
+    change: -1
+  - property: ML_tollbooth
+    set: 99
+  - property: ML_tollseg
+    set: 8
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_lanes
+    set: 1
+  - property: ML_useclass
+    set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

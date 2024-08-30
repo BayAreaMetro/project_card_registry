@@ -1,0 +1,39 @@
+project: Year 2020 Broadway BRT
+tags:
+- Year 2020
+- BRT
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3184448
+      - 3001595
+      - 3299680
+      - 3004122
+      - 3288991
+      - 3033196
+      - 3173706
+      - 3033620
+      - 3091989
+      - 3043251
+      - 3122987
+      - 3230064
+      - 3127236
+      - 3307902
+      - 3060594
+      - 3266580
+      - 3262841
+      - 3152115
+      - 3165849
+      - 3124959
+      - 3068330
+      - 3312867
+      - 3118827
+      - 3304312
+      - 3100163
+      - 3143626
+  properties:
+  - property: BRT
+    set: 1

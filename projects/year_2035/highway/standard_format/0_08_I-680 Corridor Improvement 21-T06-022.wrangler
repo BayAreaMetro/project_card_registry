@@ -1,0 +1,10 @@
+---
+project: 0_08_I-680 Corridor Improvement 21-T06-022
+category: Calculated Roadway
+tags: ''
+---
+
+self.links_df.loc[self.links_df['model_link_id'].isin([4063423,4019792,4032826,4083684,4036573,4112684]), 'lanes'] = 2
+self.links_df.loc[self.links_df['model_link_id'].isin([4084460,4031486]), 'lanes'] = 3
+self.links_df.loc[self.links_df['model_link_id'].isin([4006397,4103972]), 'lanes'] = 4
+self.links_df.loc[self.links_df['model_link_id'].isin([4014030]), 'lanes'] = 5

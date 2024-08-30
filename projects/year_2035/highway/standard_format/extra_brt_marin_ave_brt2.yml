@@ -1,0 +1,22 @@
+project: Extra BRT - Marin Ave
+tags:
+- Extra BRT
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3017550
+      - 3021417
+      - 3043311
+      - 3136949
+      - 3080359
+      - 3083853
+      - 3132986
+      - 3157093
+      - 3149193
+      - 3160456
+  properties:
+  - property: BRT
+    set: 2

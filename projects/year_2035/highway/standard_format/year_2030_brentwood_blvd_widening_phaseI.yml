@@ -1,0 +1,17 @@
+project: Brentwood Boulevard Widening - North (Phase I)
+tags:
+- Brentwood
+- year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4051359
+      - 4106700
+      - 4204685
+      - 4213112
+  properties:
+  - property: lanes
+    set: 4

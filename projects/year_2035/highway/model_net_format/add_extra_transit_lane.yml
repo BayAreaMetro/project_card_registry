@@ -1,0 +1,104 @@
+project: year 2035 extra transitonly lane
+tags:
+- Year 2035
+- transit link
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 3031452
+    B: 3078980
+    bike_access: 1
+    drive_access: 1
+    roadway: motorway
+    shstGeometryId: '0'
+    walk_access: 1
+    county: Contra Costa
+    model_link_id: 4900008
+    rail_only: 0
+    ft: 4
+    assignable: 1
+    nmt2010: 0
+    nmt2020: 0
+    tollbooth: 0
+    bus_only: 0
+    managed: 0
+    segment_id: 0
+    tollseg: 0
+    distance: 0.556036
+    cntype: TANA
+    lanes_EA: 1
+    lanes_AM: 1
+    lanes_MD: 1
+    lanes_PM: 1
+    lanes_EV: 1
+    useclass_EA: 0
+    useclass_AM: 0
+    useclass_MD: 0
+    useclass_PM: 0
+    useclass_EV: 0
+    has_transit: 1
+  - A: 3078980
+    B: 3044090
+    bike_access: 1
+    drive_access: 1
+    roadway: motorway
+    shstGeometryId: '0'
+    walk_access: 1
+    county: Contra Costa
+    model_link_id: 4534900
+    rail_only: 0
+    ft: 4
+    assignable: 1
+    nmt2010: 0
+    nmt2020: 0
+    tollbooth: 0
+    bus_only: 0
+    managed: 0
+    segment_id: 0
+    tollseg: 0
+    distance: 0.556036
+    cntype: TANA
+    lanes_EA: 1
+    lanes_AM: 1
+    lanes_MD: 1
+    lanes_PM: 1
+    lanes_EV: 1
+    useclass_EA: 0
+    useclass_AM: 0
+    useclass_MD: 0
+    useclass_PM: 0
+    useclass_EV: 0
+    has_transit: 1
+  - A: 2599627
+    B: 2523808
+    bike_access: 1
+    drive_access: 1
+    roadway: cycleway
+    shstGeometryId: '0'
+    walk_access: 1
+    county: Alameda
+    model_link_id: 4900009
+    rail_only: 0
+    ft: 4
+    assignable: 1
+    nmt2010: 0
+    nmt2020: 0
+    tollbooth: 0
+    bus_only: 0
+    managed: 0
+    segment_id: 0
+    tollseg: 0
+    distance: 0.556036
+    cntype: TANA
+    lanes_EA: 2
+    lanes_AM: 2
+    lanes_MD: 2
+    lanes_PM: 2
+    lanes_EV: 2
+    useclass_EA: 0
+    useclass_AM: 0
+    useclass_MD: 0
+    useclass_PM: 0
+    useclass_EV: 0
+    has_transit: 0

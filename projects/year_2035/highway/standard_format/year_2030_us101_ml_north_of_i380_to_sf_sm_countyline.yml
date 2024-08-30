@@ -1,0 +1,70 @@
+project: US-101 Managed Lanes North of I-380
+tags:
+- Year 2030
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 1000746
+      - 1060209
+      - 1004289
+      - 1025234
+      - 1008116
+      - 1045416
+      - 1060900
+      - 1054717
+      - 1022830
+      - 1024724
+      - 1026500
+      - 1027106
+      - 1028726
+      - 1033873
+      - 1034144
+      - 1040116
+      - 1043019
+      - 1048856
+      - 1048989
+      - 1060168
+      - 1060853
+      - 1064284
+      - 1072161
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 4
+  - property: ML_tollbooth
+    set: 99
+  - property: ML_tollseg
+    set: 8
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

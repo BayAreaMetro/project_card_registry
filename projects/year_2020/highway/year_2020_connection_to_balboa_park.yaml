@@ -1,0 +1,51 @@
+project: Connection to Balboa Park BART stop
+tags:
+- Year 2020
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 1027464
+    B: 1005248
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    county: San Francisco
+    model_link_id: 133512
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 1005248
+    B: 1027464
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    county: San Francisco
+    model_link_id: 133513
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 1027464
+    B: 1013578
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    county: San Francisco
+    model_link_id: 133514
+    assignable: 1
+    bus_only: 0
+    ft: 7
+  - A: 1013578
+    B: 1027464
+    lanes: 1
+    walk_access: 1
+    bike_access: 1
+    drive_access: 0
+    county: San Francisco
+    model_link_id: 133515
+    assignable: 1
+    bus_only: 0
+    ft: 7

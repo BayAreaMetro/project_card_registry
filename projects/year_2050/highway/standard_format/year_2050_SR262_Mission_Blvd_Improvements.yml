@@ -1,0 +1,264 @@
+project: I680/SR262 Interchange improvements, RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 3140958
+    - 3062921
+    - 3075226
+    - 3030565
+    - 3092103
+    - 3013530
+    - 3087442
+    - 3013589
+    - 3079506
+    - 3107470
+    - 3251145
+    - 3028600
+    - 3026333
+    - 3258022
+    - 3045930
+    - 3021175
+    - 3083780
+    - 3050497
+    - 3057560
+    - 3001951
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626029
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92661
+    Y: 37.49212
+  - model_node_id: 2626030
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92698
+    Y: 37.4922
+  - model_node_id: 2626031
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92676
+    Y: 37.49221
+  - model_node_id: 2626032
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.93000295
+    Y: 37.48967666
+  - model_node_id: 2626033
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92355694
+    Y: 37.49535265
+  - model_node_id: 2626034
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92344251
+    Y: 37.49527339
+  links:
+  - A: 2513388
+    B: 2626029
+    model_link_id: 3443616
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2626031
+    B: 2626032
+    model_link_id: 3443617
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2626032
+    B: 2577006
+    model_link_id: 3443618
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2511420
+    B: 2626030
+    model_link_id: 3443619
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626030
+    B: 2511420
+    model_link_id: 3443620
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626029
+    B: 2542076
+    model_link_id: 3443621
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2542076
+    B: 2501986
+    model_link_id: 3443622
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2520600
+    B: 2626033
+    model_link_id: 3443623
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626033
+    B: 2559116
+    model_link_id: 3443624
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+  - A: 2559116
+    B: 2626031
+    model_link_id: 3443625
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+  - A: 2554300
+    B: 2626030
+    model_link_id: 3443626
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626030
+    B: 2554300
+    model_link_id: 3443627
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2626030
+    B: 2525292
+    model_link_id: 3443628
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2525292
+    B: 2626030
+    model_link_id: 3443629
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    lanes: 2
+  - A: 2529074
+    B: 2626033
+    model_link_id: 3443630
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626033
+    B: 2626034
+    model_link_id: 3443631
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626034
+    B: 2567915
+    model_link_id: 3443632
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 3
+    lanes: 1
+  - A: 2626034
+    B: 2534081
+    model_link_id: 3443633
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2501986
+    B: 2626034
+    model_link_id: 3443634
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3011138
+  properties:
+  - property: lanes
+    set: 3
+  - property: ft
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3082198
+      - 3079954
+      - 3061579
+      - 3002422
+      - 3019486
+      - 3097319
+      - 3099030
+      - 3104417
+      - 3046868
+      - 3009307
+      - 3073518
+      - 3068165
+      - 3036762
+      - 3238385
+      - 3233224
+      - 3136062
+  properties:
+  - property: lanes
+    set: 2
+  - property: ft
+    set: 99
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3149101
+  properties:
+  - property: lanes
+    set: 1
+  - property: ft
+    set: 99

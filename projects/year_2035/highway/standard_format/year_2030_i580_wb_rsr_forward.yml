@@ -1,0 +1,73 @@
+project: Year 2030 I-580 WB RSR Forward
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 4001783
+      - 4010436
+      - 4123956
+      - 4123144
+      - 4036899
+      - 4070026
+      - 4078392
+      - 4091652
+      - 4109679
+      - 4114961
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '10:00'
+      - '15:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 3
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 3
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 3
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

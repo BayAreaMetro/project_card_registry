@@ -1,0 +1,73 @@
+project: dublin_blvd_n_canyons_pkwy_extension
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 2543027
+    B: 2502809
+    bike_access: 1
+    drive_access: 1
+    name: North Parkway Extension
+    roadway: motorway
+    shstGeometryId:
+    walk_access: 1
+    county: Alameda
+    model_link_id: 4900006
+    rail_only: 0
+    ft: 6
+    assignable: 1
+    distance: 0.37
+    nmt2010: 0
+    nmt2020: 0
+    tollbooth: 0
+    bus_only: 0
+    managed: 0
+    segment_id: 0
+    tollseg: 0
+    cntype: TANA
+    lanes_EA: 3
+    lanes_AM: 3
+    lanes_MD: 3
+    lanes_PM: 3
+    lanes_EV: 3
+    useclass_EA: 0
+    useclass_AM: 0
+    useclass_MD: 0
+    useclass_PM: 0
+    useclass_EV: 0
+    has_transit: 0
+  - A: 2502809
+    B: 2543027
+    bike_access: 1
+    drive_access: 1
+    name: North Parkway Extension
+    roadway: motorway
+    shstGeometryId:
+    walk_access: 1
+    county: Alameda
+    model_link_id: 4900007
+    rail_only: 0
+    ft: 6
+    assignable: 1
+    distance: 0.37
+    nmt2010: 0
+    nmt2020: 0
+    tollbooth: 0
+    bus_only: 0
+    managed: 0
+    segment_id: 0
+    tollseg: 0
+    cntype: TANA
+    lanes_EA: 3
+    lanes_AM: 3
+    lanes_MD: 3
+    lanes_PM: 3
+    lanes_EV: 3
+    useclass_EA: 0
+    useclass_AM: 0
+    useclass_MD: 0
+    useclass_PM: 0
+    useclass_EV: 0
+    has_transit: 0

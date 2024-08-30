@@ -1,0 +1,34 @@
+## REVIEW COMMENTS:
+# MODEL_LINK_IDS ARE GP LANES. THESE DON'T NEED TO BE CHANGED
+# ADDING A 1 TO THE LEFT OF EACH LINK ID, since the managed lanes are coded with a 1 to the left of the parallel links
+# DELETING 2225072 (OR 12225072), SINCE IT IS ALREADY CODED AS TOLLBOOTH 32, TOLLSEG 1
+# Properties updated would be USECLASS_AM, USECLASS_MD, USECLASS_PM, TOLLBOOTH and TOLLSEG, probably not ML_USECLASS and ML_TOLLSEG
+# TOLLBOOTH value set to 32 to be consistent, TOLLSEG value set to 2 to distinguish it from the existing one.
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+      model_link_id:
+      - 12217343
+      - 12221876
+      - 12192839
+      - 12193144
+      - 12251039
+      - 12017093
+  properties:
+  - property: useclass_am #ML_useclass
+    set: 4
+  - property: useclass_md #ML_useclass
+    set: 4
+  - property: useclass_pm #ML_useclass
+    set: 4
+  - property: tollbooth #ML_tollbooth
+    set: 32
+  - property: tollseg #ML_tollseg
+    set: 2
+dependencies: ''
+project: SR-237 Express Lanes Phase 2 EB (1st to 101)
+tags:
+- Year 2019
+- Roadway Property Change
+- toll review

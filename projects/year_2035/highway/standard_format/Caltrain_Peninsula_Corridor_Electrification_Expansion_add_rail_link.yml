@@ -1,0 +1,63 @@
+project: Caltrain_Peninsula_Corridor_Electrification_Expansion_add_rail_link
+tags:
+- add transit link
+dependencies: ''
+category: Add Transit
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 2700121
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192815
+    B: 2192806
+  - model_link_id: 2700122
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192806
+    B: 2192815
+  - model_link_id: 2700123
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192816
+    B: 2192806
+  - model_link_id: 2700124
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192806
+    B: 2192816
+  - model_link_id: 2700125
+    rail_only: 1
+    transit_access: 1.0
+    A: 1027620
+    B: 1003587
+  - model_link_id: 2700126
+    rail_only: 1
+    transit_access: 1.0
+    A: 1003587
+    B: 1027617
+  - model_link_id: 2700127
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192813
+    B: 2192812
+  - model_link_id: 2700128
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192812
+    B: 2192811
+  - model_link_id: 2700129
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192811
+    B: 2192810
+  - model_link_id: 2700130
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192810
+    B: 2192809
+  - model_link_id: 2700131
+    rail_only: 1
+    transit_access: 1.0
+    A: 2192809
+    B: 2192814

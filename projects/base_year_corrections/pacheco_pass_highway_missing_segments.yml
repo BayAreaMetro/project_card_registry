@@ -9,6 +9,7 @@ changes:
   - A: 2154279
     B: 2192760
     bike_access: 1
+    county: Santa Clara
     drive_access: 1
     model_link_id: 2660008
     rail_only: 0
@@ -20,6 +21,7 @@ changes:
   - A: 2192760
     B: 2154279
     bike_access: 1
+    county: Santa Clara
     drive_access: 1
     model_link_id: 2660009
     rail_only: 0
@@ -31,6 +33,7 @@ changes:
   - A: 2137905
     B: 2129456
     bike_access: 1
+    county: Santa Clara
     drive_access: 1
     model_link_id: 2660010
     rail_only: 0
@@ -42,6 +45,7 @@ changes:
   - A: 2129456
     B: 2137905
     bike_access: 1
+    county: Santa Clara
     drive_access: 1
     model_link_id: 2660011
     rail_only: 0

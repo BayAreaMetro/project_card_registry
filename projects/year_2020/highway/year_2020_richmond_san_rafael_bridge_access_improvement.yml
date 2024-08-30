@@ -1,0 +1,22 @@
+project: Year 2020 Richmond-San Rafael Bridge Access Improvements
+tags:
+- Year 2020
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4062186
+  properties:
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1
+  facility:
+    link:
+    - model_link_id:
+      - 4074386
+  properties:
+  - property: lanes
+    set: 3

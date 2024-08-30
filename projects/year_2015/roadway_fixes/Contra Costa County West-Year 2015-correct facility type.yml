@@ -1,0 +1,28 @@
+project: Contra Costa County West - Year 2015 - correct facility type
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4082801
+  properties:
+  - property: ft
+    set: 4
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4003116
+      - 4026576
+      - 4082421
+      - 4095558
+      - 4126406
+  properties:
+  - property: ft
+    set: 6

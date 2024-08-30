@@ -1,0 +1,36 @@
+project: I-880 Express Lanes Between SR 237 and US 101
+tags:
+- Year 2027
+- Roadway Property Change
+- toll review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12015766
+      - 12016451
+      - 12017398
+      - 12072870
+      - 12033041
+      - 12050795
+      - 12239926
+      - 12065844
+      - 12068265
+      - 12088253
+      - 12098996
+      - 12122934
+      - 12164622
+      - 12173469
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 3

@@ -1,0 +1,43 @@
+project name: I880 Winton Avenue Interchange Improvements Step 4 ( Widening of the SB, NB on-ramps to add a HOV bypass lane), RTP ID 21-T06-024
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3074719
+      - 3003651
+  properties:
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 9999
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+
+
+     

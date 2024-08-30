@@ -1,0 +1,48 @@
+project: 3_21-T11-095MAJ_WETA_Service_Frequency_Alameda_Oakland
+tags: 
+- 'change headway'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22894'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22848'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22898'
+  properties:
+  - set: 1200.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22896'
+  properties:
+  - set: 3600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22810'
+  properties:
+  - set: 3600.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22899'
+  properties:
+  - set: 3600.0
+    property: headway_secs
+valid: false

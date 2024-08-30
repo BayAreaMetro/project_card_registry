@@ -1,0 +1,25 @@
+# This removes managed lane connectors for nodes which should not have access/egress
+# This is one of two segments identified for the I-680 CC Express Lanes
+# which has a segment of restricted access/egress.
+project: I-680 Contra Costa Express Lanes SB Remove Connectors SR 245 to WC Main St
+tags:
+- Year 2019
+- Roadway Deletion
+- toll review
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+      - 18017899
+      - 18026017
+      - 18036739
+      - 18180625
+      - 18207705
+      - 18229225
+      - 18180626
+      - 18017900
+      - 18207706
+      - 18229226
+      - 18036740
+      - 18026018

@@ -1,0 +1,29 @@
+project: Year 2025 SR 85 Express Lanes US101 Interchange to I-280 Interchange - EB
+tags:
+- Year 2025
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 12051033
+      - 12175467
+      - 12161968
+      - 12164992
+      - 12200034
+      - 12214852
+      - 12222812
+      - 12267768
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 851
+  - property: tollseg
+    set: 0

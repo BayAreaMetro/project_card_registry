@@ -1,0 +1,61 @@
+project: Brentwood - Year 2015 - correct facility type
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4024032
+      - 4055451
+      - 4200350
+      - 4207100
+  properties:
+  - property: ft
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4023716
+      - 4040261
+      - 4061005
+      - 4068738
+      - 4094621
+      - 4097430
+      - 4106393
+      - 4125969
+      - 4017779
+      - 4009899
+      - 4015120
+      - 4042466
+      - 4047339
+      - 4048452
+      - 4053131
+      - 4057011
+      - 4059291
+      - 4073058
+      - 4121643
+      - 4125256
+      - 4144549
+      - 4157976
+      - 4159629
+      - 4177293
+      - 4181511
+      - 4183383
+      - 4188352
+      - 4192864
+      - 4194801
+      - 4210461
+      - 4236378
+      - 4016926
+      - 4021457
+      - 4092554
+      - 4110149
+  properties:
+  - property: ft
+    set: 4

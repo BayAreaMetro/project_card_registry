@@ -1,0 +1,473 @@
+project: Externals_SJQ_Add_complete_network_10032022
+tags:
+- Year 2015
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 900022
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.62623
+    Y: 38.32121
+  - model_node_id: 900023
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.45927
+    Y: 38.28516
+  - model_node_id: 900024
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.29041
+    Y: 38.25026
+  - model_node_id: 900025
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.17159
+    Y: 38.27123
+  - model_node_id: 900026
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.02536
+    Y: 38.26677
+  - model_node_id: 900027
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.98185
+    Y: 38.20399
+  - model_node_id: 900028
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.93852
+    Y: 38.09565
+  - model_node_id: 900029
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.93632
+    Y: 37.94313
+  - model_node_id: 900030
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.9143
+    Y: 37.82816
+  - model_node_id: 900031
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.91424
+    Y: 37.79282
+  - model_node_id: 900032
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.91614
+    Y: 37.76919
+  - model_node_id: 900033
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -120.93759
+    Y: 37.73769
+  - model_node_id: 900034
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.10475
+    Y: 37.72678
+  - model_node_id: 900035
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.28634
+    Y: 37.62973
+  - model_node_id: 900036
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.33211
+    Y: 37.59179
+  links:
+  - A: 900022
+    B: 3528709
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 3528709
+    B: 900022
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900023
+    B: 5300019
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5300021
+    B: 900023
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900024
+    B: 5300006
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5300023
+    B: 900024
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900025
+    B: 5260437
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900026
+    B: 5262224
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900027
+    B: 5300005
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900028
+    B: 5287282
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900029
+    B: 5282606
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900030
+    B: 5280530
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900031
+    B: 5266457
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900032
+    B: 5257865
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900033
+    B: 5270938
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900034
+    B: 5300022
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900035
+    B: 5260540
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 900036
+    B: 5265903
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5257865
+    B: 900032
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5260437
+    B: 900025
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5260540
+    B: 900035
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5262224
+    B: 900026
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5266457
+    B: 900031
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5270938
+    B: 900033
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5280530
+    B: 900030
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5282606
+    B: 900029
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5287282
+    B: 900028
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5300005
+    B: 900027
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5300013
+    B: 900034
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1
+  - A: 5300017
+    B: 900036
+    model_link_id: 8100000
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    roadway: 'taz'
+    cntype: 'TAZ'
+    ft: 8
+    rail_only: 0
+    assignable: 1
+    lanes: 1

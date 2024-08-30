@@ -1,0 +1,13 @@
+project: I-880 NB HOV/HOT I-880 North Safety Improvement
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3187057
+  properties:
+  - property: lanes
+    set: 2

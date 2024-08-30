@@ -1,0 +1,80 @@
+project: BART Stations PNR Connector Corrections at Dublin/Pleasanton and Pittsburg/Bay
+  Point Stations
+tags:
+- Year 2015
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - A: 3028340
+    B: 3097274
+    model_link_id: 3443544
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: TANA
+    lanes: 1
+  - A: 3097274
+    B: 3028340
+    model_link_id: 3443545
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: TANA
+    lanes: 1
+  - A: 5300061
+    B: 1027614
+    model_link_id: 3443546
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: TANA
+    lanes: 1
+  - A: 1027614
+    B: 5300061
+    model_link_id: 3443547
+    drive_access: 0
+    bike_access: 1
+    walk_access: 1
+    ft: 7
+    cntype: TANA
+    lanes: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 5080429
+      - 5001780
+      - 4237471
+      - 4147536
+      - 4228102
+      - 4237485
+      - 4122703
+      - 4078473
+      - 4200419
+      - 4114236
+      - 4216259
+      - 4166549
+      - 4080414
+      - 4121710
+      - 4207865
+      - 4197540
+      - 4088771
+      - 4007932
+      - 4234149
+      - 3315409
+      - 3315444
+      - 3105596
+      - 3232030
+      - 3121270
+      - 3263547
+      - 3231049
+      - 3146252
+  properties:
+  - property: assignable
+    set: 1
+  - property: drive_access
+    set: 1

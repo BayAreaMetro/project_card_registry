@@ -1,0 +1,153 @@
+project: Year 2025 I-680 Express Lanes fromSouth of Auto Mall Parkwayy to SR 84 NB
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3006238
+      - 3160855
+      - 3089596
+      - 3019084
+      - 3026199
+      - 3031750
+      - 3064667
+      - 3050881
+      - 3061155
+      - 3079087
+      - 3113544
+      - 3126436
+      - 3162430
+      - 3160659
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '10:00'
+      - '15:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_tollbooth
+    set: 26
+  - property: ML_tollseg
+    set: 1
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 2
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2023518
+      - 2185456
+      - 3090532
+      - 2086733
+      - 2120842
+      - 2152405
+      - 3007963
+      - 3034089
+      - 3107437
+      - 3120423
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '10:00'
+      - '15:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_tollbooth
+    set: 26
+  - property: ML_tollseg
+    set: 1
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 2
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

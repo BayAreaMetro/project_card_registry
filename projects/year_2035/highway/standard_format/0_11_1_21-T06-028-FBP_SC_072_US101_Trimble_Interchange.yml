@@ -1,0 +1,21 @@
+project: 0_11_1_21-T06-028-FBP_SC_072_US101_Trimble_Interchange
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 2063066
+      - 2146774
+      - 2109381
+      - 2126355
+      - 2167686
+      - 2182454
+      - 2258210
+      - 2028763
+  properties:
+  - existing: 2.0
+    set: 3.0
+    property: lanes
+valid: false

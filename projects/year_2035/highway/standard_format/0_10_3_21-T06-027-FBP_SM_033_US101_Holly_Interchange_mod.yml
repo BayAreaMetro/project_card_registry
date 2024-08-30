@@ -1,0 +1,16 @@
+project: 0_10_3_21-T06-027-FBP_SM_033_US101_Holly_Interchange_mod
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 1060776
+      - 1035567
+      - 1075047
+  properties:
+  - existing: 1.0
+    set: 2.0
+    property: lanes
+valid: false

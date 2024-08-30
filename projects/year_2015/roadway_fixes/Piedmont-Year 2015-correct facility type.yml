@@ -1,0 +1,17 @@
+project: Piedmont - Year 2015 - correct facility type
+tags:
+- Year 2015 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3085850
+      - 3307916
+  properties:
+  - property: ft
+    set: 6

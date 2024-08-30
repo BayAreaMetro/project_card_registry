@@ -1,0 +1,806 @@
+---
+project: Year 2030 SamTrans Express 8 Western San Francisco - San Mateo
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+# route
+add_routes_df = pd.DataFrame(
+  {"route_id" : ["1012"],
+   "route_id_original" : [""],
+   "agency_id" : ["samtrans-ca-us"],
+   "route_short_name" : ["KX"],
+   "route_long_name" : ["SamTrans Express 8"],
+   "route_type" : [3],
+   "agency_raw_name" : ["SamTrans_2015_8_20"]
+  }
+)
+self.feed.routes = self.feed.routes.append(add_routes_df, sort = False, ignore_index = True)
+
+
+# SamTrans Express 8 NB - San Mateo to Western San Francisco
+# add 2 NB new trips for AM, PM
+# trip
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+max_shape_id = self.feed.shapes.shape_id.astype(int).max()
+trip_id_list = [max_trip_id+1,max_trip_id+2]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1012",
+   "direction_id" : 0,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+1,
+   "agency_raw_name" : "SamTrans_2015_8_20"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+
+# stop
+stop_model_node_id_list = [1526179,
+                            1506068,
+                            1526561,
+                            1504365,
+                            1543306,
+                            1504205,
+                            1000603,
+                            1003477,
+                            1008628,
+                            1019067,
+                            1013394,
+                            1016231,
+                            1022287,
+                            1023015,
+                            1008798,
+                            1006608,
+                            1011919]
+
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = [0,  # placeholder nntime, non-rail transit services will use travel time on highway network
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0]
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+
+# shape
+shape_model_node_id_list = [1526179,
+                            1500467,
+                            1547567,
+                            1506089,
+                            1514361,
+                            1506068,
+                            1527319,
+                            1525579,
+                            1528623,
+                            1522725,
+                            1524638,
+                            1508850,
+                            1529808,
+                            1547145,
+                            1529690,
+                            1520181,
+                            1534971,
+                            1515829,
+                            1525350,
+                            1531089,
+                            1508127,
+                            1536365,
+                            1506470,
+                            1502060,
+                            1527383,
+                            1526561,
+                            1519224,
+                            1525093,
+                            1543517,
+                            1526880,
+                            1548258,
+                            1530181,
+                            1508083,
+                            1523395,
+                            1506735,
+                            1521556,
+                            1534069,
+                            1518194,
+                            1517242,
+                            1519361,
+                            1535312,
+                            1520501,
+                            1501403,
+                            1532231,
+                            1502133,
+                            1544530,
+                            1525806,
+                            1516672,
+                            1516618,
+                            1546306,
+                            1504365,
+                            1526025,
+                            1501480,
+                            1538948,
+                            1527142,
+                            1517358,
+                            1504772,
+                            1522498,
+                            1506883,
+                            1538647,
+                            1522108,
+                            1503774,
+                            1507616,
+                            1515213,
+                            1512093,
+                            1528938,
+                            1510256,
+                            1505927,
+                            1508730,
+                            1524340,
+                            1524803,
+                            1542458,
+                            1546363,
+                            1512739,
+                            1532800,
+                            1527696,
+                            1545036,
+                            1520337,
+                            1501382,
+                            1523960,
+                            1507012,
+                            1543306,
+                            1530649,
+                            1520367,
+                            1510561,
+                            1533250,
+                            1530081,
+                            1505941,
+                            1503922,
+                            1547190,
+                            1512153,
+                            1531738,
+                            1503711,
+                            1541729,
+                            1543604,
+                            1522745,
+                            1525668,
+                            1547936,
+                            1547976,
+                            1544865,
+                            1534615,
+                            1525821,
+                            1529603,
+                            1526883,
+                            1528080,
+                            1543674,
+                            1528569,
+                            1539718,
+                            1546892,
+                            1519415,
+                            1504573,
+                            1533587,
+                            1548379,
+                            1501662,
+                            1512460,
+                            1546810,
+                            1507277,
+                            1512690,
+                            1541896,
+                            1511163,
+                            1508604,
+                            1508213,
+                            1540363,
+                            1513948,
+                            1515571,
+                            1524035,
+                            1526919,
+                            1504605,
+                            1514115,
+                            1542401,
+                            1519383,
+                            1543922,
+                            1523203,
+                            1504205,
+                            1515830,
+                            1512216,
+                            1527923,
+                            1535566,
+                            1500135,
+                            1012032,
+                            1014598,
+                            1024042,
+                            1023507,
+                            1020598,
+                            1004389,
+                            1006488,
+                            1005573,
+                            1011999,
+                            1000603,
+                            1023847,
+                            1021045,
+                            1020711,
+                            1008338,
+                            1021301,
+                            1012590,
+                            1012994,
+                            1012446,
+                            1008564,
+                            1023948,
+                            1021156,
+                            1003477,
+                            1006861,
+                            1012060,
+                            1003542,
+                            1013528,
+                            1007410,
+                            1008857,
+                            1015387,
+                            1008628,
+                            1001373,
+                            1017471,
+                            1003338,
+                            1014292,
+                            1009338,
+                            1003492,
+                            1018392,
+                            1013801,
+                            1019067,
+                            1011130,
+                            1015198,
+                            1003305,
+                            1011319,
+                            1006139,
+                            1003130,
+                            1016331,
+                            1012475,
+                            1013394,
+                            1005296,
+                            1021724,
+                            1005778,
+                            1014876,
+                            1007636,
+                            1011187,
+                            1017247,
+                            1017603,
+                            1006541,
+                            1012546,
+                            1001170,
+                            1013284,
+                            1015476,
+                            1012987,
+                            1007098,
+                            1004884,
+                            1010545,
+                            1001837,
+                            1023686,
+                            1017694,
+                            1020248,
+                            1008465,
+                            1016231,
+                            1016720,
+                            1011444,
+                            1001753,
+                            1020108,
+                            1022987,
+                            1013184,
+                            1014249,
+                            1009241,
+                            1022287,
+                            1002749,
+                            1011272,
+                            1012481,
+                            1012183,
+                            1018523,
+                            1010585,
+                            1018888,
+                            1004225,
+                            1009950,
+                            1023015,
+                            1017359,
+                            1023656,
+                            1023501,
+                            1019270,
+                            1021085,
+                            1009210,
+                            1002869,
+                            1000071,
+                            1002218,
+                            1008798,
+                            1014574,
+                            1002856,
+                            1020955,
+                            1019518,
+                            1020255,
+                            1006572,
+                            1013054,
+                            1010101,
+                            1016278,
+                            1006608,
+                            1015062,
+                            1002414,
+                            1015239,
+                            1024220,
+                            1000680,
+                            1019901,
+                            1016616,
+                            1000250,
+                            1018612,
+                            1011919]
+
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+1,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1200, 1200],
+   "start_time" : [21600, 54000],
+   "end_time" : [36000, 68400]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+
+
+##################################
+
+
+# SamTrans Express 8 SB - Western San Francisco to San Mateo
+# add 2 SB new trips for AM, PM
+# trip
+trip_id_list = [max_trip_id+3,max_trip_id+4]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "1012",
+   "direction_id" : 1,
+   "trip_id" : trip_id_list,
+   "shape_id" : max_shape_id+2,
+   "agency_raw_name" : "SamTrans_2015_8_20"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+
+# stop
+stop_model_node_id_list = [1012747,
+                            1006608,
+                            1008798,
+                            1023015,
+                            1022287,
+                            1016231,
+                            1023213,
+                            1011032,
+                            1009728,
+                            1020652,
+                            1000437,
+                            1504205,
+                            1507160,
+                            1504365,
+                            1526561,
+                            1520060,
+                            1526179]
+
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = [0, # placeholder nntime, non-rail transit services will use travel time on highway network
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0]
+departure_time_list = arrival_time_list
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+
+# shape
+shape_model_node_id_list = [1012747,
+                            1019814,
+                            1016616,
+                            1019901,
+                            1000680,
+                            1024220,
+                            1015239,
+                            1002414,
+                            1015062,
+                            1006608,
+                            1016278,
+                            1010101,
+                            1013054,
+                            1006572,
+                            1020255,
+                            1019518,
+                            1020955,
+                            1002856,
+                            1014574,
+                            1008798,
+                            1002218,
+                            1000071,
+                            1002869,
+                            1009210,
+                            1021085,
+                            1019270,
+                            1023501,
+                            1023656,
+                            1017359,
+                            1023015,
+                            1009950,
+                            1004225,
+                            1018888,
+                            1010585,
+                            1018523,
+                            1012183,
+                            1012481,
+                            1011272,
+                            1002749,
+                            1022287,
+                            1009241,
+                            1014249,
+                            1013184,
+                            1022987,
+                            1020108,
+                            1001753,
+                            1011444,
+                            1016720,
+                            1016231,
+                            1019041,
+                            1013331,
+                            1002871,
+                            1008036,
+                            1000269,
+                            1019218,
+                            1007997,
+                            1015954,
+                            1004436,
+                            1014788,
+                            1003650,
+                            1000786,
+                            1001537,
+                            1000460,
+                            1018421,
+                            1002616,
+                            1000607,
+                            1023265,
+                            1002055,
+                            1014715,
+                            1012966,
+                            1010714,
+                            1019533,
+                            1002040,
+                            1000115,
+                            1015367,
+                            1015371,
+                            1023213,
+                            1005177,
+                            1006852,
+                            1005991,
+                            1009926,
+                            1016779,
+                            1022576,
+                            1010774,
+                            1021731,
+                            1003278,
+                            1000500,
+                            1018018,
+                            1021908,
+                            1023268,
+                            1020692,
+                            1008991,
+                            1011032,
+                            1003052,
+                            1003107,
+                            1024689,
+                            1020118,
+                            1016013,
+                            1008906,
+                            1000595,
+                            1010472,
+                            1008486,
+                            1005299,
+                            1011232,
+                            1007314,
+                            1009728,
+                            1010977,
+                            1001880,
+                            1021162,
+                            1019378,
+                            1009217,
+                            1011193,
+                            1013094,
+                            1020652,
+                            1012581,
+                            1018826,
+                            1018166,
+                            1020160,
+                            1002230,
+                            1016541,
+                            1000611,
+                            1000377,
+                            1015900,
+                            1019755,
+                            1014156,
+                            1010198,
+                            1023870,
+                            1006341,
+                            1015317,
+                            1016280,
+                            1000437,
+                            1019264,
+                            1019607,
+                            1015483,
+                            1004676,
+                            1021457,
+                            1017971,
+                            1502044,
+                            1526248,
+                            1517803,
+                            1545414,
+                            1512215,
+                            1542401,
+                            1519383,
+                            1543922,
+                            1523203,
+                            1504205,
+                            1515830,
+                            1512216,
+                            1527923,
+                            1535566,
+                            1500135,
+                            1535001,
+                            1502022,
+                            1528882,
+                            1543726,
+                            1539435,
+                            1543982,
+                            1501579,
+                            1541270,
+                            1547061,
+                            1541746,
+                            1516508,
+                            1516509,
+                            1528609,
+                            1534850,
+                            1537600,
+                            1533157,
+                            1530275,
+                            1501763,
+                            1500071,
+                            1521879,
+                            1548260,
+                            1533198,
+                            1527675,
+                            1523744,
+                            1511266,
+                            1531072,
+                            1545986,
+                            1535329,
+                            1513246,
+                            1506705,
+                            1511742,
+                            1535397,
+                            1529850,
+                            1545450,
+                            1512814,
+                            1535332,
+                            1524013,
+                            1515329,
+                            1533091,
+                            1516529,
+                            1507160,
+                            1504501,
+                            1531013,
+                            1514497,
+                            1506240,
+                            1502695,
+                            1547845,
+                            1534752,
+                            1525590,
+                            1505395,
+                            1524104,
+                            1546946,
+                            1502993,
+                            1504586,
+                            1529332,
+                            1525931,
+                            1531819,
+                            1506163,
+                            1535455,
+                            1503774,
+                            1522108,
+                            1538647,
+                            1506883,
+                            1522498,
+                            1504772,
+                            1517358,
+                            1527142,
+                            1538948,
+                            1501480,
+                            1526025,
+                            1504365,
+                            1546306,
+                            1516618,
+                            1516672,
+                            1525806,
+                            1544530,
+                            1502133,
+                            1532231,
+                            1501403,
+                            1520501,
+                            1535312,
+                            1519361,
+                            1517242,
+                            1518194,
+                            1534069,
+                            1521556,
+                            1506735,
+                            1523395,
+                            1508083,
+                            1530181,
+                            1548258,
+                            1526880,
+                            1543517,
+                            1525093,
+                            1519224,
+                            1526561,
+                            1527383,
+                            1502060,
+                            1506470,
+                            1536365,
+                            1508127,
+                            1531089,
+                            1525350,
+                            1515829,
+                            1534971,
+                            1520181,
+                            1529690,
+                            1540290,
+                            1536703,
+                            1502099,
+                            1520060,
+                            1521915,
+                            1522921,
+                            1526179]
+
+shape_pt_sequence_list = list(range(1, len(shape_model_node_id_list) + 1))
+add_shapes_df = pd.DataFrame(
+  {"shape_id" : max_shape_id+2,
+   "shape_pt_sequence" : shape_pt_sequence_list,
+   "shape_model_node_id" : shape_model_node_id_list
+  }
+)
+self.feed.shapes = self.feed.shapes.append(add_shapes_df, sort = False, ignore_index = True)
+
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [1200, 1200],
+   "start_time" : [21600, 54000],
+   "end_time" : [36000, 68400]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

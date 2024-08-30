@@ -1,0 +1,32 @@
+project: San Joaquin SJ07-1014
+tags:
+- 'San Joaquin'
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 8538339
+      - 8510266
+      - 8507465
+      - 8519887
+      - 8518173
+      - 8529407
+      - 8545558
+      - 8537940
+      - 8541612
+      - 8544308
+      - 8545015
+      - 8546848
+      - 8561844
+      - 8558308
+  properties:
+  - property: lanes
+    set: 3
+
+
+
+
+
+

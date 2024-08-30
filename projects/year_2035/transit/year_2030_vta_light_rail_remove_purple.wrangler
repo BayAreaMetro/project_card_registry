@@ -1,0 +1,23 @@
+---
+project: Year 2030 VTA Light Rail Remove Purple Line
+category: Add Transit
+tags:
+dependencies:
+  prerequisites: 
+  - ''
+---
+
+
+# route
+# remove old VTA purple light rail route
+route_id = 624
+trip_id_list = [30851, 30910, 30894, 30878, 30916, 30972, 30955, 30971]
+shape_id_list = [1905, 1907]
+
+self.feed.routes = self.feed.routes[self.feed.routes["route_id"].astype(int) != route_id].reset_index(drop=True) 
+self.feed.trips = self.feed.trips[self.feed.trips["route_id"].astype(int) != route_id].reset_index(drop=True)
+
+self.feed.shapes = self.feed.shapes[~self.feed.shapes['shape_id'].astype(int).isin(shape_id_list)].reset_index(drop=True)
+
+self.feed.stop_times = self.feed.stop_times[~self.feed.stop_times['trip_id'].astype(int).isin(trip_id_list)].reset_index(drop=True)
+self.feed.frequencies = self.feed.frequencies[~self.feed.frequencies["trip_id"].astype(int).isin(trip_id_list)].reset_index(drop=True)

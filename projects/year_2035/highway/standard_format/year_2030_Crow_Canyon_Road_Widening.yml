@@ -1,0 +1,42 @@
+project: Crow Canyon Road (Alcosta to Indian Rice) Widening, RTP ID 21-T07-056
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4035233
+      - 4135439
+      - 4149618
+      - 4040236
+      - 4015399
+      - 4215734
+      - 4095656
+      - 4096367
+      - 4040587
+      - 4001295
+      - 4116140
+      - 4109202
+      - 4019400
+      - 4086542
+      - 4050954
+      - 4095557
+      - 4044453
+      - 4051976
+      - 4059104
+      - 4088903
+      - 4043210
+      - 4073664
+      - 4017316
+      - 4033698
+      - 4061354
+      - 4069472
+      - 4096723
+      - 4117561
+      - 4060844
+      - 4007805
+  properties:
+  - property: lanes
+    set: 3

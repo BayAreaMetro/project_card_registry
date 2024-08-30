@@ -1,0 +1,41 @@
+project: US 101 Marin/Sonoma Narrows (Sonoma)
+tags:
+  - year 2040
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 7061406
+      - 7050303
+      - 7007615
+      - 7030333
+      - 7055624
+      - 7053055
+      - 7038125
+      - 7004935
+      - 8000404
+      - 8002874
+      - 8005271
+      - 8026330
+      - 8025406
+      - 8017687
+      - 8022950
+      - 8009312
+      - 8001057 
+      - 8006698
+      - 8011639
+      - 8031549
+      - 8030002
+      - 8027190
+      - 7038021
+      - 7040427
+      - 7019678
+      - 7003858
+      - 7016874
+      - 7050529
+      - 7057548
+  properties:
+  - property: useclass
+    set: 2

@@ -1,0 +1,52 @@
+project: San Joaquin SJ07-1005
+tags:
+- 'San Joaquin'
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 8519233
+      - 8510730
+      - 8510989
+      - 8516289
+      - 8522045
+      - 8558771
+      - 8525300
+      - 8526797
+      - 8526908
+      - 8551904
+      - 8543446
+      - 8531855
+      - 8532288
+      - 8561903
+  properties:
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 2
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 2
+  - property: segment_id
+    set: 214
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

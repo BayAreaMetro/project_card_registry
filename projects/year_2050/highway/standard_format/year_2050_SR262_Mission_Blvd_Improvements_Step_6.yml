@@ -1,0 +1,59 @@
+project: SR262 improvements Step 6 (Create SR 262 GP lanes between Mohave Dr and I680),
+  RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+    - 3045930
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 2626027
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    X: -121.92355694
+    Y: 37.49535265
+  links:
+  - A: 2626021
+    B: 2542076
+    model_link_id: 3443577
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2542076
+    B: 2501986
+    model_link_id: 3443578
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 2
+  - A: 2520600
+    B: 2626027
+    model_link_id: 3443579
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 4
+    lanes: 2
+  - A: 2626027
+    B: 2559116
+    model_link_id: 3443580
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3
+  - A: 2559116
+    B: 2626022
+    model_link_id: 3443581
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 1
+    lanes: 3

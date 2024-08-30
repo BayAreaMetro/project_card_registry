@@ -1,0 +1,48 @@
+project: Year 2030 SF County TA HOV/HOT Lanes NB on US 101 and I-280
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 17706
+      - 15510
+      - 16233
+      - 37215
+      - 28490
+      - 20384
+      - 31483
+      - 31496
+      - 39942
+      - 40639
+      - 12538
+  properties:
+  - property: lanes
+    change: -1
+  - property: ML_lanes
+    set: 1
+  - property: ML_useclass
+    set: 3
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '10:00'
+      - '15:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

@@ -1,0 +1,337 @@
+project: Added_networkforexternals_Sacto2_GN_11142022
+tags:
+- Year 2015
+dependencies: ''
+changes:
+- category: Add New Roadway
+  nodes:
+  - model_node_id: 5300150
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.75145
+    Y: 38.0203
+  - model_node_id: 5300151
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.74503
+    Y: 38.06757
+  - model_node_id: 5300152
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.6841
+    Y: 38.15993
+  - model_node_id: 5300153
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.65535
+    Y: 38.17721
+  - model_node_id: 5300154
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.60842
+    Y: 38.17913
+  - model_node_id: 5300155
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.5765
+    Y: 38.20652
+  - model_node_id: 5300156
+    drive_access: 1
+    walk_access: 0
+    bike_access: 0
+    rail_only: 0
+    X: -121.57282
+    Y: 38.22824
+  links:
+  - A: 3511186
+    B: 3528089
+    model_link_id: 8100030
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3524919
+    B: 5300152
+    model_link_id: 8100031
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3527595
+    B: 3546979
+    model_link_id: 8100032
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 5
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 2
+  - A: 3528089
+    B: 3511186
+    model_link_id: 8100033
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3545295
+    B: 5300156
+    model_link_id: 8100034
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3546979
+    B: 3527595
+    model_link_id: 8100035
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 5
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 2
+  - A: 3547284
+    B: 5300152
+    model_link_id: 8100036
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3547287
+    B: 5300151
+    model_link_id: 8100037
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5290249
+    B: 5300156
+    model_link_id: 8100038
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5293556
+    B: 5300152
+    model_link_id: 8100039
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300150
+    B: 5300151
+    model_link_id: 8100040
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300151
+    B: 3547287
+    model_link_id: 8100041
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300151
+    B: 5300150
+    model_link_id: 8100042
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300152
+    B: 3524919
+    model_link_id: 8100043
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300152
+    B: 3547284
+    model_link_id: 8100044
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300152
+    B: 5293556
+    model_link_id: 8100045
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300152
+    B: 5300153
+    model_link_id: 8100046
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300153
+    B: 5300152
+    model_link_id: 8100047
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300153
+    B: 5300154
+    model_link_id: 8100048
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300154
+    B: 5300153
+    model_link_id: 8100049
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300154
+    B: 5300155
+    model_link_id: 8100050
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300155
+    B: 5300154
+    model_link_id: 8100051
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300155
+    B: 5300156
+    model_link_id: 8100052
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300156
+    B: 3545295
+    model_link_id: 8100053
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300156
+    B: 5290249
+    model_link_id: 8100054
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300156
+    B: 5300155
+    model_link_id: 8100055
+    drive_access: 1
+    bike_access: 1
+    walk_access: 1
+    ft: 6
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 3043615
+    B: 5300150
+    model_link_id: 8100056
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1
+  - A: 5300150
+    B: 3004598
+    model_link_id: 8100057
+    drive_access: 1
+    bike_access: 0
+    walk_access: 0
+    ft: 2
+    cntype: 'TANA'
+    assignable: 1
+    lanes: 1

@@ -1,0 +1,40 @@
+##REVIEW COMMENTS: 
+#  model_link_ids listed are mainline/general purpose links.
+# the managed lanes are already coded properly in the network
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+      model_link_id:
+      - 14025174
+      - 14020617
+      - 14112246
+      - 14074247
+      - 14084204
+      - 14049511
+      - 14095497
+      - 14055125
+      - 14064696
+      - 14079820
+      - 14052851
+      - 14024868
+      - 14109549
+      - 14066358
+      - 14042337
+      - 14062144
+      - 14056752
+      - 14102354
+      - 14120008
+  properties:
+  - property: useclass_am #ML_useclass
+    set: 4
+  - property: useclass_md #ML_useclass
+    set: 4
+  - property: useclass_pm #ML_useclass
+    set: 4
+dependencies: ''
+project: I-680 Contra Costa Express Lanes Phase 1 NB
+tags:
+- Year 2017
+- Roadway Property Change
+- toll review

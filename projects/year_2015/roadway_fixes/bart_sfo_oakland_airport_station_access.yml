@@ -1,0 +1,51 @@
+project: BART SFO and Oakland Station Access
+tags:
+- add station access
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - model_link_id: 3443540
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 0
+    assignable: 1
+    distance: 0.1
+    ft: 8
+    A: 100426
+    B: 1556368
+  - model_link_id: 3443541
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 0
+    assignable: 1
+    distance: 0.1
+    ft: 8
+    A: 1556368
+    B: 100426
+  - model_link_id: 3443542
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 0
+    distance: 0.2
+    ft: 8
+    assignable: 1
+    A: 331113
+    B: 2625962
+  - model_link_id: 3443543
+    lanes: 1.0
+    walk_access: 1
+    bike_access: 1
+    rail_only: 0
+    drive_access: 0
+    distance: 0.2
+    ft: 8
+    assignable: 1
+    A: 2625962
+    B: 331113

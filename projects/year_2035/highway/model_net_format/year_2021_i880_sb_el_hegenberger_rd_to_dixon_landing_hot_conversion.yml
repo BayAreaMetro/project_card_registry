@@ -1,0 +1,77 @@
+project: Year 2021 Modify HOV Lanes and USE to HOT 3+ for 5AM to 8PM on I-880 SB Hegenberger Rd to Dixon Landing
+tags:
+- Year 2021
+- Managed Lanes
+- HOV Lanes
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 13001150
+      -  13004982
+      -  13005324
+      -  13006323
+      -  13008208
+      -  13018559
+      -  13121055
+      -  13021201
+      -  13021842
+      -  13022967
+      -  13025549
+      -  13055731
+      -  13027904
+      -  13027923
+      -  13029508
+      -  13031088
+      -  13031207
+      -  13131892
+      -  13035752
+      -  13038781
+      -  13048813
+      -  13046843
+      -  13094586
+      -  13050780
+      -  13051245
+      -  13053901
+      -  13133219
+      -  13074718
+      -  13064238
+      -  13065468
+      -  13110285
+      -  13068866
+      -  13068897
+      -  13073865
+      -  13075777
+      -  13084513
+      -  13087174
+      -  13092425
+      -  13108003
+      -  13111133
+      -  13110578
+      -  13111287
+      -  13112698
+      -  13117162
+      -  13117607
+      -  13119599
+      -  13125844
+      -  13145988
+      -  13133175
+      -  13133394
+      -  13139672
+      -  13153032
+      -  13167814
+      -  13168274
+      -  13168757
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 2

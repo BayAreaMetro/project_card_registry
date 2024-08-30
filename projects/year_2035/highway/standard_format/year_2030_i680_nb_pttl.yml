@@ -1,0 +1,39 @@
+project: Year 2030 I-680 NB Part-Time Transit Lanes between Ygnacio Valley Rd to Alcosta Blvd
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 4042337
+      - 4013933
+      - 4020617
+      - 4024868
+      - 4025174
+      - 4079820
+      - 4033582
+      - 4045119
+      - 4112246
+      - 4102354
+      - 4049511
+      - 4050024
+      - 4052851
+      - 4055125
+      - 4056752
+      - 4062144
+      - 4064696
+      - 4066358
+      - 4074247
+      - 4093735
+      - 4079146
+      - 4084204
+      - 4123715
+      - 4095497
+      - 4101132
+      - 4109549
+      - 4120008
+  properties:
+  - property: BRT
+    set: 3

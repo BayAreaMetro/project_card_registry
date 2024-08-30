@@ -1,0 +1,34 @@
+project: 3_21-T10-083-Central_Subway_ToChinaTown_change_hdw
+tags: 
+- 'change headway'
+dependencies: ''
+changes:
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22517'
+  properties:
+  - set: 240.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 0
+    trip_id: '22336'
+  properties:
+  - set: 240.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22620'
+  properties:
+  - set: 240.0
+    property: headway_secs
+- category: Transit Service Property Change
+  facility:
+    direction_id: 1
+    trip_id: '22554'
+  properties:
+  - set: 240.0
+    property: headway_secs
+valid: false

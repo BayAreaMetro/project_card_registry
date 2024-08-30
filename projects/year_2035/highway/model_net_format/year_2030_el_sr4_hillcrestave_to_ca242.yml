@@ -1,0 +1,65 @@
+project: SR-4 Express Lanes Hillcrest Ave to I-680/SR4 Interchange
+tags:
+- Year 2030
+- Roadway Property Change
+- toll review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 14000067
+      - 14001533
+      - 14003124
+      - 14004870
+      - 14006591
+      - 14006672
+      - 14007500
+      - 14007823
+      - 14009813
+      - 14106448
+      - 14014130
+      - 14015455
+      - 14018271
+      - 14019165
+      - 14024722
+      - 14025335
+      - 14025744
+      - 14034115
+      - 14109492
+      - 14037566
+      - 14045253
+      - 14048183
+      - 14054432
+      - 14060322
+      - 14062826
+      - 14089176
+      - 14070724
+      - 14099843
+      - 14077091
+      - 14079076
+      - 14084389
+      - 14085008
+      - 14090054
+      - 14092854
+      - 14093163
+      - 14102154
+      - 14102345
+      - 14102727
+      - 14105233
+      - 14106713
+      - 14110612
+      - 14111708
+      - 14126894
+  properties:
+  - property: useclass_AM
+    set: 4
+  - property: useclass_MD
+    set: 4
+  - property: useclass_PM
+    set: 4
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 7

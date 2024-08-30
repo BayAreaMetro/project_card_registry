@@ -1,0 +1,12 @@
+project: I880 Winton Avenue Interchange Improvements Step 1 (Remove existing SB loop off-ramp, NB loop off-ramp to EB Winton Ave and existing C-D road), RTP ID 21-T06-024
+tags:
+- Year 2030
+dependencies: ''
+changes:
+- category: Roadway Deletion
+  links:
+    model_link_id:
+      - 3036160
+      - 3039238
+      - 3007253
+      - 3108537

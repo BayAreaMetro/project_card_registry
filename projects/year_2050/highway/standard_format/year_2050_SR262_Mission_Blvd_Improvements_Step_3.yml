@@ -1,0 +1,24 @@
+project: SR262 Interchange improvements Step 3 (Create Frontage Rd between Warmsprings Blvd and Mohave Dr), RTP ID 21-T06-046
+tags:
+- Year 2050
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3082198
+      - 3079954
+      - 3061579
+      - 3002422
+      - 3019486
+      - 3097319
+  properties:
+  - property: lanes
+    set: 2
+  - property: ft
+    set: 99
+
+
+
+

@@ -1,0 +1,69 @@
+project: Year 2033 Modify GP Lanes and USE on I-680 Calaveras Blvd (SR-237) to US-101
+tags:
+- Year 2033
+- Managed Lanes
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2002654
+      - 2116704
+      - 2025671
+      - 2043090
+      - 2048669
+      - 2048885
+      - 2052039
+      - 2058099
+      - 2068621
+      - 2164028
+      - 2090244
+      - 2091241
+      - 2237776
+      - 2096393
+      - 2104426
+      - 2121056
+      - 2130574
+      - 2238116
+      - 2140208
+      - 2159713
+      - 2241904
+      - 2242243
+      - 2249444
+      - 2251257
+      - 2264020
+      - 2264542
+  properties:
+  - property: lanes
+    change: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      change: -1
+    - time:
+      - '15:00'
+      - '19:00'
+      change: -1
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: ML_useclass
+    set: 2
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

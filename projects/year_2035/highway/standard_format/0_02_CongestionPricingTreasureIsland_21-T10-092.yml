@@ -1,0 +1,18 @@
+project: 0_02_CongestionPricingTreasureIsland_21-T10-092
+tags: ''
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 24626
+      - 14948
+      - 8977
+      - 28728
+      - 5758
+  properties:
+  - existing: 0
+    set: 9
+    property: tollbooth
+valid: false

@@ -1,0 +1,228 @@
+---
+project: 9_1_21-T10-065_MAJ_AC_Frequency_Improvement
+category: Add Transit
+tags: 
+  - ''
+---
+
+
+# this wrangler card adds 3 d0 + 3 d1 new trips for AM, MD, PM
+# route
+add_routes_df = pd.DataFrame(
+  {"route_id" : ["998"],
+   "route_id_original" : [""],
+   "agency_id" : ["AC Transit"],
+   "route_short_name" : ["97R"],
+   "route_long_name" : ["Union City BART - Hesperian Blvd."],
+   "route_type" : [3],
+   "agency_raw_name" : ["ACTransit_2015_8_14"]
+  }
+)
+self.feed.routes = self.feed.routes.append(add_routes_df, sort = False, ignore_index = True)
+
+# add direction 0 AM, MD, PM
+# trip
+max_trip_id = self.feed.trips.trip_id.astype(int).max()
+trip_id_list = [max_trip_id+1,max_trip_id+2,max_trip_id+3]
+
+add_trips_df = pd.DataFrame(
+  {"route_id" : "998",
+   "direction_id" : 0,
+   "trip_id" : trip_id_list,
+   "shape_id" : "324",
+   "agency_raw_name" : "ACTransit_2015_8_14"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop
+stop_model_node_id_list = [2572881,
+                          2589694,
+                          2528152,
+                          2574163,
+                          2574040,
+                          2598049,
+                          2542964,
+                          2562444,
+                          2574341,
+                          2510815,
+                          2508176,
+                          2579834,
+                          2557106,
+                          2523825,
+                          2540257,
+                          2568027,
+                          2538000,
+                          2537574,
+                          2507071,
+                          2545482,
+                          2546478,
+                          2512014,
+                          2583023,
+                          2596582,
+                          2517733,
+                          2551537,
+                          2542596,
+                          2547521,
+                          2583055]
+stop_id_xref_dict = self.feed.stops.set_index("model_node_id")["stop_id"].to_dict()
+stop_id_xref_dict = {int(key): int(value) for key, value in stop_id_xref_dict.items()}
+model_node_coord_dict = self.road_net.nodes_df.set_index('model_node_id')[['X', 'Y']].apply(tuple, axis=1).to_dict()
+model_node_coord_dict = {int(key): value for key, value in model_node_coord_dict.items()}
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list =0
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [720,720,720],
+   "start_time" : [21600,36000,54000],
+   "end_time" : [36000,54000,68400]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)
+
+
+
+# add direction 1 AM, MD, PM
+# trip
+trip_id_list = [max_trip_id+4,max_trip_id+5,max_trip_id+6]
+add_trips_df = pd.DataFrame(
+  {"route_id" : "998",
+   "direction_id" : 1,
+   "trip_id" : trip_id_list,
+   "shape_id" : "326",
+   "agency_raw_name" : "ACTransit_2015_8_14"
+  }
+)
+self.feed.trips = self.feed.trips.append(add_trips_df, sort = False, ignore_index = True)
+
+# stop
+stop_model_node_id_list = [2583055,
+                          2537886,
+                          2595410,
+                          2568166,
+                          2509044,
+                          2558898,
+                          2544024,
+                          2567105,
+                          2581673,
+                          2550999,
+                          2545016,
+                          2507331,
+                          2511365,
+                          2518298,
+                          2561323,
+                          2509698,
+                          2505384,
+                          2510836,
+                          2594326,
+                          2583331,
+                          2571121,
+                          2598049,
+                          2574040,
+                          2596614,
+                          2589129,
+                          2534470,
+                          2520593,
+                          2572881]
+stop_id_list = [] # used to build stop_time
+stop_id_new_list = [] # used to build stop
+model_node_id_list = [] # used to build stop
+stop_lat_list = [] # used to build stop
+stop_lon_list = [] # used to build stop
+stop_id_max = max(stop_id_xref_dict.values()) # assign stop_id to new stops
+
+for s in stop_model_node_id_list:
+    if s in stop_id_xref_dict.keys():
+        stop_id_list.append(stop_id_xref_dict[s])
+    else:
+        stop_id_new = stop_id_max + 1
+        stop_id_list.append(stop_id_new)
+        stop_id_new_list.append(stop_id_new)
+        model_node_id_list.append(s)
+        stop_lat_list.append(model_node_coord_dict[s][1])
+        stop_lon_list.append(model_node_coord_dict[s][0])
+        stop_id_xref_dict.update({s: stop_id_new})
+        stop_id_max += 1
+
+add_stops_df = pd.DataFrame(
+  {"stop_id" : stop_id_new_list,
+   "stop_name" : "",
+   "stop_lat" : stop_lat_list,
+   "stop_lon" : stop_lon_list,
+   "model_node_id" : model_node_id_list
+  }
+)
+self.feed.stops = self.feed.stops.append(add_stops_df, sort = False, ignore_index = True)
+
+# stop_time
+stop_sequence_list = list(range(1, len(stop_id_list) + 1))
+arrival_time_list = 0
+departure_time_list =0
+add_stop_times_df = []
+
+for trip_id in trip_id_list:
+    df = pd.DataFrame({
+        "trip_id": [trip_id] * len(stop_id_list),
+        "stop_sequence": stop_sequence_list,
+        "arrival_time": arrival_time_list,
+        "departure_time": departure_time_list,
+        "stop_id": stop_id_list
+    })
+    add_stop_times_df.append(df)
+self.feed.stop_times = self.feed.stop_times.append(add_stop_times_df, sort = False, ignore_index = True)
+
+# frequency
+add_freqs_df = pd.DataFrame(
+  {"trip_id" : trip_id_list,
+   "headway_secs" : [720,720,720],
+   "start_time" : [21600,36000,54000],
+   "end_time" : [36000,54000,68400]
+  }
+)
+self.feed.frequencies = self.feed.frequencies.append(add_freqs_df, sort = False, ignore_index = True)

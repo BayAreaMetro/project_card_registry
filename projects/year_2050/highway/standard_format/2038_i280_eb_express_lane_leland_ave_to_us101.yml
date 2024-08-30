@@ -1,0 +1,63 @@
+project: Year 2038 Express Lane on I-280 EB from Leland Ave to US101
+tags:
+- Year 2038
+dependencies: ''
+changes:
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 2000384
+      - 2004309
+      - 2219682
+      - 2057794
+      - 2058194
+      - 2065903
+      - 2106845
+      - 2237976
+      - 2264016
+      - 2135606
+      - 2170459
+      - 2205242
+      - 2242971
+      - 2260137
+  properties:
+  - property: lanes
+    set: 4
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 3
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 3
+  - property: ML_lanes
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 1
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 1
+  - property: segment_id
+    set: 222
+  - property: ML_useclass
+    set: 0
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

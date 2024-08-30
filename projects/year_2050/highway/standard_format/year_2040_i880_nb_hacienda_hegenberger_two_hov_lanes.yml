@@ -1,0 +1,28 @@
+project: I-880 NB HOV/HOT North of Hacienda to Hegenberger
+tags:
+- I-880
+- year 2040
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3001223
+      - 3012282
+      - 3018364
+      - 3155125
+      - 3049317
+      - 3165742
+      - 3039721
+      - 3047967
+      - 3048243
+      - 3049928
+      - 3082775
+      - 3084877
+      - 3166455
+      - 3103811
+      - 3131720
+  properties:
+  - property: ML_lanes
+    set: 2

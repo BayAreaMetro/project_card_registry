@@ -1,6 +1,13 @@
 name: Update Registry
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
+ 
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -20,6 +27,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install --user -e git+https://github.com/wsp-sag/network_wrangler.git@develop#egg=network_wrangler
+          pip install pytest
           python update_registry.py
 
       - name: commit files
@@ -33,4 +41,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: configure
+          branch: bicounty

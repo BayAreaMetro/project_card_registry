@@ -1,0 +1,74 @@
+project: Oakland - Year 2019 - modify lanes
+tags:
+- Year 2019 
+- Roadway Property Change
+- update lanes
+- highway review
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3014335
+      - 3018949
+      - 3027897
+      - 3033512
+      - 3040782
+      - 3047083
+      - 3047566
+      - 3074012
+      - 3074788
+      - 3085411
+      - 3086892
+      - 3095716
+      - 3097441
+      - 3098002
+      - 3105186
+      - 3116059
+      - 3130117
+      - 3132473
+      - 3141678
+      - 3153875
+      - 3181582
+      - 3196073
+      - 3215753
+      - 3215873
+      - 3217611
+      - 3234368
+      - 3258272
+      - 3276932
+      - 3287160
+      - 3304168
+      - 3309774
+  properties:
+  - property: lanes
+    set: 1
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3005155
+      - 3008588
+      - 3012462
+      - 3024484
+      - 3034933
+      - 3043286
+      - 3136148
+  properties:
+  - property: lanes
+    set: 2
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3017703
+      - 3036759
+      - 3053195
+      - 3070327
+      - 3101252
+      - 3132096
+      - 3167424
+  properties:
+  - property: lanes
+    set: 3

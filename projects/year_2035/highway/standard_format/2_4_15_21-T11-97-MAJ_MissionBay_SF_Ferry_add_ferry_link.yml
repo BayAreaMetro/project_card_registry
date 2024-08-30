@@ -1,0 +1,22 @@
+project: 2_4_15_21-T11-97-MAJ_MissionBay_SF_Ferry_add_ferry_link
+tags: ''
+dependencies: ''
+changes:
+- category: Add New Roadway
+  links:
+  - rail_only: 0
+    transit_access: 1.0
+    bus_only: 0
+    model_link_id: 2700049
+    A: 1028039
+    B: 2900005
+  - rail_only: 0
+    transit_access: 1.0
+    bus_only: 0
+    model_link_id: 2700050
+    A: 2900005
+    B: 1028039
+  nodes:
+  - Y: 37.77333018240103
+    X: -122.38188093832103
+    model_node_id: 2900005

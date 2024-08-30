@@ -1,0 +1,84 @@
+project: Year 2025  Rte 84 Widening, south of Ruby Hill Dr to I-680, 21-T06-037
+tags:
+- Year 2025
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      -  3032968
+      -  3251607
+      -  3018779
+      -  3266409
+      -  3025845
+      -  3178033
+      -  3027018
+      -  3300473
+      -  3068140
+      -  3231211
+      -  3106931
+      -  3173522
+      -  3108213
+      -  3044280
+      -  3269518
+      -  3059914
+      -  3144502
+      -  3223448
+      -  3095170
+      -  3232862
+      -  3106033
+      -  3107965
+      -  3224845
+      -  3178800
+      -  3119028
+      -  3278588
+      -  3134595
+      -  3140521
+      -  3253902
+      -  3141479
+      -  3226735
+  properties:
+  - property: lanes
+    set: 2
+- category: Parallel Managed lanes
+  facility:
+    link:
+    - model_link_id:
+      - 3047941
+      -  3030440
+      -  3043738
+      -  3116763
+      -  3070930
+      -  3141862
+      -  3128027
+  properties:
+  - property: lanes
+    change: -1
+  - property: ML_lanes
+    set: 1
+  - property: ML_useclass
+    set: 2
+    timeofday:
+    - time:
+      - '6:00'
+      - '10:00'
+      set: 4
+    - time:
+      - '15:00'
+      - '19:00'
+      set: 4
+  - property: ML_tollbooth
+    set: 688
+  - property: ML_tollseg
+    set: 1
+  - property: tollbooth
+    set: 99
+  - property: tollseg
+    set: 0
+  - property: useclass
+    set: 4
+  - property: ML_access
+    set: all
+  - property: ML_egress
+    set: all

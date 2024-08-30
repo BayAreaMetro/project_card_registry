@@ -1,0 +1,37 @@
+project:  I-580 Interchange Imps at Hacienda/Fallon Rd, Ph 2
+tags:
+- Year 2040
+dependencies: ''
+changes:
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3140211
+      - 3144508
+      - 3115236
+      - 3035801
+      - 3115236
+      - 3128984 
+      - 3067775
+      - 3045093
+  properties:
+  - property: lanes
+    set: 4
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1 
+- category: Roadway Property Change
+  facility:
+    link:
+    - model_link_id:
+      - 3012368
+      - 3023590
+  properties:
+  - property: lanes
+    set: 4
+  - property: bike_access
+    set: 1
+  - property: walk_access
+    set: 1
